@@ -16,6 +16,17 @@ export default function OutreachPage() {
   const { items: crmItems } = useCRM();
   const { limits } = usePlan();
   const [selectedInvestor, setSelectedInvestor] = useState('');
+  
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const params = new URLSearchParams(window.location.search);
+      const invId = params.get('investor');
+      if (invId) {
+        setSelectedInvestor(invId);
+      }
+    }
+  }, []);
+
   const [subject, setSubject] = useState('');
   const [body, setBody] = useState('');
   const [sending, setSending] = useState(false);

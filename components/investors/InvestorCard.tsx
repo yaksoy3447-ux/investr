@@ -10,6 +10,7 @@ import { cn, formatCurrency } from '@/lib/utils';
 import { useCRM } from '@/components/providers/CRMProvider';
 import { usePlan, blurName } from '@/components/providers/PlanProvider';
 import { useLocale } from 'next-intl';
+import { Link } from '@/i18n/routing';
 
 function getLabel(items: readonly { value: string; labelTr: string; labelEn: string }[], value: string, locale: string) {
   const item = items.find((i) => i.value === value);
@@ -240,9 +241,11 @@ export default function InvestorCard({ investor, index }: { investor: Investor; 
                     {added ? <Check size={16} /> : <Plus size={16} />}
                     {added ? (locale === 'en' ? 'Remove from CRM' : 'CRM\'den Çıkar') : (locale === 'en' ? 'Add to CRM' : 'CRM\'e Ekle')}
                   </button>
-                  <button className="flex-1 btn-primary flex items-center justify-center gap-2 py-2.5 text-sm">
-                    <Mail size={16} /> {locale === 'en' ? 'Send Email' : 'Email Gönder'}
-                  </button>
+                  <Link href={`/outreach?investor=${investor.id}`} className="flex-1">
+                    <button className="w-full btn-primary flex items-center justify-center gap-2 py-2.5 text-sm">
+                      <Mail size={16} /> {locale === 'en' ? 'Send Email' : 'Email Gönder'}
+                    </button>
+                  </Link>
                 </div>
               </motion.div>
             </motion.div>
