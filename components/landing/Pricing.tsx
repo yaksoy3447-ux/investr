@@ -8,6 +8,7 @@ import { useTranslations } from 'next-intl';
 
 export default function Pricing() {
   const [isYearly, setIsYearly] = useState(false);
+  const [loadingPlan, setLoadingPlan] = useState<string | null>(null);
   const t = useTranslations('landing.pricingPage');
 
   const calculatePrice = (monthlyPrice: number) => {
@@ -23,6 +24,7 @@ export default function Pricing() {
 
   const plans = [
     {
+      id: 'free',
       name: t('tiers.free'),
       basePrice: 0,
       isFree: true,
@@ -30,6 +32,7 @@ export default function Pricing() {
       features: t.raw('planFeatures.free') as { name: string, included: boolean }[]
     },
     {
+      id: 'starter',
       name: t('tiers.startup'),
       basePrice: 29,
       isFree: false,
@@ -37,6 +40,7 @@ export default function Pricing() {
       features: t.raw('planFeatures.starter') as { name: string, included: boolean }[]
     },
     {
+      id: 'growth',
       name: t('tiers.pro'),
       basePrice: 69,
       isFree: false,
@@ -44,6 +48,7 @@ export default function Pricing() {
       features: t.raw('planFeatures.growth') as { name: string, included: boolean }[]
     },
     {
+      id: 'premium',
       name: t('tiers.enterprise'),
       basePrice: 149,
       isFree: false,
@@ -51,6 +56,42 @@ export default function Pricing() {
       features: t.raw('planFeatures.premium') as { name: string, included: boolean }[]
     }
   ];
+
+  const handleCheckout = async (planId: string, isFree: boolean) => {
+    if (isFree) {
+      window.location.href = '/register';
+      return;
+    }
+    
+    setLoadingPlan(planId);
+    
+    try {
+      const res = await fetch('/api/stripe/checkout', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ planLevel: planId }),
+      });
+      
+      if (res.status === 401) {
+        window.location.href = '/register';
+        return;
+      }
+      
+      if (res.ok) {
+        const data = await res.json();
+        if (data.url) {
+          window.location.href = data.url;
+        }
+      } else {
+        alert('Stripe initialization failed.');
+      }
+    } catch (err) {
+      console.error(err);
+      alert('Error connecting to payment gateway.');
+    } finally {
+      setLoadingPlan(null);
+    }
+  };
 
   return (
     <section className="py-24 px-6 bg-[#030303] text-white overflow-hidden relative" id="pricing">
@@ -130,18 +171,23 @@ export default function Pricing() {
                 )}
               </div>
 
-              <Link
-                href="/register"
-                className={`w-full text-center py-3 rounded-xl font-bold transition-all mb-6 text-sm ${
+              <button
+                onClick={() => handleCheckout(plan.id, plan.isFree)}
+                disabled={loadingPlan === plan.id}
+                className={`w-full text-center py-3 rounded-xl font-bold transition-all mb-6 text-sm flex items-center justify-center gap-2 ${
                   plan.popular
                     ? 'bg-white hover:bg-gray-100 text-primary shadow-lg'
                     : plan.isFree
                     ? 'bg-white/5 hover:bg-white/10 text-white border border-white/10'
                     : 'bg-white/10 hover:bg-white/20 text-white'
-                }`}
+                } ${loadingPlan === plan.id ? 'opacity-70 cursor-wait' : ''}`}
               >
-                {plan.isFree ? t('startFree') : t('choosePlan')}
-              </Link>
+                {loadingPlan === plan.id ? (
+                  <div className="w-4 h-4 border-2 border-current border-t-transparent rounded-full animate-spin" />
+                ) : (
+                  plan.isFree ? t('startFree') : t('choosePlan')
+                )}
+              </button>
 
               <div className={`h-px w-full mb-6 ${plan.popular ? 'bg-blue-400/30' : 'bg-white/10'}`} />
 

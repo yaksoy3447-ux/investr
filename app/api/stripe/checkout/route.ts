@@ -16,10 +16,19 @@ export async function POST(req: Request) {
     }
 
     const body = await req.json();
-    const { priceId } = body;
+    const { planLevel } = body;
+
+    let priceId = '';
+    if (planLevel === 'premium') {
+      priceId = process.env.STRIPE_PREMIUM_PRICE_ID as string;
+    } else if (planLevel === 'growth') {
+      priceId = process.env.STRIPE_GROWTH_PRICE_ID as string;
+    } else if (planLevel === 'starter') {
+      priceId = process.env.STRIPE_STARTER_PRICE_ID as string;
+    }
 
     if (!priceId) {
-      return new NextResponse('Missing priceId', { status: 400 });
+      return new NextResponse('Invalid or missing planLevel', { status: 400 });
     }
 
     // Determine return URL based on environments
