@@ -74,7 +74,7 @@ export default function OutreachPage() {
       setSubject('Yenilikçi Projemiz İçin Tanışma Talebi');
       setBody(
         'Sayın Yatırımcı,\n\n' +
-        'Sektördeki tecrübelerinizi ve vizyonunuzu yakından takip ediyoruz. Geliştirmekte olduğumuz ve hızla büyüyen projemiz "Investr" hakkında sizinle stratejik bir görüşme gerçekleştirmek isteriz.\n\n' +
+        'Sektördeki tecrübelerinizi ve vizyonunuzu yakından takip ediyoruz. Geliştirmekte olduğumuz ve hızla büyüyen projemiz "GetInvestr" hakkında sizinle stratejik bir görüşme gerçekleştirmek isteriz.\n\n' +
         'Projemiz, melek yatırımcılar ile yenilikçi girişimleri tek bir platformda buluşturarak yatırım sürecindeki verimsizlikleri ortadan kaldırmayı hedefliyor.\n\n' +
         'Müsait olduğunuz bir zaman diliminde, detayları paylaşmak adına 15 dakikalık kısa bir online toplantı organize etmekten mutluluk duyarız.\n\n' +
         'Saygılarımla,\n' +
@@ -96,8 +96,8 @@ export default function OutreachPage() {
           </h2>
           <p className="text-foreground-muted text-sm max-w-md mb-6">
             {locale === 'en'
-              ? 'Upgrade to Starter or higher to send personalized emails to investors directly through Investr.'
-              : 'Yatırımcılara doğrudan Investr üzerinden kişiselleştirilmiş email göndermek için Başlangıç veya üst plana geçin.'}
+              ? 'Upgrade to Starter or higher to send personalized emails to investors directly through GetInvestr.'
+              : 'Yatırımcılara doğrudan GetInvestr üzerinden kişiselleştirilmiş email göndermek için Başlangıç veya üst plana geçin.'}
           </p>
           <Link
             href="/pricing"

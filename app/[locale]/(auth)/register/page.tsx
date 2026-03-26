@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/routing';
 import { createClient } from '@/lib/supabase/client';
-import { Eye, EyeOff, Mail, Lock, User, Building2, ArrowRight } from 'lucide-react';
+import { Eye, EyeOff, Mail, Lock, User, Building2, ArrowRight, Radar } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 export default function RegisterPage() {
@@ -136,9 +136,9 @@ export default function RegisterPage() {
         <div className="w-full max-w-md">
           {/* Logo */}
           <Link href="/" className="flex items-center mb-10 group">
+            <Radar className="text-primary mr-2" strokeWidth={2.5} size={32} />
             <div className="text-foreground font-bold text-3xl flex items-center tracking-tight">
-              <span className="text-primary font-black text-3xl mr-2">///</span> 
-              Investr
+              GetInvestr
             </div>
           </Link>
 

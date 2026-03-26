@@ -17,7 +17,7 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Investr — Türkiye'nin İlk Yatırımcı Erişim Platformu",
+  title: "GetInvestr — Türkiye'nin İlk Yatırımcı Erişim Platformu",
   description:
     "1000+ Türk melek yatırımcı ve VC'ye doğrudan erişim. Platform üzerinden email at, yanıtları takip et.",
   keywords: [

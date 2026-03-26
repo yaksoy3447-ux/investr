@@ -1,5 +1,5 @@
 import { Link } from '@/i18n/routing';
-import { ArrowRight, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Radar } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 
 export default function Footer() {
@@ -7,7 +7,7 @@ export default function Footer() {
 
   return (
     <>
-      {/* Unique Investr CTA Section */}
+      {/* Unique GetInvestr CTA Section */}
       <section className="bg-white px-6 pb-24 relative overflow-hidden">
         <div className="max-w-5xl mx-auto">
           <div className="bg-gradient-to-b from-[#0a0f1c] to-[#030712] rounded-[2.5rem] p-10 md:p-24 text-center text-white relative shadow-2xl overflow-hidden border border-white/10">
@@ -70,7 +70,7 @@ export default function Footer() {
           {/* Brand & Copyright */}
           <div>
             <div className="flex items-center gap-2 mb-4 text-white font-bold text-2xl tracking-tight">
-              <span className="text-primary font-black text-3xl">///</span> Investr
+              <Radar className="text-primary mr-1" strokeWidth={2.5} size={32} /> GetInvestr
             </div>
             <p className="text-sm text-gray-500 max-w-xs mb-6">
               {t('desc')}
@@ -109,8 +109,8 @@ export default function Footer() {
         </div>
 
         <div className="max-w-6xl mx-auto relative z-10 mt-16 pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-medium text-gray-500">
-          <span>© {new Date().getFullYear()} Investr Technologies.</span>
-          <span className="flex items-center gap-2">{t('built')} <span className="text-primary">///</span></span>
+          <span>© {new Date().getFullYear()} GetInvestr Technologies.</span>
+          <span className="flex items-center gap-2">{t('built')} <Radar className="text-primary mx-1" strokeWidth={3} size={20} /></span>
         </div>
       </footer>
     </>

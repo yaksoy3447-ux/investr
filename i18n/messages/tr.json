@@ -1,6 +1,6 @@
 {
   "common": {
-    "appName": "Investr",
+    "appName": "GetInvestr",
     "login": "Giriş Yap",
     "register": "Kayıt Ol",
     "logout": "Çıkış Yap",
@@ -28,14 +28,14 @@
   },
   "landing": {
     "heroTitle": "Türkiye'nin Tüm Yatırımcılarına Tek Platformdan Ulaş",
-    "heroSubtitle": "Investr, melek yatırımcıları ve girişim sermayelerini tek bir ekranda birleştiriyor. Geleneksel arama sürecini atlayın, doğru ağa hemen ulaşın.",
+    "heroSubtitle": "GetInvestr, melek yatırımcıları ve girişim sermayelerini tek bir ekranda birleştiriyor. Geleneksel arama sürecini atlayın, doğru ağa hemen ulaşın.",
     "heroCta": "Hemen Başla — Ücretsiz Dene",
     "socialProof": {
       "title": "YATIRIMCILARIMIZIN BULUNDUĞU AĞLAR"
     },
     "howItWorks": {
-      "title": "Investr girişiminizin potansiyelini nasıl ortaya çıkarır?",
-      "subtitle": "Investr; ağınızı genişletmenize, fon aramak için harcadığınız zamandan tasarruf etmenize ve girişiminiz için o mükemmel yatırımcıyı bulmanıza yardımcı olur.",
+      "title": "GetInvestr girişiminizin potansiyelini nasıl ortaya çıkarır?",
+      "subtitle": "GetInvestr; ağınızı genişletmenize, fon aramak için harcadığınız zamandan tasarruf etmenize ve girişiminiz için o mükemmel yatırımcıyı bulmanıza yardımcı olur.",
       "step1Title": "Kapsamlı Yatırımcı Veritabanı",
       "step1Desc": "Binlerce potansiyel melek yatırımcı ve girişim sermayesi fonunun bulunduğu geniş veritabanımıza erişin.",
       "step2Title": "İletişim Bilgileri ve Profiller",
@@ -53,13 +53,13 @@
       "foundersTitle": "Girişimciler için",
       "foundersDesc": "Ağınızı genişletin ve binlerce yatırımcıdan oluşan veritabanımızla fon aramak için harcadığınız yüzlerce saatten tasarruf edin.",
       "businessesTitle": "İşletme Sahipleri için",
-      "businessesDesc": "Investr, işinizi geliştirmek için ihtiyaç duyduğunuz destek ve ivmeyi sağlamak için sizi doğru yatırımcılarla buluşturur.",
+      "businessesDesc": "GetInvestr, işinizi geliştirmek için ihtiyaç duyduğunuz destek ve ivmeyi sağlamak için sizi doğru yatırımcılarla buluşturur.",
       "findRightTitle": "Hayalinizi finanse edecek doğru yatırımcıyı bulun",
-      "findRightDesc": "Investr, yanlış yatırımcıları manuel olarak aramak zorunda kalmamanız için lokasyonlara, yatırım aşamalarına ve yatırımcı türlerine göre kategorize edilmiş binlerce yatırımcı içerir.",
+      "findRightDesc": "GetInvestr, yanlış yatırımcıları manuel olarak aramak zorunda kalmamanız için lokasyonlara, yatırım aşamalarına ve yatırımcı türlerine göre kategorize edilmiş binlerce yatırımcı içerir.",
       "feature1": "Sektör eşleşmesi",
       "feature2": "Aşama eşleşmesi",
       "feature3": "Bölge eşleşmesi",
-      "mainTitle": "Investr'ın size sunabilecekleri",
+      "mainTitle": "GetInvestr'ın size sunabilecekleri",
       "feature1Desc": "İşletmenizle veya vizyonunuzla eşleşen yatırımcılar",
       "feature2Desc": "Girişiminizin aşamasını doğru yatırımcı profiliyle eşleştirin",
       "feature3Desc": "Ülkenizde ve bölgenizde sizin için aktif yatırım arayanları bulun"
@@ -78,9 +78,9 @@
     },
     "faq": {
       "title": "Sıkça Sorulan Sorular",
-      "description": "Investr hakkında en çok merak edilen soruları sizin için yanıtladık. Platformun yeteneklerinden güvenliğe kadar her detay aşağıda.",
-      "q1": "Investr tam olarak nedir ve kimler içindir?",
-      "a1": "Investr, girişimciler ve start-up kurucuları için özel olarak tasarlanmış kapsayıcı bir yatırımcı veritabanı ve CRM platformudur. Binlerce melek yatırımcı ve girişim sermayesi fonunun yer aldığı bu platformda, girişimize en uygun yatırımcıları filtreleyebilir ve iletişim süreçlerinizi tek bir noktadan yönetebilirsiniz.",
+      "description": "GetInvestr hakkında en çok merak edilen soruları sizin için yanıtladık. Platformun yeteneklerinden güvenliğe kadar her detay aşağıda.",
+      "q1": "GetInvestr tam olarak nedir ve kimler içindir?",
+      "a1": "GetInvestr, girişimciler ve start-up kurucuları için özel olarak tasarlanmış kapsayıcı bir yatırımcı veritabanı ve CRM platformudur. Binlerce melek yatırımcı ve girişim sermayesi fonunun yer aldığı bu platformda, girişimize en uygun yatırımcıları filtreleyebilir ve iletişim süreçlerinizi tek bir noktadan yönetebilirsiniz.",
       "q2": "Veritabanınız ne sıklıkla güncellenmektedir?",
       "a2": "Veritabanımız, portföy eşleşmesi alanında maksimum etkiyi yaratan Türkiye ekosistemindeki aktif yatırımcılara odaklanmıştır. Seçkin Melek Yatırımcılar (Angel), VC (Girişim Sermayesi) fonları ve ülkemizdeki kurumsal yatırım yapılarına doğrudan ulaşabilirsiniz.",
       "q3": "Yatırımcılarla nasıl iletişime geçeceğim?",
@@ -88,7 +88,7 @@
       "q4": "Yıllık planlardaki 3 ay hediye avantajı nasıl işliyor?",
       "a4": "Yıllık abonelik seçtiğinizde, 12 aylık kullanım bedeli yerine yalnızca 9 aylık ücret ödersiniz. Böylece faturanızda 3 aylık bir indirim uygulanmış olur.",
       "q5": "Platformda hangi ülkelerden yatırımcılar var?",
-      "a5": "Investr'ın veritabanı global bir ağı kapsar. Amerika (Silikon Vadisi), Avrupa, MENA bölgesi ve Türkiye başta olmak üzere dünyanın dört bir yanından binlerce yatırımcı profiline erişim sağlayabilirsiniz.",
+      "a5": "GetInvestr'ın veritabanı global bir ağı kapsar. Amerika (Silikon Vadisi), Avrupa, MENA bölgesi ve Türkiye başta olmak üzere dünyanın dört bir yanından binlerce yatırımcı profiline erişim sağlayabilirsiniz.",
       "q6": "Girişimimi yatırımcılara nasıl daha iyi sunabilirim?",
       "a6": "Kesinlikle. Ödeme altyapımız dünya standartlarındaki Stripe güvencesi altındadır ve kredi kartı bilgileriniz hiçbir şekilde sunucularımızda saklanmamaktadır.",
       "q7": "Kredi kartı bilgilerim güvende mi?",
@@ -108,14 +108,14 @@
     "heroH1_3": "bağlantı kurun.",
     "heroBtn1": "Hemen Başlayın",
     "heroBtn2": "Sistemi Keşfet",
-    "testimonialsTitle": "Investr Kullanan Kurucuların Yorumları",
-    "testimonialsSubtitle": "Investr ile hedefledikleri yatırım turlarını başarıyla kapatan girişimcilerin hikayelerine kulak verin.",
+    "testimonialsTitle": "GetInvestr Kullanan Kurucuların Yorumları",
+    "testimonialsSubtitle": "GetInvestr ile hedefledikleri yatırım turlarını başarıyla kapatan girişimcilerin hikayelerine kulak verin.",
     "footer": {
       "ctaAlert": "Kayıt işlemini tamamlamak için bir plan seçin.",
       "ctaAction": "Planları İncele",
       "ctaHeading1": "Geleceğin Yatırım Ağında",
       "ctaHeading2": "Yerinizi Alın",
-      "ctaDesc": "Investr'ın benzersiz yapay zeka ve CRM destekli ekosistemiyle girişiminizin ihtiyaç duyduğu finansmanı saniyeler içerisinde bulun.",
+      "ctaDesc": "GetInvestr'ın benzersiz yapay zeka ve CRM destekli ekosistemiyle girişiminizin ihtiyaç duyduğu finansmanı saniyeler içerisinde bulun.",
       "ctaBtn1": "HEMEN BAŞLA",
       "ctaBtn2": "Oturum Aç",
       "desc": "Yeni nesil girişimciler ve melek yatırımcılar için tasarlanmış kapalı bağlantı ağı.",
@@ -284,7 +284,7 @@
       "title": "Girişimcilerin Başarı Hikayeleri",
       "stories": [
         {
-          "text": "Investr sayesinde aylarca süren yatırım arayışımız sadece birkaç haftaya indi. Hız inanılmazdı.",
+          "text": "GetInvestr sayesinde aylarca süren yatırım arayışımız sadece birkaç haftaya indi. Hız inanılmazdı.",
           "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=100&auto=format&fit=crop",
           "name": "Ceren Yılmaz",
           "role": "Kurucu Ortak, Sağlık Teknolojileri"
@@ -423,7 +423,7 @@
         {
           "id": 1,
           "title": "Türkiye'de 2024 Yılının En Çok Yatırım Alan 10 Fintech Girişimi",
-          "author": "Investr Ekibi",
+          "author": "GetInvestr Ekibi",
           "date": "15 Haziran 2024",
           "readMinutes": 5,
           "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
@@ -441,7 +441,7 @@
         {
           "id": 3,
           "title": "Sağlık Teknolojileri (HealthTech) Sektörüne İlgi Duyan En Aktif Melek Yatırımcılar",
-          "author": "Investr Ekibi",
+          "author": "GetInvestr Ekibi",
           "date": "05 Haziran 2024",
           "readMinutes": 4,
           "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=800",
@@ -648,13 +648,13 @@
   },
   "pages": {
     "aboutTitle": "Hakkımızda",
-    "aboutContent": "Investr, girişimciler ile melek yatırımcılar, risk sermayeleri ve kurumsal yatırımcılar arasında köprü kurmayı hedefleyen yenilikçi bir finansal teknoloji platformudur.\n\nAmacımız, aylarca süren yatırım arayışı süreçlerini minimize ederek, doğru eşleşmeleri en hızlı ve en güvenilir yoldan sağlamaktır. Teknolojimizi tutkuyla geliştiriyor, girişim ekosistemini güçlendirmeye devam ediyoruz.",
+    "aboutContent": "GetInvestr, girişimciler ile melek yatırımcılar, risk sermayeleri ve kurumsal yatırımcılar arasında köprü kurmayı hedefleyen yenilikçi bir finansal teknoloji platformudur.\n\nAmacımız, aylarca süren yatırım arayışı süreçlerini minimize ederek, doğru eşleşmeleri en hızlı ve en güvenilir yoldan sağlamaktır. Teknolojimizi tutkuyla geliştiriyor, girişim ekosistemini güçlendirmeye devam ediyoruz.",
     "contactTitle": "İletişim",
     "contactContent": "Bizimle iletişime geçmekten çekinmeyin! Herhangi bir sorunuz veya öneriniz için bize tek bir tıkla aşağıdaki adresten ulaşabilirsiniz:\n\nEmail: info@investr.ai\n\nEkibimiz sizlere en kısa sürede dönüş yapacaktır.",
     "careersTitle": "Kariyer",
     "careersContent": "Açık bir kariyer vizyonu ve inovasyon tutkusuyla çalışıyoruz.\n\nŞu anda aktif bir açık pozisyonumuz bulunmamaktadır. Ancak ekibimize dahil olmak veya gelecekteki fırsatlar için değerlendirilmek isterseniz özgeçmişinizi kariyer@investr.ai adresine gönderebilirsiniz. Sizi tanımaktan mutluluk duyarız!",
     "termsTitle": "Kullanım Koşulları",
-    "termsContent": "Bu platformu kullanarak, Investr'ın tüm kurallarını okumuş ve kabul etmiş sayılırsınız.\n\nSisteme kayıtlı kullanıcılarımız doğru bilgi verdiklerini taahhüt ederler. İçerik doğrulukları ve sağlanan materyaller kendi sorumluluğunuzdadır. Kullanım koşulları her zaman değiştirilebilir olup, güncel metin her daim bu sayfadan duyurulacaktır.",
+    "termsContent": "Bu platformu kullanarak, GetInvestr'ın tüm kurallarını okumuş ve kabul etmiş sayılırsınız.\n\nSisteme kayıtlı kullanıcılarımız doğru bilgi verdiklerini taahhüt ederler. İçerik doğrulukları ve sağlanan materyaller kendi sorumluluğunuzdadır. Kullanım koşulları her zaman değiştirilebilir olup, güncel metin her daim bu sayfadan duyurulacaktır.",
     "privacyTitle": "Gizlilik Sözleşmesi",
     "privacyContent": "Gizliliğinize değer veriyoruz.\n\nKişisel verileriniz ve hesabınız yüksek güvenlik standartları altında şifrelenmektedir. Bilgileriniz 3. şahıslar veya izinsiz şirketlerle hiçbir şekilde paylaşılmaz.",
     "cookieTitle": "Çerez Politikası",

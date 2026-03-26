@@ -4,7 +4,7 @@ import { Link } from '@/i18n/routing';
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
-import { Globe } from 'lucide-react';
+import { Globe, Menu, X, Radar } from 'lucide-react';
 import { useLocale } from 'next-intl';
 import { useRouter, usePathname } from '@/i18n/routing';
 import { useTranslations } from 'next-intl';
@@ -54,12 +54,12 @@ export default function LandingHeader() {
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         
         {/* Brand */}
-        <Link href="/" className="flex items-center gap-2 group">
-          <div className="text-white font-bold text-xl flex items-center">
-            <span className="text-primary font-black text-2xl mr-2">///</span> 
-            Investr
-          </div>
-        </Link>
+          <Link href="/" className="flex items-center group">
+            <Radar className="text-primary mr-2" strokeWidth={2.5} size={28} />
+            <span className="text-xl font-bold text-foreground transition-opacity tracking-tight">
+              GetInvestr
+            </span>
+          </Link>
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-white/70">

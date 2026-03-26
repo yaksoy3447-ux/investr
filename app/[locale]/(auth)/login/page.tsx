@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/routing';
 import { createClient } from '@/lib/supabase/client';
-import { Eye, EyeOff, Mail, Lock, ArrowRight } from 'lucide-react';
+import { Mail, Lock, Eye, EyeOff, LogIn, Radar, ArrowRight } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 export default function LoginPage() {
@@ -56,10 +56,10 @@ export default function LoginPage() {
         <div className="w-full max-w-md">
           {/* Logo */}
           <Link href="/" className="flex items-center mb-10 group">
-            <div className="text-foreground font-bold text-3xl flex items-center tracking-tight">
-              <span className="text-primary font-black text-3xl mr-2">///</span> 
-              Investr
-            </div>
+            <Radar className="text-primary mr-2" strokeWidth={2.5} size={32} />
+            <span className="font-bold text-3xl tracking-tight text-foreground">
+              GetInvestr
+            </span>
           </Link>
 
           <h1 className="text-3xl font-bold text-foreground mb-2 tracking-tight">

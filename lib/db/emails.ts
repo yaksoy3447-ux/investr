@@ -17,7 +17,7 @@ export async function createEmailThread(investorId: string, subject: string, bod
       investor_id: investorId,
       subject,
       status: 'sent',
-      reply_to_address: `user-${user.id.slice(0, 8)}@mail.investr.co`,
+      reply_to_address: `user-${user.id.slice(0, 8)}@mail.getinvestr.com`,
       sent_at: new Date().toISOString(),
     })
     .select()
