@@ -7,6 +7,7 @@ import { cn } from '@/lib/utils';
 import { useCRM } from '@/components/providers/CRMProvider';
 import { usePlan } from '@/components/providers/PlanProvider';
 import { createEmailThread, getMonthlyEmailCount } from '@/lib/db/emails';
+import { createClient } from '@/lib/supabase/client';
 import { Link } from '@/i18n/routing';
 
 export default function OutreachPage() {
@@ -65,33 +66,37 @@ export default function OutreachPage() {
     if (isGenerating) return;
     setIsGenerating(true);
     
-    // Simulate API call for AI generation
-    await new Promise((r) => setTimeout(r, 1200));
-    
-    if (body.trim().length > 0) {
-      // Refine existing text
-      setSubject('Yatırım Planımız Üzerine Tanışma Talebi - [Proje Adı]');
-      setBody(
-        'Sayın Yatırımcı,\n\n' +
-        'Umarım harika bir gün geçiriyorsunuzdur.\n\n' +
-        'Aşağıda kısaca bahsettiğim konu üzerinde vizyoner bakış açınızın bize değer katacağına inanıyoruz:\n\n' +
-        `"${body.trim()}"\n\n` +
-        'Bu hedeflerimiz doğrultusunda, tecrübelerinizle bizi yönlendirebileceğiniz 15 dakikalık kısa bir tanışma toplantısı organize etmekten onur duyarım.\n\n' +
-        'Saygılarımla,\n' +
-        '[Adınız]'
-      );
-    } else {
-      // Generate from scratch
-      setSubject('Yenilikçi Projemiz İçin Tanışma Talebi');
-      setBody(
-        'Sayın Yatırımcı,\n\n' +
-        'Sektördeki tecrübelerinizi ve vizyonunuzu yakından takip ediyoruz. Geliştirmekte olduğumuz ve hızla büyüyen projemiz "GetInvestr" hakkında sizinle stratejik bir görüşme gerçekleştirmek isteriz.\n\n' +
-        'Projemiz, melek yatırımcılar ile yenilikçi girişimleri tek bir platformda buluşturarak yatırım sürecindeki verimsizlikleri ortadan kaldırmayı hedefliyor.\n\n' +
-        'Müsait olduğunuz bir zaman diliminde, detayları paylaşmak adına 15 dakikalık kısa bir online toplantı organize etmekten mutluluk duyarız.\n\n' +
-        'Saygılarımla,\n' +
-        '[Kurucu Adı]'
-      );
+    try {
+      const supabase = createClient();
+      const { data: { user } } = await supabase.auth.getUser();
+      if (!user) {
+        setIsGenerating(false);
+        return;
+      }
+
+      const promptText = body.trim().length > 0 
+        ? body.trim() 
+        : "Bizim girişimimiz GetInvestr. Risk sermayesi ve melek yatırımcıları, yenilikçi kaliteli girişimcilerle buluşturan teknolojik bir köprüyüz. Bizim bu yatırımcıyla 15 dakika tanışmasını iste.";
+
+      const res = await fetch('/api/ai/generate', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ prompt: promptText, userId: user.id }),
+      });
+
+      if (res.ok) {
+        const data = await res.json();
+        if (data.subject && data.body) {
+          setSubject(data.subject);
+          setBody(data.body);
+        }
+      } else {
+        console.error("AI Generation failed");
+      }
+    } catch (e) {
+      console.error(e);
     }
+    
     setIsGenerating(false);
   };
 
