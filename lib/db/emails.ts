@@ -129,6 +129,43 @@ export async function getMonthlyEmailCount(): Promise<number> {
 export async function addReplyToThread(threadId: string, body: string) {
   const supabase = createClient();
 
+  // 1) Get the thread and investor details to know where to send
+  const { data: thread } = await supabase
+    .from('email_threads')
+    .select('subject, investor_id')
+    .eq('id', threadId)
+    .single();
+
+  if (thread) {
+    const { data: investorData } = await supabase
+      .from('investors')
+      .select('email')
+      .eq('id', thread.investor_id)
+      .single();
+
+    const investorEmail = investorData?.email;
+    const { data: { user } } = await supabase.auth.getUser();
+
+    // 2) Send the actual reply email via API
+    if (investorEmail && user) {
+      try {
+        await fetch('/api/emails/send', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            to: investorEmail,
+            subject: `Re: ${thread.subject}`,
+            body: body,
+            userId: user.id
+          })
+        });
+      } catch (err) {
+        console.error('Failed to send reply email:', err);
+      }
+    }
+  }
+
+  // 3) Save reply to local DB
   const { error } = await supabase
     .from('email_messages')
     .insert({
