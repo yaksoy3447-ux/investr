@@ -2,16 +2,27 @@ import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
 import { createClient } from '@supabase/supabase-js';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+// We will lazily initialize clients to avoid build errors if env vars are missing
+let resend: Resend;
+let supabaseAdmin: ReturnType<typeof createClient>;
 
-// Create a server-side Supabase client to verify auth and deduct limits
-const supabaseAdmin = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.SUPABASE_SERVICE_ROLE_KEY!
-);
+function getClients() {
+  if (!resend) {
+    resend = new Resend(process.env.RESEND_API_KEY || 'dummy_key');
+  }
+  if (!supabaseAdmin) {
+    supabaseAdmin = createClient(
+      process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://dummy.supabase.co',
+      process.env.SUPABASE_SERVICE_ROLE_KEY || 'dummy_key'
+    );
+  }
+  return { resend, supabaseAdmin };
+}
 
 export async function POST(req: Request) {
   try {
+    const { resend, supabaseAdmin } = getClients();
+    
     const { to, subject, body, userId } = await req.json();
 
     if (!to || !subject || !body || !userId) {
