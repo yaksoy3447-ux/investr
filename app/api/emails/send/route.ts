@@ -65,10 +65,10 @@ export async function POST(req: Request) {
         <tr>
           <td style="background-color: #f1f5f9; padding: 24px 32px; text-align: center; border-top: 1px solid #e2e8f0;">
             <p style="margin: 0 0 12px 0; color: #64748b; font-size: 13px;">
-              Bu e-posta, <strong>${senderName}</strong> tarafından <strong>GetInvestr</strong> yatırımcı ağı üzerinden gönderilmiştir.
+              Bu e-posta, <strong>${senderName}</strong> tarafından <strong>GetInvestr</strong> ağını kullanarak gönderilmiştir.
             </p>
             <p style="margin: 0 0 12px 0; color: #94a3b8; font-size: 11px;">
-              Bu göndericiden farklı bir yatırım teklifi almak istemiyorsanız, lütfen kendisiyle iletişime geçin. (Unsubscribe)
+              GetInvestr platformu üzerinden daha fazla e-posta almak istemiyorsanız, lütfen <a href="mailto:info@getinvestr.com?subject=Unsubscribe" style="color: #94a3b8; text-decoration: underline;">buraya tıklayarak</a> abonelikten ayrılın.
             </p>
             <p style="margin: 0; color: #94a3b8; font-size: 12px;">
               &copy; ${new Date().getFullYear()} GetInvestr Inc. Tüm hakları saklıdır.
