@@ -129,7 +129,7 @@ export default function Sidebar() {
             </div>
             {plan === 'free' && (
               <Link
-                href="/settings"
+                href="/pricing"
                 className="mt-2 flex items-center gap-1 text-[11px] font-semibold text-primary hover:underline"
               >
                 {locale === 'en' ? 'Upgrade Plan' : 'Planı Yükselt'} <ArrowUpRight size={11} />
