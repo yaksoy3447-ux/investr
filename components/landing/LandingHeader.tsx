@@ -56,7 +56,7 @@ export default function LandingHeader() {
         {/* Brand */}
           <Link href="/" className="flex items-center group">
             <Radar className="text-primary mr-2" strokeWidth={2.5} size={28} />
-            <span className="text-xl font-bold text-foreground transition-opacity tracking-tight">
+            <span className="text-xl font-bold text-white transition-opacity tracking-tight">
               GetInvestr
             </span>
           </Link>
