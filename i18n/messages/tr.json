@@ -1,0 +1,663 @@
+{
+  "common": {
+    "appName": "Investr",
+    "login": "Giriş Yap",
+    "register": "Kayıt Ol",
+    "logout": "Çıkış Yap",
+    "save": "Kaydet",
+    "cancel": "İptal",
+    "delete": "Sil",
+    "edit": "Düzenle",
+    "search": "Ara...",
+    "loading": "Yükleniyor...",
+    "noResults": "Sonuç bulunamadı",
+    "viewAll": "Tümünü Gör",
+    "comingSoon": "Çok Yakında",
+    "upgrade": "Planını Yükselt",
+    "back": "Geri",
+    "notifications": "Bildirimler",
+    "noNotifications": "Yeni bildiriminiz yok."
+  },
+  "nav": {
+    "investors": "Yatırımcılar",
+    "crm": "CRM",
+    "outreach": "Email Gönder",
+    "inbox": "Gelen Kutusu",
+    "settings": "Ayarlar",
+    "blog": "Yayınlar"
+  },
+  "landing": {
+    "heroTitle": "Türkiye'nin Tüm Yatırımcılarına Tek Platformdan Ulaş",
+    "heroSubtitle": "Investr, melek yatırımcıları ve girişim sermayelerini tek bir ekranda birleştiriyor. Geleneksel arama sürecini atlayın, doğru ağa hemen ulaşın.",
+    "heroCta": "Hemen Başla — Ücretsiz Dene",
+    "socialProof": {
+      "title": "YATIRIMCILARIMIZIN BULUNDUĞU AĞLAR"
+    },
+    "howItWorks": {
+      "title": "Investr girişiminizin potansiyelini nasıl ortaya çıkarır?",
+      "subtitle": "Investr; ağınızı genişletmenize, fon aramak için harcadığınız zamandan tasarruf etmenize ve girişiminiz için o mükemmel yatırımcıyı bulmanıza yardımcı olur.",
+      "step1Title": "Kapsamlı Yatırımcı Veritabanı",
+      "step1Desc": "Binlerce potansiyel melek yatırımcı ve girişim sermayesi fonunun bulunduğu geniş veritabanımıza erişin.",
+      "step2Title": "İletişim Bilgileri ve Profiller",
+      "step2Desc": "Yatırımcıların güncel iletişim bilgilerini, email adreslerini ve geçmiş yatırım profillerini tek tıklamayla görüntüleyin.",
+      "step3Title": "Detaylı Arama ve Filtreleme",
+      "step3Desc": "Girişiminizin aşamasına, sektörüne ve aradığınız yatırım miktarına göre size en uygun yatırımcıları filtreleyin.",
+      "step4Title": "Çeşitli Yatırımcı Profilleri",
+      "step4Desc": "Platformumuz endüstrinizdeki en doğru bağlantıları bulmanız için her sektörden farklı yatırımcıları barındırır.",
+      "step5Title": "Yatırım Sürecinizi Takip Edin",
+      "step5Desc": "Entegre CRM sistemimiz ile yatırımcılarla olan etkileşimlerinizi tek bir yerden, kolayca yönetin.",
+      "step6Title": "Sürekli Güncel Veri",
+      "step6Desc": "Verilerimizin her zaman taze kalması için finansal ve insan kaynaklarımızı veritabanımızı güncellemeye adıyoruz."
+    },
+    "preview": {
+      "foundersTitle": "Girişimciler için",
+      "foundersDesc": "Ağınızı genişletin ve binlerce yatırımcıdan oluşan veritabanımızla fon aramak için harcadığınız yüzlerce saatten tasarruf edin.",
+      "businessesTitle": "İşletme Sahipleri için",
+      "businessesDesc": "Investr, işinizi geliştirmek için ihtiyaç duyduğunuz destek ve ivmeyi sağlamak için sizi doğru yatırımcılarla buluşturur.",
+      "findRightTitle": "Hayalinizi finanse edecek doğru yatırımcıyı bulun",
+      "findRightDesc": "Investr, yanlış yatırımcıları manuel olarak aramak zorunda kalmamanız için lokasyonlara, yatırım aşamalarına ve yatırımcı türlerine göre kategorize edilmiş binlerce yatırımcı içerir.",
+      "feature1": "Sektör eşleşmesi",
+      "feature2": "Aşama eşleşmesi",
+      "feature3": "Bölge eşleşmesi",
+      "mainTitle": "Investr'ın size sunabilecekleri",
+      "feature1Desc": "İşletmenizle veya vizyonunuzla eşleşen yatırımcılar",
+      "feature2Desc": "Girişiminizin aşamasını doğru yatırımcı profiliyle eşleştirin",
+      "feature3Desc": "Ülkenizde ve bölgenizde sizin için aktif yatırım arayanları bulun"
+    },
+    "pricing": {
+      "title": "Basit ve Şeffaf Fiyatlandırma",
+      "subtitle": "7 gün ücretsiz dene. Kredi kartı gerekmez.",
+      "starter": "Başlangıç",
+      "pro": "Pro",
+      "yearly": "Yıllık",
+      "perMonth": "/ay",
+      "perYear": "/yıl",
+      "popular": "En Popüler",
+      "freeTrial": "7 Gün Ücretsiz Dene",
+      "currentPlan": "Mevcut Plan"
+    },
+    "faq": {
+      "title": "Sıkça Sorulan Sorular",
+      "description": "Investr hakkında en çok merak edilen soruları sizin için yanıtladık. Platformun yeteneklerinden güvenliğe kadar her detay aşağıda.",
+      "q1": "Investr tam olarak nedir ve kimler içindir?",
+      "a1": "Investr, girişimciler ve start-up kurucuları için özel olarak tasarlanmış kapsayıcı bir yatırımcı veritabanı ve CRM platformudur. Binlerce melek yatırımcı ve girişim sermayesi fonunun yer aldığı bu platformda, girişimize en uygun yatırımcıları filtreleyebilir ve iletişim süreçlerinizi tek bir noktadan yönetebilirsiniz.",
+      "q2": "Veritabanınız ne sıklıkla güncellenmektedir?",
+      "a2": "Veritabanımız, portföy eşleşmesi alanında maksimum etkiyi yaratan Türkiye ekosistemindeki aktif yatırımcılara odaklanmıştır. Seçkin Melek Yatırımcılar (Angel), VC (Girişim Sermayesi) fonları ve ülkemizdeki kurumsal yatırım yapılarına doğrudan ulaşabilirsiniz.",
+      "q3": "Yatırımcılarla nasıl iletişime geçeceğim?",
+      "a3": "Platformumuzun kapalı kutu güvenli iletişim altyapısı sayesinde, dış e-posta trafiğiyle vakit kaybetmezsiniz. Profilini beğendiğiniz yatırımcılara CRM panomuz üzerinden anında sisteme içi mesaj / pitch yollayabilir ve size dönüş sağladıklarında iletişim bilgisi paylaşımlarıyla sürece güvenle devam edebilirsiniz.",
+      "q4": "Yıllık planlardaki 3 ay hediye avantajı nasıl işliyor?",
+      "a4": "Yıllık abonelik seçtiğinizde, 12 aylık kullanım bedeli yerine yalnızca 9 aylık ücret ödersiniz. Böylece faturanızda 3 aylık bir indirim uygulanmış olur.",
+      "q5": "Platformda hangi ülkelerden yatırımcılar var?",
+      "a5": "Investr'ın veritabanı global bir ağı kapsar. Amerika (Silikon Vadisi), Avrupa, MENA bölgesi ve Türkiye başta olmak üzere dünyanın dört bir yanından binlerce yatırımcı profiline erişim sağlayabilirsiniz.",
+      "q6": "Girişimimi yatırımcılara nasıl daha iyi sunabilirim?",
+      "a6": "Kesinlikle. Ödeme altyapımız dünya standartlarındaki Stripe güvencesi altındadır ve kredi kartı bilgileriniz hiçbir şekilde sunucularımızda saklanmamaktadır.",
+      "q7": "Kredi kartı bilgilerim güvende mi?",
+      "a7": "Kesinlikle. Ödeme altyapımız tamamen Stripe & Iyzico (bölgenize göre) güvencesi altındadır ve kredi kartı bilgileriniz hiçbir şekilde sunucularımızda saklanmamaktadır."
+    },
+    "header": {
+      "howItWorks": "Nasıl Çalışır",
+      "testimonials": "Başarı Hikayeleri",
+      "pricing": "Fiyatlandırma",
+      "login": "Giriş Yap",
+      "join": "Hemen Katıl",
+      "blog": "Yayınlar"
+    },
+    "heroBadge": "Yeni Nesil Yatırım Ağı",
+    "heroH1_1": "Saniyeler içinde",
+    "heroH1_2": "binlerce yatırımcıyla",
+    "heroH1_3": "bağlantı kurun.",
+    "heroBtn1": "Hemen Başlayın",
+    "heroBtn2": "Sistemi Keşfet",
+    "testimonialsTitle": "Investr Kullanan Kurucuların Yorumları",
+    "testimonialsSubtitle": "Investr ile hedefledikleri yatırım turlarını başarıyla kapatan girişimcilerin hikayelerine kulak verin.",
+    "footer": {
+      "ctaAlert": "Kayıt işlemini tamamlamak için bir plan seçin.",
+      "ctaAction": "Planları İncele",
+      "ctaHeading1": "Geleceğin Yatırım Ağında",
+      "ctaHeading2": "Yerinizi Alın",
+      "ctaDesc": "Investr'ın benzersiz yapay zeka ve CRM destekli ekosistemiyle girişiminizin ihtiyaç duyduğu finansmanı saniyeler içerisinde bulun.",
+      "ctaBtn1": "HEMEN BAŞLA",
+      "ctaBtn2": "Oturum Aç",
+      "desc": "Yeni nesil girişimciler ve melek yatırımcılar için tasarlanmış kapalı bağlantı ağı.",
+      "links": {
+        "platform": "Platform",
+        "platform1": "Nasıl Çalışır",
+        "platform2": "Yatırımcı Ağı",
+        "platform3": "Planlar",
+        "company": "Şirket",
+        "company1": "Hakkımızda",
+        "company2": "İletişim",
+        "company3": "Kariyer",
+        "legal": "Yasal",
+        "legal1": "Kullanım Koşulları",
+        "legal2": "Gizlilik Sözleşmesi",
+        "legal3": "Çerez Politikası",
+        "company4": "Yayınlar"
+      },
+      "rights": "Tüm hakları saklıdır.",
+      "built": "Tutkuyla geliştirildi"
+    },
+    "pricingPage": {
+      "badge": "Kayıt işlemini tamamlamak için aşağıdaki planlardan birini seçin.",
+      "title1": "Dakikalar içinde en iyi yatırımcılarla bağlantı kurun ve",
+      "title2": "hemen bugün turunuzu tamamlayın.",
+      "subtitle": "Gizli ücret yok, sürpriz yok. Yıllık ödemelerde 3 ay bizden hediye.",
+      "monthly": "Aylık",
+      "yearly": "Yıllık",
+      "yearlyBadge": "3 Ay Hediye",
+      "tiers": {
+        "free": "Ücretsiz",
+        "freeDesc": "Platformu keşfedin, yatırımcıları tanıyın.",
+        "startup": "Başlangıç",
+        "startupDesc": "Yatırım turuna yeni başlayan erken aşama girişimler için.",
+        "pro": "Büyüme",
+        "proDesc": "Aktif olarak büyüme fonu arayan profesyonel start-up'lar için.",
+        "enterprise": "Premium",
+        "enterpriseDesc": "Tüm ekibinizin kullanabileceği, limitsiz yatırımcı erişimi arayanlar için.",
+        "features": {
+          "investorDatabase": "Global Yatırımcı Veritabanına Erişim",
+          "contactInfo": "Güncel Email ve LinkedIn İletişim Bilgileri",
+          "basicFilters": "Sektör ve Aşama (Stage) Filtreleme",
+          "crm": "Entegre Gelişmiş CRM Panosu",
+          "outreachAi": "Yapay Zeka Destekli Mail Şablonları (Outreach AI)",
+          "prioritySupport": "7/24 Öncelikli Müşteri Desteği",
+          "teamMembers": "Çoklu Ekip Üyesi Kullanımı (Sınırsız)"
+        }
+      },
+      "billedYearly": "Yıllık faturalandırılır",
+      "choosePlan": "Planı Seç",
+      "startFree": "Ücretsiz Başla",
+      "mostPopular": "En Popüler",
+      "perMonth": "/ ay",
+      "perYear": "/ ay (Yıllık Plan)",
+      "planFeatures": {
+        "free": [
+          { "name": "Yatırımcı veritabanına erişim (isimler gizli)", "included": true },
+          { "name": "5 yatırımcıya kadar CRM kaydı", "included": true },
+          { "name": "Temel filtreleme", "included": true },
+          { "name": "Kapalı kutu yatırımcı iletişimi", "included": false },
+          { "name": "Mesaj kredisi", "included": false },
+          { "name": "AI Pitch Oluşturucu", "included": false },
+          { "name": "Öncelikli canlı destek", "included": false }
+        ],
+        "starter": [
+          { "name": "Nitelikli yatırımcıya erişim", "included": true },
+          { "name": "Kapalı kutu yatırımcı iletişimi", "included": true },
+          { "name": "Sınırsız arama", "included": true },
+          { "name": "Ayda 100 mesaj kredisi", "included": true },
+          { "name": "Detaylı filtreleme", "included": true },
+          { "name": "100 yatırımcıya kadar CRM kaydı", "included": true },
+          { "name": "Sınırsız email takibi", "included": true },
+          { "name": "Aylık pipeline yönetimi", "included": true },
+          { "name": "AI Pitch Oluşturucu", "included": false },
+          { "name": "Toplu seçim", "included": false },
+          { "name": "Öncelikli canlı destek", "included": false }
+        ],
+        "growth": [
+          { "name": "Nitelikli yatırımcıya erişim", "included": true },
+          { "name": "Kapalı kutu yatırımcı iletişimi", "included": true },
+          { "name": "Sınırsız arama", "included": true },
+          { "name": "Ayda 500 mesaj kredisi", "included": true },
+          { "name": "Detaylı filtreleme", "included": true },
+          { "name": "AI Pitch Oluşturucu", "included": true },
+          { "name": "500 yatırımcıya kadar CRM kaydı", "included": true },
+          { "name": "Sınırsız email takibi", "included": true },
+          { "name": "Aylık pipeline yönetimi", "included": true },
+          { "name": "25 toplu seçim", "included": true },
+          { "name": "Öncelikli canlı destek", "included": false }
+        ],
+        "premium": [
+          { "name": "Nitelikli yatırımcıya erişim", "included": true },
+          { "name": "Kapalı kutu yatırımcı iletişimi", "included": true },
+          { "name": "Sınırsız arama", "included": true },
+          { "name": "Ayda 1000 mesaj kredisi", "included": true },
+          { "name": "Detaylı filtreleme", "included": true },
+          { "name": "AI Pitch Oluşturucu", "included": true },
+          { "name": "1000 yatırımcıya kadar CRM kaydı", "included": true },
+          { "name": "Sınırsız email takibi", "included": true },
+          { "name": "Aylık pipeline yönetimi", "included": true },
+          { "name": "75 toplu seçim", "included": true },
+          { "name": "Öncelikli canlı destek", "included": true }
+        ]
+      },
+      "faqTitle": "Sıkça Sorulan Sorular"
+    },
+    "heroCards": {
+      "matchAnalysis": "Eşleşme Analizi",
+      "highMatch": "Yüksek Uyum",
+      "activeInvestors": "Aktif Yatırımcı",
+      "stageMatch": "Aşama Eşleşmesi",
+      "seriesA": "Seri A Portföyü",
+      "outreachAi": "Pitch Hazır",
+      "outreachLabel": "Yapay Zeka (AI)"
+    },
+    "detailedPricing": {
+      "title": "Özellikler",
+      "free": "Ücretsiz",
+      "starter": "Başlangıç",
+      "growth": "Büyüme",
+      "premium": "Premium",
+      "unlimited": "Sınırsız",
+      "db": {
+        "category": "Yatırımcı Veritabanı",
+        "f1Name": "Nitelikli Yatırımcılar",
+        "f1Sub": "Angel, VC ve Kurumsallara Erişim",
+        "f2Name": "Sistem İçi Güvenli Mesajlaşma",
+        "f2Sub": "İletişim kopmadan platform üzerinden doğrudan görüşme",
+        "f3Name": "Sınırsız Arama",
+        "f3Sub": "Maksimum arama limiti yok",
+        "f4Name": "Sistem İçi Aylık Mesaj Kredisi",
+        "f4Sub": "Aylık gönderilebilecek maksimum doğrudan mesaj sayısı",
+        "f5Name": "Detaylı Filtreleme",
+        "f5Sub": "Sektör, meblağ veya lokasyona göre",
+        "f6Name": "Yapay Zeka (AI) Pitch Oluşturucu",
+        "f6Sub": "İş modelinize özel AI ile email yazımı",
+        "f7Name": "Aylık Pipeline Yönetimi",
+        "f7Sub": "Yatırım turu süreçlerini evrelere ayırma",
+        "f8Name": "Toplu Seçim",
+        "f8Sub": "Birden fazla yatırımcıyı listeye ekleme",
+        "f8V1": "25 kerede",
+        "f8V2": "75 kerede",
+        "f9Name": "Öncelikli Canlı Destek (Live Chat)",
+        "f9Sub": "Uygulama içi destek ekibiyle anında mesajlaşma"
+      },
+      "email": {
+        "category": "Email Gönderim Paneli",
+        "f1Name": "Akıllı (AI) Mesaj Otomasyonu",
+        "f1Sub": "AI yardımıyla CRM listenizdeki yatırımcılara otomatik pitch (sunum) mesajı atma",
+        "f2Name": "Kapalı Kutu Yatırımcı İletişimi",
+        "f2Sub": "Yatırımcı izni olmadan kişisel verilerin korunması",
+        "f3Name": "Okunma / Tıklama",
+        "f3Sub": "Detaylı teslimat metrikleri",
+        "f4Name": "Yapay Zeka (AI) Portföy Uyumu",
+        "f4Sub": "Girişiminiz ile yatırımcının potansiyel eşleşme skoru analizi"
+      },
+      "crm": {
+        "category": "Girişimci CRM Panosu",
+        "f1Name": "Listenizdeki Yatırımcılar",
+        "f1Sub": "Her aşamaya eklenebilecek max yatırımcı",
+        "f2Name": "Satış Hattı",
+        "f2Sub": "CRM içerisinde oluşturulabilen özelleştirilmiş kategori dizilimi"
+      }
+    },
+    "testimonials": {
+      "title": "Girişimcilerin Başarı Hikayeleri",
+      "stories": [
+        {
+          "text": "Investr sayesinde aylarca süren yatırım arayışımız sadece birkaç haftaya indi. Hız inanılmazdı.",
+          "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=100&auto=format&fit=crop",
+          "name": "Ceren Yılmaz",
+          "role": "Kurucu Ortak, Sağlık Teknolojileri"
+        },
+        {
+          "text": "Yatırımcı bulduğum günden beri vizyonumu daha da büyütmeme yardımcı oldular. Buradan ulaştığım yatırımcılar çok değerli.",
+          "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=100&auto=format&fit=crop",
+          "name": "Ahmet Doğan",
+          "role": "CEO, FinTech Start"
+        },
+        {
+          "text": "Melek yatırım ağlarına tek tek mail atmak yerine, doğru filtrelerle nokta atışı yaptık.",
+          "image": "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=100&auto=format&fit=crop",
+          "name": "Selin Karahan",
+          "role": "Cofounder"
+        },
+        {
+          "text": "Buradaki veritabanı harika. Series A öncesi ihtiyacımız olan nakiti tam zamanında, doğru kişiden bulduk.",
+          "image": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=100&auto=format&fit=crop",
+          "name": "Onur Tekin",
+          "role": "CEO & Kurucu"
+        },
+        {
+          "text": "Platform, yatırım sürecindeki verimsizliği tamamen ortadan kaldırıyor. Zaman tasarrufu paha biçilemez.",
+          "image": "https://images.unsplash.com/photo-1598550874175-4d0ef436c909?q=80&w=100&auto=format&fit=crop",
+          "name": "Ayşe Çelik",
+          "role": "Proje Yöneticisi"
+        },
+        {
+          "text": "Sadece veritabanı değil, CRM yapısıyla kiminle hangi aşamada olduğumuzu inanılmaz netleştirdi.",
+          "image": "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?q=80&w=100&auto=format&fit=crop",
+          "name": "Merve Demir",
+          "role": "Yatırım Operasyonları"
+        },
+        {
+          "text": "Eskiden Excel üzerinde takip ederdik her şeyi. Şimdi sadece 'Sürükle bırak'.",
+          "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=100&auto=format&fit=crop",
+          "name": "Caner Arslan",
+          "role": "Kurucu"
+        },
+        {
+          "text": "Müşteri panosu ve yatırımcı havuzu tam olarak Startupların dertlerine reçete gibi verilmiş.",
+          "image": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=100&auto=format&fit=crop",
+          "name": "Deniz Şahin",
+          "role": "Pazarlama Direktörü"
+        },
+        {
+          "text": "Uluslararası yatırımcıları kendi ülkemizden buralarda bulabılmek en büyük avantajımız oldu.",
+          "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=100&auto=format&fit=crop",
+          "name": "Emre Can",
+          "role": "Kurucu Ortak"
+        }
+      ],
+      "badge": "BAŞARI HİKAYELERİ"
+    },
+    "pricingTable": {
+      "title": "Tüm Özellikleri Karşılaştırın",
+      "subtitle": "Kapsamlı özellik listesi sayesinde hangi planın size uygun olduğunu kolayca belirleyin.",
+      "categories": {
+        "database": "YATIRIMCI VERİTABANI",
+        "outreach": "YAPAY ZEKA (Aİ) & OUTREACH",
+        "crm": "KURUCU CRM PANOSU"
+      },
+      "rows": [
+        {
+          "name": "Aktif Yatırımcı Erişimi",
+          "description": "Melek yatırımcı, VC ve Kurumsal firmalar",
+          "starter": "✔",
+          "growth": "✔",
+          "premium": "✔"
+        },
+        {
+          "name": "Sistem İçi Güvenli Görüşme",
+          "description": "Yatırımcıya özel mesaj isteği atın (E-posta gizli kalır)",
+          "starter": "✔",
+          "growth": "✔",
+          "premium": "✔"
+        },
+        {
+          "name": "Detaylı Sektör & Tutar Filtreleme",
+          "description": "Portföy uyumu ve bütçeye göre listeleme",
+          "starter": "✔",
+          "growth": "✔",
+          "premium": "✔"
+        },
+        {
+          "name": "Yapay Zeka (AI) Pitch Oluşturucu",
+          "description": "İş modelinize özel AI ile email yazımı",
+          "starter": "Yok",
+          "growth": "✔",
+          "premium": "✔"
+        },
+        {
+          "name": "Toplu Hedefleme (Bulk Add)",
+          "description": "Yatırımcıları CRM listelerine tek seferde ekleme",
+          "starter": "Yok",
+          "growth": "25 yatırımcı",
+          "premium": "75 yatırımcı"
+        },
+        {
+          "name": "Sistem İçi Yapay Zeka (AI) Mesaj Atma",
+          "description": "Uygulama dışına çıkmadan yatırımcılara otomatik pitch yollama",
+          "starter": "✔",
+          "growth": "✔",
+          "premium": "✔"
+        },
+        {
+          "name": "Özelleştirilebilir Pipeline Aşamaları",
+          "description": "Sürükle-bırak Kanban panosu",
+          "starter": "Sınırsız",
+          "growth": "Sınırsız",
+          "premium": "Sınırsız"
+        },
+        {
+          "name": "Aylık Mesajlaşma Kotası",
+          "description": "Tüm seviyeler için aylık sistem içi iletişim adedi",
+          "starter": "100",
+          "growth": "500",
+          "premium": "1000"
+        },
+        {
+          "name": "Öncelikli Canlı Destek (Live Chat)",
+          "description": "Destek ekibiyle anında özel sohbet baloncuğu",
+          "starter": "Yok",
+          "growth": "Yok",
+          "premium": "✔"
+        }
+      ]
+    },
+    "blog": {
+      "title": "Girişim ve Yatırım Dünyasından Haberler",
+      "subtitle": "Türkiye ekosistemindeki en güncel tohum yatırım haberleri, analizler ve kurucu rehberleri.",
+      "readTime": "Okuma süresi",
+      "min": "dakika",
+      "posts": [
+        {
+          "id": 1,
+          "title": "Türkiye'de 2024 Yılının En Çok Yatırım Alan 10 Fintech Girişimi",
+          "author": "Investr Ekibi",
+          "date": "15 Haziran 2024",
+          "readMinutes": 5,
+          "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
+          "category": "Fintech Özel"
+        },
+        {
+          "id": 2,
+          "title": "Tohum (Seed) Öncesi Yatırım Turuna Çıkarken Dikkat Edilmesi Gereken Kritik Metrikler",
+          "author": "Yasin AKSOY",
+          "date": "10 Haziran 2024",
+          "readMinutes": 7,
+          "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
+          "category": "Kurucu Rehberi"
+        },
+        {
+          "id": 3,
+          "title": "Sağlık Teknolojileri (HealthTech) Sektörüne İlgi Duyan En Aktif Melek Yatırımcılar",
+          "author": "Investr Ekibi",
+          "date": "05 Haziran 2024",
+          "readMinutes": 4,
+          "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=800",
+          "category": "Sektör Analizi"
+        }
+      ],
+      "lastUpdated": "Son güncelleme:"
+    }
+  },
+  "auth": {
+    "welcomeBack": "Tekrar Hoş Geldiniz",
+    "registerTitle": "Hesap Oluştur",
+    "googleLogin": "Google ile devam et",
+    "orContinueWith": "veya email ile devam et",
+    "emailLabel": "E-posta",
+    "email": "E-posta",
+    "emailPlaceholder": "ornek@sirket.com",
+    "passwordLabel": "Şifre",
+    "passwordPlaceholder": "••••••••",
+    "forgot": "Şifrenizi mi unuttunuz?",
+    "continue": "Devam Et",
+    "noAccountLabel": "Hesabınız yok mu?",
+    "noAccountLink": "Hemen oluşturun",
+    "socialProofText": "Binlerce yatırımcıyla bağlantı kurmak için",
+    "f1": "Nitelikli yatırımcıya erişim",
+    "f2": "Platform içi güvenli mesajlaşma",
+    "f3": "CRM ile takiplerinizi hızlandırın",
+    "createAccount": "Girişimci Hesabınızı Oluşturun",
+    "fullName": "Ad Soyad",
+    "company": "Şirket adı",
+    "companyName": "Şirket Adı",
+    "cpasswordLabel": "Şifre Tekrar",
+    "cpasswordPlaceholder": "••••••••",
+    "freeTrial": "Ücretsiz kaydol ve hemen keşfet.",
+    "alreadyAccount": "Zaten hesabınız var mı?",
+    "loginLink": "Giriş yap",
+    "terms1": "Kaydolduğunuzda",
+    "terms2": "Hizmet Şartları",
+    "terms3": "nı kabul etmiş sayılırsınız.",
+    "passMismatch": "Şifreler eşleşmiyor"
+  },
+  "investors": {
+    "title": "Yatırımcı Veritabanı",
+    "subtitle": "Türkiye'nin en kapsamlı yatırımcı veritabanını keşfet",
+    "filters": {
+      "type": "Yatırımcı Tipi",
+      "sector": "Sektör",
+      "stage": "Yatırım Aşaması",
+      "location": "Lokasyon",
+      "checkSize": "Check Size",
+      "verified": "Doğrulanmış Email",
+      "clearAll": "Filtreleri Temizle"
+    },
+    "types": {
+      "angel": "Melek Yatırımcı",
+      "vc": "Girişim Sermayesi (VC)",
+      "family_office": "Aile Ofisi",
+      "pe": "Özel Sermaye"
+    },
+    "stages": {
+      "pre_seed": "Pre-Seed",
+      "seed": "Tohum",
+      "series_a": "Seri A",
+      "series_b": "Seri B"
+    },
+    "card": {
+      "addToList": "Listeye Ekle",
+      "sendEmail": "Email Gönder",
+      "verified": "Doğrulanmış",
+      "portfolio": "Portföy",
+      "checkSize": "Check Size"
+    }
+  },
+  "crm": {
+    "title": "Fundraising CRM",
+    "subtitle": "Yatırımcı süreçlerini takip et",
+    "stages": {
+      "new": "Yeni",
+      "contacted": "İletişime Geçildi",
+      "replied": "Yanıt Verdi",
+      "meeting": "Görüşme",
+      "closed": "Kapandı"
+    },
+    "addNote": "Not Ekle",
+    "lastContact": "Son İletişim",
+    "emptyState": "Henüz yatırımcı eklemediniz. Yatırımcı veritabanından birini listeye ekleyerek başlayın!"
+  },
+  "settings": {
+    "title": "Profil Ayarları",
+    "subtitle": "Hesap bilgilerini ve tercihlerini yönet",
+    "profile": "Profil Bilgileri",
+    "subscription": "Abonelik",
+    "language": "Dil Tercihi",
+    "deleteAccount": "Hesabı Sil",
+    "deleteWarning": "Bu işlem geri alınamaz. Tüm verileriniz kalıcı olarak silinir."
+  },
+  "outreach": {
+    "title": "Email Gönder",
+    "subtitle": "Yatırımcılara platform üzerinden email gönder"
+  },
+  "inbox": {
+    "title": "Gelen Kutusu",
+    "subtitle": "Yatırımcılardan gelen yanıtları takip et"
+  },
+  "dashboard": {
+    "sidebar": {
+      "investors": "Yatırımcılar",
+      "crm": "CRM",
+      "outreach": "Email Outreach",
+      "inbox": "Gelen Kutusu",
+      "settings": "Ayarlar",
+      "collapse": "Kapat",
+      "expand": "Aç",
+      "profile": "Profilim",
+      "logout": "Çıkış Yap"
+    },
+    "navbar": {
+      "search": "Arama yapın...",
+      "notifications": "Bildirimler",
+      "noNewNotifications": "Yeni bildirim yok."
+    },
+    "investors": {
+      "title": "Yatırımcı Veritabanı",
+      "subtitle": "Dünya çapında binlerce yatırımcıyı keşfedin",
+      "searchPlaceholder": "İsim veya şirket ara...",
+      "investorType": "Yatırımcı Tipi",
+      "allTypes": "Tüm Tipler",
+      "angel": "Melek Yatırımcı",
+      "vc": "VC",
+      "pe": "PE",
+      "familyOffice": "Family Office",
+      "industry": "Sektör",
+      "allIndustries": "Tüm Sektörler",
+      "fintech": "FinTech",
+      "healthtech": "HealthTech",
+      "ecommerce": "E-ticaret",
+      "ai": "Yapay Zeka",
+      "ticketSize": "Yatırım Miktarı",
+      "allSizes": "Tümü",
+      "addToCrm": "CRM'e Ekle",
+      "added": "Eklendi",
+      "noResults": "Aramanızla eşleşen yatırımcı bulunamadı.",
+      "investorCount": "yatırımcı bulundu"
+    },
+    "crm": {
+      "title": "Kanban Pano",
+      "subtitle": "Yatırımcılarla olan iletişim süreçlerinizi yönetin",
+      "addList": "+ Liste Ekle",
+      "emptyDescription": "Tüm yatırımcı süreçlerinizi tek ekrandan, sürükle-bırak yöntemiyle yönetin.",
+      "stages": {
+        "new": "Yeni",
+        "contacted": "İletişime Geçildi",
+        "meeting": "Toplantı Planlandı",
+        "due_diligence": "Due Diligence",
+        "negotiation": "Pazarlık",
+        "closed_won": "Yatırım Alındı",
+        "closed_lost": "Reddedildi"
+      }
+    },
+    "outreach": {
+      "title": "Email Gönderimi",
+      "subtitle": "Yatırımcılara kişiselleştirilmiş emailler gönderin",
+      "investorLabel": "Yatırımcı",
+      "selectInvestor": "Bir yatırımcı seçin...",
+      "subjectLabel": "Konu",
+      "subjectPlaceholder": "Email konusu...",
+      "contentLabel": "Email İçeriği",
+      "contentPlaceholder": "Sayın [İsim],\n\nGirişimimiz hakkında...",
+      "aiGenerate": "AI ile Oluştur",
+      "generating": "Oluşturuluyor...",
+      "sendEmail": "Email Gönder",
+      "sending": "Gönderiliyor...",
+      "historyTitle": "Gönderim Geçmişi",
+      "historyEmpty": "Henüz bir email gönderimi bulunmamaktadır."
+    },
+    "inbox": {
+      "title": "Gelen Kutusu",
+      "subtitle": "Yatırımcılarla olan mesajlaşmalarınız",
+      "all": "Tümü",
+      "unread": "Okunmamış",
+      "replied": "Yanıtlandı",
+      "archived": "Arşiv",
+      "noMessages": "Henüz mesaj bulunmuyor.",
+      "replyPlaceholder": "Yanıtınızı yazın...",
+      "send": "Gönder"
+    },
+    "settings": {
+      "title": "Profil Ayarları",
+      "subtitle": "Hesap ve tercihlerinizi yönetin",
+      "profileTitle": "Profil",
+      "notificationsTitle": "Bildirimler",
+      "securityTitle": "Güvenlik",
+      "profilePicture": "Profil Fotoğrafı",
+      "change": "Değiştir",
+      "fullName": "Ad Soyad",
+      "company": "Şirket Adı",
+      "email": "Email",
+      "website": "Website",
+      "about": "Hakkında",
+      "aboutPlaceholder": "Girişiminiz hakkında kısa bir açıklama...",
+      "save": "Kaydet",
+      "saved": "Kaydedildi"
+    }
+  },
+  "pages": {
+    "aboutTitle": "Hakkımızda",
+    "aboutContent": "Investr, girişimciler ile melek yatırımcılar, risk sermayeleri ve kurumsal yatırımcılar arasında köprü kurmayı hedefleyen yenilikçi bir finansal teknoloji platformudur.\n\nAmacımız, aylarca süren yatırım arayışı süreçlerini minimize ederek, doğru eşleşmeleri en hızlı ve en güvenilir yoldan sağlamaktır. Teknolojimizi tutkuyla geliştiriyor, girişim ekosistemini güçlendirmeye devam ediyoruz.",
+    "contactTitle": "İletişim",
+    "contactContent": "Bizimle iletişime geçmekten çekinmeyin! Herhangi bir sorunuz veya öneriniz için bize tek bir tıkla aşağıdaki adresten ulaşabilirsiniz:\n\nEmail: info@investr.ai\n\nEkibimiz sizlere en kısa sürede dönüş yapacaktır.",
+    "careersTitle": "Kariyer",
+    "careersContent": "Açık bir kariyer vizyonu ve inovasyon tutkusuyla çalışıyoruz.\n\nŞu anda aktif bir açık pozisyonumuz bulunmamaktadır. Ancak ekibimize dahil olmak veya gelecekteki fırsatlar için değerlendirilmek isterseniz özgeçmişinizi kariyer@investr.ai adresine gönderebilirsiniz. Sizi tanımaktan mutluluk duyarız!",
+    "termsTitle": "Kullanım Koşulları",
+    "termsContent": "Bu platformu kullanarak, Investr'ın tüm kurallarını okumuş ve kabul etmiş sayılırsınız.\n\nSisteme kayıtlı kullanıcılarımız doğru bilgi verdiklerini taahhüt ederler. İçerik doğrulukları ve sağlanan materyaller kendi sorumluluğunuzdadır. Kullanım koşulları her zaman değiştirilebilir olup, güncel metin her daim bu sayfadan duyurulacaktır.",
+    "privacyTitle": "Gizlilik Sözleşmesi",
+    "privacyContent": "Gizliliğinize değer veriyoruz.\n\nKişisel verileriniz ve hesabınız yüksek güvenlik standartları altında şifrelenmektedir. Bilgileriniz 3. şahıslar veya izinsiz şirketlerle hiçbir şekilde paylaşılmaz.",
+    "cookieTitle": "Çerez Politikası",
+    "cookieContent": "Sitemizde daha iyi bir kullanıcı deneyimi sunmak amacıyla çerezler kullanılmaktadır.\n\nKullanılan çerezler genel site analizi, kişiselleştirme fonksiyonları ve güvenlik parametreleri hedeflenerek toplanmaktadır. Siteyi ziyaret etmeye devam etmeniz durumunda bu çerezleri onaylamış sayılırsınız."
+  }
+}

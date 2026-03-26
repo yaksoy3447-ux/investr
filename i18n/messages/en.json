@@ -1,0 +1,664 @@
+{
+  "common": {
+    "appName": "Investr",
+    "login": "Sign In",
+    "register": "Sign Up",
+    "logout": "Log Out",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "search": "Search...",
+    "loading": "Loading...",
+    "noResults": "No results found",
+    "viewAll": "View All",
+    "comingSoon": "Coming Soon",
+    "upgrade": "Upgrade Plan",
+    "back": "Back",
+    "notifications": "Notifications",
+    "noNotifications": "No new notifications."
+  },
+  "nav": {
+    "investors": "Investors",
+    "crm": "CRM",
+    "outreach": "Email Outreach",
+    "inbox": "Inbox",
+    "settings": "Settings",
+    "blog": "Publications",
+    "collapse": "Collapse"
+  },
+  "landing": {
+    "heroTitle": "Access All Investors in Turkey From One Platform",
+    "heroSubtitle": "Investr brings angel investors and venture capital together in one seamless dashboard. Skip the traditional search and reach the right network.",
+    "heroCta": "Get Started — Free Trial",
+    "socialProof": {
+      "title": "NETWORKS OUR INVESTORS BELONG TO"
+    },
+    "howItWorks": {
+      "title": "How does Investr unlock your startup's potential?",
+      "subtitle": "Investr helps you expand your network, save time spent searching for funding, and find that perfect investor for your startup.",
+      "step1Title": "Comprehensive Investor Database",
+      "step1Desc": "Access our vast database containing thousands of potential angel investors and venture capital funds.",
+      "step2Title": "Contact Info and Profiles",
+      "step2Desc": "View investors' up-to-date contact info, email addresses, and past investment profiles with a single click.",
+      "step3Title": "Detailed Search and Filtering",
+      "step3Desc": "Filter the most suitable investors for you based on your startup's stage, industry, and the investment amount you seek.",
+      "step4Title": "Diverse Investor Profiles",
+      "step4Desc": "Our platform hosts different investors from every sector to help you find the right connections in your industry.",
+      "step5Title": "Track Your Investment Process",
+      "step5Desc": "Easily manage your interactions with investors from a single place using our integrated CRM system.",
+      "step6Title": "Always Up-to-Date Data",
+      "step6Desc": "We dedicate our financial and human resources to updating our database so our data always stays fresh."
+    },
+    "preview": {
+      "foundersTitle": "For Entrepreneurs",
+      "foundersDesc": "Expand your network and save hundreds of hours spent looking for funding with our database of thousands of investors.",
+      "businessesTitle": "For Business Owners",
+      "businessesDesc": "Investr connects you with the right investors to provide the support and momentum you need to grow your business.",
+      "findRightTitle": "Find the right investor to fund your dream",
+      "findRightDesc": "Investr features thousands of investors categorized by locations, investment stages, and investor types so you don't have to manually search for the wrong investors.",
+      "feature1": "Industry matching",
+      "feature2": "Stage matching",
+      "feature3": "Region matching",
+      "mainTitle": "What Investr can offer you",
+      "feature1Desc": "Investors whose vision matches your business",
+      "feature2Desc": "Match your startup stage with the right investor profile",
+      "feature3Desc": "Find active investors looking for opportunities in your region"
+    },
+    "pricing": {
+      "title": "Simple and Transparent Pricing",
+      "subtitle": "7-day free trial. No credit card required.",
+      "starter": "Starter",
+      "pro": "Pro",
+      "yearly": "Yearly",
+      "perMonth": "/mo",
+      "perYear": "/yr",
+      "popular": "Most Popular",
+      "freeTrial": "Start 7-Day Free Trial",
+      "currentPlan": "Current Plan"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "description": "We've answered the most common questions about Investr for you. Everything from platform capabilities to security is detailed below.",
+      "q1": "What exactly is Investr and who is it for?",
+      "a1": "Investr is a comprehensive investor database and CRM platform exclusively designed for entrepreneurs and start-up founders. With thousands of angel investors and VC funds, you can securely filter the best matches for your startup and manage all your communications from a single hub.",
+      "q2": "How often is your database updated?",
+      "a2": "Our database is entirely focused on investors active in the Turkish market. You can find leading local angel investors, Venture Capital (VC) funds, and corporate investors operating within Turkey, allowing you to establish direct connections within the domestic startup ecosystem securely.",
+      "q3": "How do I contact the investors?",
+      "a3": "Thanks to our closed-box secure communication infrastructure, you do not waste time with external email traffic. You can instantly send an in-app message / pitch to investors from your CRM dashboard, and safely proceed exchanging full contact details once they respond positively.",
+      "q4": "How does the '3 months free' on yearly plans work?",
+      "a4": "When you choose a yearly subscription, you pay for only 9 months of usage instead of 12. This effectively applies a 3-month discount to your billing total.",
+      "q5": "Which regions are covered by the investors on the platform?",
+      "a5": "Investr's database covers a global network. You can access thousands of investor profiles from the US (Silicon Valley), Europe, the MENA region, and Turkey.",
+      "q6": "How can I pitch my startup better?",
+      "a6": "Absolutely. Our payment infrastructure is strictly secured by globally recognized Stripe standards, and your raw credit card data is never processed or retained locally on our servers.",
+      "q7": "Is my credit card information secure?",
+      "a7": "Absolutely. Our payment infrastructure is entirely secured by Stripe & Iyzico (depending on your region), and your credit card information is never stored on our servers."
+    },
+    "header": {
+      "howItWorks": "How it Works",
+      "testimonials": "Testimonials",
+      "pricing": "Pricing",
+      "login": "Sign In",
+      "join": "Join Now",
+      "blog": "Publications"
+    },
+    "heroBadge": "Next-Gen Investment Network",
+    "heroH1_1": "Connect with",
+    "heroH1_2": "thousands of investors",
+    "heroH1_3": "in seconds.",
+    "heroBtn1": "Get Started",
+    "heroBtn2": "Discover Platform",
+    "testimonialsTitle": "Feedback from Founders using Investr",
+    "testimonialsSubtitle": "Listen to the stories of entrepreneurs who successfully closed their target investment rounds with Investr.",
+    "footer": {
+      "ctaAlert": "Select a plan to complete your registration.",
+      "ctaAction": "View Plans",
+      "ctaHeading1": "Take your place in",
+      "ctaHeading2": "the Future Investment Network",
+      "ctaDesc": "Find the funding your startup needs in seconds with Investr's unique AI and CRM-supported ecosystem.",
+      "ctaBtn1": "GET STARTED",
+      "ctaBtn2": "Sign In",
+      "desc": "A closed network designed for next-generation entrepreneurs and angel investors.",
+      "links": {
+        "platform": "Platform",
+        "platform1": "How It Works",
+        "platform2": "Investor Network",
+        "platform3": "Plans",
+        "company": "Company",
+        "company1": "About Us",
+        "company2": "Contact",
+        "company3": "Careers",
+        "legal": "Legal",
+        "legal1": "Terms of Use",
+        "legal2": "Privacy Agreement",
+        "legal3": "Cookie Policy",
+        "company4": "Publications"
+      },
+      "rights": "All rights reserved.",
+      "built": "Built with passion"
+    },
+    "pricingPage": {
+      "badge": "Select one of the plans below to complete your registration.",
+      "title1": "Connect with the best investors in minutes and",
+      "title2": "close your round today.",
+      "subtitle": "No hidden fees, no surprises. Get 3 months free with yearly billing.",
+      "monthly": "Monthly",
+      "yearly": "Yearly",
+      "yearlyBadge": "3 Months Free",
+      "tiers": {
+        "free": "Free",
+        "freeDesc": "Explore the platform, discover investors.",
+        "startup": "Starter",
+        "startupDesc": "For early-stage startups just beginning their funding rounds.",
+        "pro": "Pro",
+        "proDesc": "For professional startups actively securing growth capital.",
+        "enterprise": "Enterprise",
+        "enterpriseDesc": "For scaling teams seeking unlimited access to our entire investor network.",
+        "features": {
+          "investorDatabase": "Access to Global Investor Database",
+          "contactInfo": "Up-to-date Email & LinkedIn Contact Info",
+          "basicFilters": "Industry and Stage Filtering",
+          "crm": "Integrated Advanced CRM Hub",
+          "outreachAi": "AI-Powered Direct Email Templates (Outreach AI)",
+          "prioritySupport": "24/7 Priority Customer Support",
+          "teamMembers": "Multi-user Team Access (Unlimited)"
+        }
+      },
+      "billedYearly": "Billed annually",
+      "choosePlan": "Choose Plan",
+      "mostPopular": "Most Popular",
+      "perMonth": "/ mo",
+      "perYear": "/ mo (Yearly Plan)",
+      "startFree": "Start Free",
+      "planFeatures": {
+        "free": [
+          { "name": "Access to investor database (names hidden)", "included": true },
+          { "name": "CRM records for up to 5 investors", "included": true },
+          { "name": "Basic filtering", "included": true },
+          { "name": "Closed-box investor messaging", "included": false },
+          { "name": "Message credits", "included": false },
+          { "name": "AI Pitch Generator", "included": false },
+          { "name": "Priority live support", "included": false }
+        ],
+        "starter": [
+          { "name": "Curated investor access", "included": true },
+          { "name": "Closed-box investor messaging", "included": true },
+          { "name": "Unlimited search", "included": true },
+          { "name": "100 message credits/month", "included": true },
+          { "name": "Advanced filtering", "included": true },
+          { "name": "CRM records for up to 100 investors", "included": true },
+          { "name": "Unlimited email tracking", "included": true },
+          { "name": "Monthly pipeline management", "included": true },
+          { "name": "AI Pitch Generator", "included": false },
+          { "name": "Bulk selection", "included": false },
+          { "name": "Priority live support", "included": false }
+        ],
+        "growth": [
+          { "name": "Curated investor access", "included": true },
+          { "name": "Closed-box investor messaging", "included": true },
+          { "name": "Unlimited search", "included": true },
+          { "name": "500 message credits/month", "included": true },
+          { "name": "Advanced filtering", "included": true },
+          { "name": "AI Pitch Generator", "included": true },
+          { "name": "CRM records for up to 500 investors", "included": true },
+          { "name": "Unlimited email tracking", "included": true },
+          { "name": "Monthly pipeline management", "included": true },
+          { "name": "25 bulk selections", "included": true },
+          { "name": "Priority live support", "included": false }
+        ],
+        "premium": [
+          { "name": "Curated investor access", "included": true },
+          { "name": "Closed-box investor messaging", "included": true },
+          { "name": "Unlimited search", "included": true },
+          { "name": "1000 message credits/month", "included": true },
+          { "name": "Advanced filtering", "included": true },
+          { "name": "AI Pitch Generator", "included": true },
+          { "name": "CRM records for up to 1000 investors", "included": true },
+          { "name": "Unlimited email tracking", "included": true },
+          { "name": "Monthly pipeline management", "included": true },
+          { "name": "75 bulk selections", "included": true },
+          { "name": "Priority live support", "included": true }
+        ]
+      },
+      "faqTitle": "Frequently Asked Questions"
+    },
+    "heroCards": {
+      "matchAnalysis": "Match Analysis",
+      "highMatch": "High Match",
+      "activeInvestors": "Active Investors",
+      "stageMatch": "Stage Matching",
+      "seriesA": "Series A Portfolio",
+      "outreachAi": "Pitch Ready",
+      "outreachLabel": "Outreach AI"
+    },
+    "detailedPricing": {
+      "title": "Features",
+      "free": "Free",
+      "starter": "Starter",
+      "growth": "Growth",
+      "premium": "Premium",
+      "unlimited": "Unlimited",
+      "db": {
+        "category": "Investor Database",
+        "f1Name": "Curated Investors",
+        "f1Sub": "Access to Angels, VCs, and Corporates",
+        "f2Name": "Secure In-App Messaging",
+        "f2Sub": "Talk directly via the platform without exposing contact details",
+        "f3Name": "Unlimited Search",
+        "f3Sub": "No maximum search limits",
+        "f4Name": "Monthly Direct Messaging Limit",
+        "f4Sub": "Maximum number of allowed direct messages per month",
+        "f5Name": "Detailed Filtering",
+        "f5Sub": "Search by industry, amount or location",
+        "f6Name": "AI Pitch Deck Generator",
+        "f6Sub": "Craft tailored investor outreach emails using AI",
+        "f7Name": "Monthly Pipeline Management",
+        "f7Sub": "Structure investment rounds into mapped stages",
+        "f8Name": "Bulk Selection",
+        "f8Sub": "Add multiple investors to lists instantly",
+        "f8V1": "25 at once",
+        "f8V2": "75 at once",
+        "f9Name": "Priority Live Support (Chat)",
+        "f9Sub": "Instant messaging with our in-app support team"
+      },
+      "email": {
+        "category": "Email Dispatch Panel",
+        "f1Name": "Smart AI Pitch Automation",
+        "f1Sub": "Automatically send AI-generated pitch messages to targeted CRM investors",
+        "f2Name": "Closed-Box Investor Reach",
+        "f2Sub": "Invest personal data strictly protected until authorized",
+        "f3Name": "Open / Click Analysis",
+        "f3Sub": "Detailed delivery metrics",
+        "f4Name": "AI Portfolio Match Scoring",
+        "f4Sub": "Smart compatibility assessment between your startup and investor thesis"
+      },
+      "crm": {
+        "category": "Founder CRM Dashboard",
+        "f1Name": "Investors in Your List",
+        "f1Sub": "Max investors addable to stages",
+        "f2Name": "Pipeline Stages",
+        "f2Sub": "Customizable category pipelines within CRM"
+      }
+    },
+    "testimonials": {
+      "title": "Founder Success Stories",
+      "stories": [
+        {
+          "text": "Thanks to Investr, our months-long search for investment was reduced to just a few weeks. The speed was incredible.",
+          "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=100&auto=format&fit=crop",
+          "name": "Ceren Yilmaz",
+          "role": "Co-Founder, HealthTech"
+        },
+        {
+          "text": "Since finding investors here, they helped me expand my vision even further. The connections made are highly valuable.",
+          "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=100&auto=format&fit=crop",
+          "name": "Ahmet Dogan",
+          "role": "CEO, FinTech Start"
+        },
+        {
+          "text": "Instead of emailing angel investor networks one by one, we made precise hits using their advanced filters.",
+          "image": "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=100&auto=format&fit=crop",
+          "name": "Selin Karahan",
+          "role": "Cofounder"
+        },
+        {
+          "text": "The database here is fantastic. We found the crucial pre-Series A capital we needed from exactly the right person.",
+          "image": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=100&auto=format&fit=crop",
+          "name": "Onur Tekin",
+          "role": "CEO & Founder"
+        },
+        {
+          "text": "The platform completely eliminates the inefficiencies of the investment process. The time saved is priceless.",
+          "image": "https://images.unsplash.com/photo-1598550874175-4d0ef436c909?q=80&w=100&auto=format&fit=crop",
+          "name": "Ayse Celik",
+          "role": "Project Manager"
+        },
+        {
+          "text": "It's not just a database; the CRM structure made it incredibly clear who we were engaged with at each stage.",
+          "image": "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?q=80&w=100&auto=format&fit=crop",
+          "name": "Merve Demir",
+          "role": "Investment Operations"
+        },
+        {
+          "text": "We used to track everything on spreadsheets. Now everything is literally just 'Drag and Drop'.",
+          "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=100&auto=format&fit=crop",
+          "name": "Caner Arslan",
+          "role": "Founder"
+        },
+        {
+          "text": "The client dashboard and investor pool seem perfectly tailored as a prescription for startup headaches.",
+          "image": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=100&auto=format&fit=crop",
+          "name": "Deniz Sahin",
+          "role": "Marketing Director"
+        },
+        {
+          "text": "Being able to find international investors right from our home country was our biggest advantage.",
+          "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=100&auto=format&fit=crop",
+          "name": "Emre Can",
+          "role": "Co-Founder"
+        }
+      ],
+      "badge": "SUCCESS STORIES"
+    },
+    "pricingTable": {
+      "title": "Compare All Features",
+      "subtitle": "Discover everything included in our plans to find the best fit for your startup.",
+      "categories": {
+        "database": "INVESTOR DATABASE",
+        "outreach": "AI & OUTREACH",
+        "crm": "FOUNDER CRM DASHBOARD"
+      },
+      "rows": [
+        {
+          "name": "Active Investor Access",
+          "description": "Angels, VCs, and Corporate funds",
+          "starter": "✔",
+          "growth": "✔",
+          "premium": "✔"
+        },
+        {
+          "name": "Secure In-App Messaging",
+          "description": "Send private pitch messages (Direct emails hidden)",
+          "starter": "✔",
+          "growth": "✔",
+          "premium": "✔"
+        },
+        {
+          "name": "Deep Industry Filtering",
+          "description": "Search by stage, portfolio match, and ticket size",
+          "starter": "✔",
+          "growth": "✔",
+          "premium": "✔"
+        },
+        {
+          "name": "AI Pitch Deck Generator",
+          "description": "Craft tailored investor outreach emails using AI",
+          "starter": "None",
+          "growth": "✔",
+          "premium": "✔"
+        },
+        {
+          "name": "Bulk CRM Assigning",
+          "description": "Add multiple filtered investors to your lists instantly",
+          "starter": "None",
+          "growth": "25 at once",
+          "premium": "75 at once"
+        },
+        {
+          "name": "Direct Platform AI Pitching",
+          "description": "Send tracked AI pitch messages directly within the dashboard",
+          "starter": "✔",
+          "growth": "✔",
+          "premium": "✔"
+        },
+        {
+          "name": "Customizable Pipeline Stages",
+          "description": "Drag-and-drop interactive Kanban boards",
+          "starter": "Unlimited",
+          "growth": "Unlimited",
+          "premium": "Unlimited"
+        },
+        {
+          "name": "Monthly Messaging Quota",
+          "description": "Maximum strictly in-platform outbox reaches monthly",
+          "starter": "100",
+          "growth": "500",
+          "premium": "1000"
+        },
+        {
+          "name": "Priority Live Support (Chat)",
+          "description": "Dedicated live chat widget directly inside your dashboard",
+          "starter": "None",
+          "growth": "None",
+          "premium": "✔"
+        }
+      ]
+    },
+    "blog": {
+      "title": "Latest Venture Publications",
+      "subtitle": "The most recent seed investment news, deep-dive ecosystem analytics, and founder guides.",
+      "readTime": "Read time",
+      "min": "min",
+      "posts": [
+        {
+          "id": 1,
+          "title": "Top 10 Fastest Growing Turkish Fintech Startups Securing Funds in 2024",
+          "author": "Investr Editorial",
+          "date": "June 15, 2024",
+          "readMinutes": 5,
+          "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
+          "category": "Fintech Special"
+        },
+        {
+          "id": 2,
+          "title": "Critical Metrics You Need to Prepare Before Securing a Pre-Seed Fund Round",
+          "author": "Yasin AKSOY",
+          "date": "June 10, 2024",
+          "readMinutes": 7,
+          "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
+          "category": "Founder's Guide"
+        },
+        {
+          "id": 3,
+          "title": "Actively Searching For HealthTech? Connect with These Top Tier Angel Investors",
+          "author": "Investr Editorial",
+          "date": "June 05, 2024",
+          "readMinutes": 4,
+          "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=800",
+          "category": "Sector Analysis"
+        }
+      ],
+      "lastUpdated": "Last updated:"
+    }
+  },
+  "auth": {
+    "welcomeBack": "Welcome Back",
+    "registerTitle": "Create Account",
+    "googleLogin": "Continue with Google",
+    "orContinueWith": "or continue with email",
+    "emailLabel": "Email",
+    "email": "Email",
+    "emailPlaceholder": "example@company.com",
+    "passwordLabel": "Password",
+    "passwordPlaceholder": "••••••••",
+    "forgot": "Forgot Password?",
+    "continue": "Continue",
+    "noAccountLabel": "Don't have an account?",
+    "noAccountLink": "Create one now",
+    "socialProofText": "To connect with thousands of investors",
+    "f1": "Access curated investors",
+    "f2": "Secure in-app messaging",
+    "f3": "Accelerate tracking with CRM",
+    "createAccount": "Create Your Founder Account",
+    "fullName": "Full Name",
+    "company": "Company Name",
+    "companyName": "Company Name",
+    "cpasswordLabel": "Confirm Password",
+    "cpasswordPlaceholder": "••••••••",
+    "freeTrial": "Sign up for free and explore.",
+    "alreadyAccount": "Already have an account?",
+    "loginLink": "Log in",
+    "terms1": "By signing up, you agree to our",
+    "terms2": "Terms of Service",
+    "terms3": ".",
+    "passMismatch": "Passwords do not match"
+  },
+  "investors": {
+    "title": "Investor Database",
+    "subtitle": "Discover Turkey's most comprehensive investor database",
+    "filters": {
+      "type": "Investor Type",
+      "sector": "Sector",
+      "stage": "Investment Stage",
+      "location": "Location",
+      "checkSize": "Check Size",
+      "verified": "Verified Email",
+      "clearAll": "Clear Filters"
+    },
+    "types": {
+      "angel": "Angel Investor",
+      "vc": "Venture Capital (VC)",
+      "family_office": "Family Office",
+      "pe": "Private Equity"
+    },
+    "stages": {
+      "pre_seed": "Pre-Seed",
+      "seed": "Seed",
+      "series_a": "Series A",
+      "series_b": "Series B"
+    },
+    "card": {
+      "addToList": "Add to List",
+      "sendEmail": "Send Email",
+      "verified": "Verified",
+      "portfolio": "Portfolio",
+      "checkSize": "Check Size"
+    }
+  },
+  "crm": {
+    "title": "Fundraising CRM",
+    "subtitle": "Track your investor pipeline",
+    "stages": {
+      "new": "New",
+      "contacted": "Contacted",
+      "replied": "Replied",
+      "meeting": "Meeting",
+      "closed": "Closed"
+    },
+    "addNote": "Add Note",
+    "lastContact": "Last Contact",
+    "emptyState": "No investors added yet. Start by adding an investor from the investor database!"
+  },
+  "settings": {
+    "title": "Profile Settings",
+    "subtitle": "Manage your account and preferences",
+    "profile": "Profile Information",
+    "subscription": "Subscription",
+    "language": "Language Preference",
+    "deleteAccount": "Delete Account",
+    "deleteWarning": "This action cannot be undone. All your data will be permanently deleted."
+  },
+  "outreach": {
+    "title": "Email Outreach",
+    "subtitle": "Send emails to investors through the platform"
+  },
+  "inbox": {
+    "title": "Inbox",
+    "subtitle": "Track replies from investors"
+  },
+  "dashboard": {
+    "sidebar": {
+      "investors": "Investors",
+      "crm": "CRM",
+      "outreach": "Email Outreach",
+      "inbox": "Inbox",
+      "settings": "Settings",
+      "collapse": "Collapse",
+      "expand": "Expand",
+      "profile": "My Profile",
+      "logout": "Logout"
+    },
+    "navbar": {
+      "search": "Search...",
+      "notifications": "Notifications",
+      "noNewNotifications": "No new notifications."
+    },
+    "investors": {
+      "title": "Investor Database",
+      "subtitle": "Discover thousands of investors worldwide",
+      "searchPlaceholder": "Search name or company...",
+      "investorType": "Investor Type",
+      "allTypes": "All Types",
+      "angel": "Angel Investor",
+      "vc": "VC",
+      "pe": "PE",
+      "familyOffice": "Family Office",
+      "industry": "Industry",
+      "allIndustries": "All Industries",
+      "fintech": "FinTech",
+      "healthtech": "HealthTech",
+      "ecommerce": "E-commerce",
+      "ai": "Artificial Intelligence",
+      "ticketSize": "Ticket Size",
+      "allSizes": "All",
+      "addToCrm": "Add to CRM",
+      "added": "Added",
+      "noResults": "No investors matched your search.",
+      "investorCount": "investors found"
+    },
+    "crm": {
+      "title": "Kanban Board",
+      "subtitle": "Manage your investor communication pipeline",
+      "addList": "+ Add List",
+      "emptyDescription": "Manage all your investor pipelines from a single screen with drag-and-drop.",
+      "stages": {
+        "new": "New",
+        "contacted": "Contacted",
+        "meeting": "Meeting Scheduled",
+        "due_diligence": "Due Diligence",
+        "negotiation": "Negotiating",
+        "closed_won": "Invested",
+        "closed_lost": "Rejected"
+      }
+    },
+    "outreach": {
+      "title": "Email Outreach",
+      "subtitle": "Send personalized emails to investors",
+      "investorLabel": "Investor",
+      "selectInvestor": "Select an investor...",
+      "subjectLabel": "Subject",
+      "subjectPlaceholder": "Email subject...",
+      "contentLabel": "Email Content",
+      "contentPlaceholder": "Dear [Name],\n\nRegarding our startup...",
+      "aiGenerate": "Generate with AI",
+      "generating": "Generating...",
+      "sendEmail": "Send Email",
+      "sending": "Sending...",
+      "historyTitle": "Outreach History",
+      "historyEmpty": "You haven't sent any emails yet."
+    },
+    "inbox": {
+      "title": "Inbox",
+      "subtitle": "Your conversations with investors",
+      "all": "All",
+      "unread": "Unread",
+      "replied": "Replied",
+      "archived": "Archived",
+      "noMessages": "No messages yet.",
+      "replyPlaceholder": "Type your reply...",
+      "send": "Send"
+    },
+    "settings": {
+      "title": "Profile Settings",
+      "subtitle": "Manage your account and preferences",
+      "profileTitle": "Profile",
+      "notificationsTitle": "Notifications",
+      "securityTitle": "Security",
+      "profilePicture": "Profile Picture",
+      "change": "Change",
+      "fullName": "Full Name",
+      "company": "Company Name",
+      "email": "Email",
+      "website": "Website",
+      "about": "About",
+      "aboutPlaceholder": "A brief description about your startup...",
+      "save": "Save",
+      "saved": "Saved"
+    }
+  },
+  "pages": {
+    "aboutTitle": "About Us",
+    "aboutContent": "Investr is an innovative financial technology platform aiming to bridge the gap between startup founders, angel investors, venture capitalists, and corporate investors.\n\nOur objective is to dramatically minimize the months-long investment sourcing process, enabling the fastest and most secure direct matchmaking. We build our technology with passion, continuing to empower the startup ecosystem universally.",
+    "contactTitle": "Contact",
+    "contactContent": "Do not hesitate to reach out! For any questions or suggestions, please contact us through the following address:\n\nEmail: info@investr.ai\n\nOur team will get back to you immediately.",
+    "careersTitle": "Careers",
+    "careersContent": "We operate with a transparent career vision and a hunger for innovation.\n\nWe do not have any open positions at the moment. However, if you would like to join our vibrant team or be considered for future opportunities, please forward your resume to careers@investr.ai. We'd love to meet you!",
+    "termsTitle": "Terms of Service",
+    "termsContent": "By utilizing this platform, you acknowledge and agree to abide by all rulings of Investr.\n\nRegistered users commit to maintaining accurate information securely. Content validation and materials provided are your own responsibility. We reserve the full rights to alter our global terms at any moment here exclusively.",
+    "privacyTitle": "Privacy Policy",
+    "privacyContent": "We strictly value your online privacy.\n\nYour personal data and account identifiers are heavily encrypted under ultimate structural security protocols. Your information is never shared openly with unauthorized third-parties or external advertising domains.",
+    "cookieTitle": "Cookie Policy",
+    "cookieContent": "Cookies are persistently utilized on our platform to guarantee you an extensively better overall experience.\n\nEmbedded cookies are primarily geared towards global site diagnostic analytics, functionality personalization, and strict internal security criteria matching. By continuing to navigate across our portal, you formally accept these embedded rulesets."
+  }
+}
