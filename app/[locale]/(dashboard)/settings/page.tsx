@@ -48,6 +48,8 @@ export default function SettingsPage() {
     sector: '',
     stage: '',
     bio: '',
+    cancelAtPeriodEnd: false,
+    currentPeriodEnd: null as string | null,
   });
 
   const [notifications, setNotifications] = useState({
@@ -69,6 +71,8 @@ export default function SettingsPage() {
           sector: '',
           stage: '',
           bio: '',
+          cancelAtPeriodEnd: !!data.cancel_at_period_end,
+          currentPeriodEnd: data.current_period_end || null,
         });
         if (data.avatar_url) {
           setAvatarUrl(data.avatar_url);
@@ -457,16 +461,39 @@ export default function SettingsPage() {
             {plan !== 'free' && (
               <div className="pb-6 border-b border-glass-border">
                 <h3 className="text-sm font-semibold text-foreground mb-1">{locale === 'en' ? 'Membership Management' : 'Üyelik Yönetimi'}</h3>
-                <p className="text-xs text-foreground-muted mb-3">
-                  {locale === 'en' ? 'Cancel your subscription. You will keep your features until the end of the billing period.' : 'Paketinizi iptal edin. Mevcut özelliklerinizi fatura dönemi bitene kadar kullanmaya devam edersiniz.'}
-                </p>
-                <button 
-                  onClick={handleCancelSubscription}
-                  disabled={canceling}
-                  className="px-4 py-2 rounded-lg border border-glass-border text-foreground-secondary text-sm font-medium hover:bg-background-tertiary transition-all"
-                >
-                  {canceling ? (locale === 'en' ? 'Canceling...' : 'İptal Ediliyor...') : (locale === 'en' ? 'Cancel Membership' : 'Üyeliğimi İptal Et')}
-                </button>
+                
+                {profile.cancelAtPeriodEnd ? (
+                  <div className="mt-2 p-4 rounded-xl bg-amber-50 border border-amber-100 animate-fade-in-up">
+                    <div className="flex items-start gap-3">
+                      <div className="w-8 h-8 rounded-full bg-amber-100 flex items-center justify-center shrink-0">
+                        <Bell size={16} className="text-amber-600" />
+                      </div>
+                      <div>
+                        <p className="text-sm font-semibold text-amber-800">
+                          {locale === 'en' ? 'Subscription Canceled' : 'Aboneliğiniz İptal Edildi'}
+                        </p>
+                        <p className="text-xs text-amber-700 mt-0.5 leading-relaxed">
+                          {locale === 'en' 
+                            ? `Your active subscription will remain valid until ${new Date(profile.currentPeriodEnd!).toLocaleDateString(locale === 'en' ? 'en-US' : 'tr-TR')}. Your card will not be charged again.` 
+                            : `Mevcut aboneliğiniz ${new Date(profile.currentPeriodEnd!).toLocaleDateString('tr-TR')} tarihine kadar geçerli kalacaktır. Bu tarihten sonra kartınızdan tekrar ödeme alınmayacaktır.`}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                ) : (
+                  <>
+                    <p className="text-xs text-foreground-muted mb-3">
+                      {locale === 'en' ? 'Cancel your subscription. You will keep your features until the end of the billing period.' : 'Paketinizi iptal edin. Mevcut özelliklerinizi fatura dönemi bitene kadar kullanmaya devam edersiniz.'}
+                    </p>
+                    <button 
+                      onClick={handleCancelSubscription}
+                      disabled={canceling}
+                      className="px-4 py-2 rounded-lg border border-glass-border text-foreground-secondary text-sm font-medium hover:bg-background-tertiary transition-all"
+                    >
+                      {canceling ? (locale === 'en' ? 'Canceling...' : 'İptal Ediliyor...') : (locale === 'en' ? 'Üyeliğimi İptal Et' : 'Üyeliğimi İptal Et')}
+                    </button>
+                  </>
+                )}
               </div>
             )}
 

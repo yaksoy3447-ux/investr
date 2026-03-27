@@ -169,6 +169,22 @@ export async function POST(req: Request) {
     }
   }
 
+  // Handle subscription updates (like cancel_at_period_end)
+  if (event.type === 'customer.subscription.updated') {
+    const subscription = event.data.object as Stripe.Subscription;
+    const { error } = await supabase
+      .from('users')
+      .update({
+        cancel_at_period_end: subscription.cancel_at_period_end,
+        current_period_end: new Date(subscription.current_period_end * 1000).toISOString(),
+      })
+      .eq('stripe_subscription_id', subscription.id);
+
+    if (error) {
+      console.error('Error updating subscription status:', error);
+    }
+  }
+
   // Handle subscription cancellations
   if (event.type === 'customer.subscription.deleted') {
     const subscription = event.data.object as Stripe.Subscription;
