@@ -123,20 +123,20 @@ export default function Sidebar() {
           </div>
         ) : (
           <div className={cn('rounded-xl p-3 border', style.bg, style.border)}>
-            <div className="flex items-center gap-2">
-              <Crown size={14} className={style.text} />
-              <span className={cn('text-xs font-bold', style.text)}>
-                {style.label[locale === 'en' ? 'en' : 'tr']} Plan
-              </span>
-            </div>
-            {plan === 'free' && (
+            <div className="flex flex-col items-start gap-1">
+              <div className="flex items-center gap-2">
+                <Crown size={14} className={style.text} />
+                <span className={cn('text-xs font-bold', style.text)}>
+                  {style.label[locale === 'en' ? 'en' : 'tr']} Plan
+                </span>
+              </div>
               <Link
-                href="/pricing"
-                className="mt-2 flex items-center gap-1 text-[11px] font-semibold text-primary hover:underline"
+                href="/upgrade"
+                className="mt-1 flex items-center gap-1 text-[11px] font-semibold text-primary hover:underline hover:text-blue-500 transition-colors"
               >
-                {locale === 'en' ? 'Upgrade Plan' : 'Planı Yükselt'} <ArrowUpRight size={11} />
+                {locale === 'en' ? 'Get Credits / Upgrade' : 'Kredi Al / Yükselt'} <ArrowUpRight size={11} />
               </Link>
-            )}
+            </div>
           </div>
         )}
       </div>

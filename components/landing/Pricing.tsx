@@ -5,12 +5,31 @@ import { Check, X } from 'lucide-react';
 import { Link } from '@/i18n/routing';
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
+import { usePlan } from '@/components/providers/PlanProvider';
 
 export default function Pricing() {
   const [isYearly, setIsYearly] = useState(false);
   const [loadingPlan, setLoadingPlan] = useState<string | null>(null);
   const [creditAmount, setCreditAmount] = useState<number>(10);
   const t = useTranslations('landing.pricingPage');
+  
+  // Safe context extraction for when used outside PlanProvider (Landing Page)
+  let currentPlan: string | undefined = undefined;
+  try {
+    const context = usePlan();
+    currentPlan = context?.plan;
+  } catch (e) {
+    // Ignore error if usePlan is used outside PlanProvider
+  }
+
+  const planTiers: Record<string, number> = {
+    free: 0,
+    starter: 1,
+    pro: 2,
+    premium: 3,
+    growth: 2, // Map legacy or alternate names if necessary
+  };
+  const userTier = currentPlan ? planTiers[currentPlan] || 0 : -1;
 
   type PlanType = {
     id: string;
@@ -221,9 +240,11 @@ export default function Pricing() {
 
               <button
                 onClick={() => handleCheckout(plan.id, plan.isFree || false, plan.isCredit || false)}
-                disabled={loadingPlan === plan.id}
+                disabled={loadingPlan === plan.id || (!plan.isCredit && planTiers[plan.id] !== undefined && planTiers[plan.id] <= userTier)}
                 className={`w-full text-center py-3 rounded-xl font-bold transition-all text-sm flex items-center justify-center gap-2 mt-auto ${
-                  plan.popular
+                  currentPlan === plan.id || (!plan.isCredit && planTiers[plan.id] !== undefined && planTiers[plan.id] < userTier)
+                    ? 'bg-white/10 text-white/40 cursor-not-allowed border border-white/5'
+                    : plan.popular
                     ? 'bg-white hover:bg-gray-100 text-primary shadow-lg'
                     : plan.isFree
                     ? 'bg-white/5 hover:bg-white/10 text-white border border-white/10'
@@ -232,6 +253,10 @@ export default function Pricing() {
               >
                 {loadingPlan === plan.id ? (
                   <div className="w-4 h-4 border-2 border-current border-t-transparent rounded-full animate-spin" />
+                ) : currentPlan === plan.id ? (
+                  t('currentPlan', { defaultValue: 'Mevcut Planınız' })
+                ) : !plan.isCredit && planTiers[plan.id] !== undefined && planTiers[plan.id] < userTier ? (
+                  t('unavailable', { defaultValue: 'Kullanılamaz' })
                 ) : (
                   plan.cta
                 )}

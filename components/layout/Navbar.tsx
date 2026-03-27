@@ -60,7 +60,7 @@ export default function Navbar() {
       <div className="flex items-center gap-2">
         {/* Credits Badge */}
         <button
-          onClick={() => router.push('/pricing')}
+          onClick={() => router.push('/upgrade')}
           className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-orange-50 border border-orange-200 text-orange-600 hover:bg-orange-100 transition-colors mr-2 cursor-pointer"
           title={locale === 'en' ? 'Get more credits' : 'Kredi satın al'}
         >
