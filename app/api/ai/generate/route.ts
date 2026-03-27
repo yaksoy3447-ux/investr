@@ -29,17 +29,44 @@ export async function POST(req: Request) {
       Sadece JSON döndür. Ekstra hiçbir açıklama metni yazma.
     `;
 
-    const response = await anthropic.messages.create({
-      model: 'claude-3-5-sonnet-20240620',
-      max_tokens: 1024,
-      system: systemPrompt,
-      messages: [
-        { role: 'user', content: `Kullanıcı Notları / Şablonu: ${prompt}` }
-      ],
-    });
+    const modelsToTry = [
+      'claude-3-5-sonnet-20240620',
+      'claude-3-5-haiku-20241022',
+      'claude-3-haiku-20240307',
+      'claude-3-opus-20240229'
+    ];
+
+    let response;
+    let lastError;
+
+    for (const model of modelsToTry) {
+      try {
+        response = await anthropic.messages.create({
+          model: model,
+          max_tokens: 1024,
+          system: systemPrompt,
+          messages: [
+            { role: 'user', content: `Kullanıcı Notları / Şablonu: ${prompt}` }
+          ],
+        });
+        break; // if successful, break the loop
+      } catch (e: unknown) {
+        lastError = e;
+        const errMsg = e instanceof Error ? e.message : 'Unknown error';
+        console.error(`Model ${model} failed:`, errMsg);
+        // Continue to the next model
+      }
+
+
+    }
+
+    if (!response) {
+       throw lastError || new Error("All Anthropic models failed");
+    }
 
     // Check if content exists and is a TextBlock
     const block = response.content[0];
+
     if (block && block.type === 'text') {
       const gptText = block.text;
       
