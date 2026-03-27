@@ -50,18 +50,20 @@ export async function POST(req: Request) {
       const priceId = firstItem?.price?.id;
       const quantity = firstItem?.quantity || 1;
       
-      if (priceId === process.env.STRIPE_PREMIUM_PRICE_ID) {
+      if (priceId === process.env.STRIPE_PREMIUM_PRICE_ID?.trim()) {
         newPlan = 'premium';
         addedCredits = 1000;
-      } else if (priceId === process.env.STRIPE_GROWTH_PRICE_ID) {
+      } else if (priceId === process.env.STRIPE_GROWTH_PRICE_ID?.trim()) {
         newPlan = 'pro';
         addedCredits = 100;
-      } else if (priceId === process.env.STRIPE_STARTER_PRICE_ID) {
+      } else if (priceId === process.env.STRIPE_STARTER_PRICE_ID?.trim()) {
         newPlan = 'starter';
         addedCredits = 40;
-      } else if (priceId === process.env.STRIPE_CREDIT_PRICE_ID) {
+      } else if (priceId === process.env.STRIPE_CREDIT_PRICE_ID?.trim()) {
         // Here, the quantity IS the exact number of credits purchased (e.g. 10, 15, 50)
         addedCredits = quantity;
+      } else {
+        console.warn(`Webhook received unknown priceId: ${priceId}`);
       }
 
       const currentCredits = user?.credits || 0;
