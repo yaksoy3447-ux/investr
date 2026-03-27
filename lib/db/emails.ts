@@ -25,7 +25,7 @@ export async function createEmailThread(investorId: string, subject: string, bod
       investor_id: investorId,
       subject,
       status: 'sent',
-      reply_to_address: `info@getinvestr.com`,
+      reply_to_address: user.email || `info@getinvestr.com`,
       sent_at: new Date().toISOString(),
     })
     .select()

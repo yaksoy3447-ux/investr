@@ -86,7 +86,7 @@ export async function POST(req: Request) {
       to: [to],
       subject: subject,
       html: htmlContent,
-      replyTo: `info@getinvestr.com`,
+      replyTo: user.user.email || 'info@getinvestr.com',
       tags: threadId ? [{ name: 'thread_id', value: threadId }] : undefined,
     });
 
