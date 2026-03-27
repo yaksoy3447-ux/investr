@@ -118,6 +118,16 @@ export default function SettingsPage() {
         setSaving(false);
         return;
       }
+      // Send notification
+      const { data: { user: authUser } } = await supabase.auth.getUser();
+      if (authUser) {
+        await supabase.from('notifications').insert({
+          user_id: authUser.id,
+          title: locale === 'en' ? 'Password Changed' : 'Şifre Değiştirildi',
+          message: locale === 'en' ? 'Your password has been successfully changed.' : 'Şifreniz başarıyla değiştirildi.',
+          type: 'info'
+        });
+      }
       setPasswords({ new: '', confirm: '' });
     } else if (activeTab === 'profile') {
       const result = await updateProfile({
@@ -168,7 +178,7 @@ export default function SettingsPage() {
           </div>
           {plan !== 'premium' && (
             <Link
-              href="/pricing"
+              href="/upgrade"
               className="flex items-center gap-1 text-xs font-semibold text-primary hover:underline"
             >
               {locale === 'en' ? 'Upgrade Plan' : 'Planı Yükselt'} <ArrowUpRight size={12} />

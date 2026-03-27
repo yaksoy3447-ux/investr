@@ -94,6 +94,28 @@ export async function POST(req: Request) {
       }
       
       console.log(`User ${userId} upgraded to ${newPlan} and received ${addedCredits} credits.`);
+      
+      // INSERT NOTIFICATION
+      let notificationMessage = '';
+      if (addedCredits > 0 && newPlan === (user?.plan || 'free')) {
+        notificationMessage = `${addedCredits} yatırımcı kilidi açma krediniz başarıyla hesabınıza tanımlandı.`;
+      } else if (newPlan !== (user?.plan || 'free')) {
+        const planName = newPlan.charAt(0).toUpperCase() + newPlan.slice(1);
+        notificationMessage = `${planName} paketine başarıyla geçiş yaptınız. Tüm özellikleriniz aktif!`;
+      } else if (addedCredits > 0 && newPlan !== (user?.plan || 'free')) {
+        const planName = newPlan.charAt(0).toUpperCase() + newPlan.slice(1);
+        notificationMessage = `${planName} paketine geçiş yaptınız ve ${addedCredits} krediniz eklendi.`;
+      }
+      
+      if (notificationMessage) {
+        await supabase.from('notifications').insert({
+          user_id: userId,
+          title: 'Satın Alma Başarılı',
+          message: notificationMessage,
+          type: 'success'
+        });
+      }
+
     } else {
       console.warn('Checkout completed but no client_reference_id found.');
     }
@@ -106,17 +128,24 @@ export async function POST(req: Request) {
        // Need to fetch user by stripe_subscription_id
        const { data: user } = await supabase
          .from('users')
-         .select('id, plan, credits')
+         .select('id, auth_id, plan, credits')
          .eq('stripe_subscription_id', invoice.subscription as string)
          .single();
          
        if (user) {
          let refill = 40;
          if (user.plan === 'pro') refill = 100;
-         if (user.plan === 'premium') refill = 500;
+         if (user.plan === 'premium') refill = 1000;
          
          await supabase.from('users').update({ credits: user.credits + refill }).eq('id', user.id);
          console.log(`Refilled ${refill} credits for recurring subscription of user ${user.id}`);
+         
+         await supabase.from('notifications').insert({
+           user_id: user.auth_id,
+           title: 'Abonelik Yenilendi',
+           message: `Aylık aboneliğiniz yenilendi ve ${refill} iletişim kilit kredisi hesabınıza yüklendi.`,
+           type: 'info'
+         });
        }
     }
   }
