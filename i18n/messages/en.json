@@ -67,8 +67,8 @@
       "feature3Desc": "Find active investors looking for opportunities in your region"
     },
     "pricing": {
-      "title": "Simple and Transparent Pricing",
-      "subtitle": "7-day free trial. No credit card required.",
+      "title": "Simple, Predictable Pricing",
+      "subtitle": "Pay only for the investor contacts you reveal. No hidden fees.",
       "starter": "Starter",
       "pro": "Pro",
       "yearly": "Yearly",
@@ -76,7 +76,71 @@
       "perYear": "/yr",
       "popular": "Most Popular",
       "freeTrial": "Start 7-Day Free Trial",
-      "currentPlan": "Current Plan"
+      "currentPlan": "Current Plan",
+      "monthly": "Monthly Packs",
+      "annual": "Pay As You Go",
+      "tiers": [
+        {
+          "name": "Free",
+          "price": "0",
+          "period": "Forever",
+          "description": "Discover our database and filter investors. No email reveals.",
+          "features": [
+            "Full access to 5,000+ investors",
+            "Advanced filtering & sorting",
+            "Blurred contact info",
+            "Save to specific CRM list"
+          ],
+          "cta": "Get Started",
+          "href": "/register",
+          "popular": false
+        },
+        {
+          "name": "Starter",
+          "price": "29",
+          "period": "per month",
+          "description": "Perfect for founders starting their seed round.",
+          "features": [
+            "40 Contact Reveals / month",
+            "View verified emails & LinkedIn",
+            "Direct email outreach via UI",
+            "Basic email templates"
+          ],
+          "cta": "Subscribe",
+          "href": "#",
+          "popular": true
+        },
+        {
+          "name": "Pro",
+          "price": "69",
+          "period": "per month",
+          "description": "For serious founders actively raising funds.",
+          "features": [
+            "100 Contact Reveals / month",
+            "Priority support",
+            "Advanced email analytics",
+            "Export unlocked contacts to CSV"
+          ],
+          "cta": "Subscribe",
+          "href": "#",
+          "popular": false
+        },
+        {
+          "name": "Premium",
+          "price": "149",
+          "period": "per month",
+          "description": "For agencies, VCs, and heavy raisers.",
+          "features": [
+            "500 Contact Reveals / month",
+            "Dedicated account manager",
+            "Full API access (Coming soon)",
+            "Unlock full database analytics"
+          ],
+          "cta": "Subscribe",
+          "href": "#",
+          "popular": false
+        }
+      ]
     },
     "faq": {
       "title": "Frequently Asked Questions",
@@ -174,52 +238,172 @@
       "startFree": "Start Free",
       "planFeatures": {
         "free": [
-          { "name": "Access to investor database (names hidden)", "included": true },
-          { "name": "CRM records for up to 5 investors", "included": true },
-          { "name": "Basic filtering", "included": true },
-          { "name": "Closed-box investor messaging", "included": false },
-          { "name": "Message credits", "included": false },
-          { "name": "AI Pitch Generator", "included": false },
-          { "name": "Priority live support", "included": false }
+          {
+            "name": "Access to investor database (names hidden)",
+            "included": true
+          },
+          {
+            "name": "CRM records for up to 5 investors",
+            "included": true
+          },
+          {
+            "name": "Basic filtering",
+            "included": true
+          },
+          {
+            "name": "Closed-box investor messaging",
+            "included": false
+          },
+          {
+            "name": "Message credits",
+            "included": false
+          },
+          {
+            "name": "AI Pitch Generator",
+            "included": false
+          },
+          {
+            "name": "Priority live support",
+            "included": false
+          }
         ],
         "starter": [
-          { "name": "Curated investor access", "included": true },
-          { "name": "Closed-box investor messaging", "included": true },
-          { "name": "Unlimited search", "included": true },
-          { "name": "100 message credits/month", "included": true },
-          { "name": "Advanced filtering", "included": true },
-          { "name": "CRM records for up to 100 investors", "included": true },
-          { "name": "Unlimited email tracking", "included": true },
-          { "name": "Monthly pipeline management", "included": true },
-          { "name": "AI Pitch Generator", "included": false },
-          { "name": "Bulk selection", "included": false },
-          { "name": "Priority live support", "included": false }
+          {
+            "name": "Curated investor access",
+            "included": true
+          },
+          {
+            "name": "Closed-box investor messaging",
+            "included": true
+          },
+          {
+            "name": "Unlimited search",
+            "included": true
+          },
+          {
+            "name": "100 message credits/month",
+            "included": true
+          },
+          {
+            "name": "Advanced filtering",
+            "included": true
+          },
+          {
+            "name": "CRM records for up to 100 investors",
+            "included": true
+          },
+          {
+            "name": "Unlimited email tracking",
+            "included": true
+          },
+          {
+            "name": "Monthly pipeline management",
+            "included": true
+          },
+          {
+            "name": "AI Pitch Generator",
+            "included": false
+          },
+          {
+            "name": "Bulk selection",
+            "included": false
+          },
+          {
+            "name": "Priority live support",
+            "included": false
+          }
         ],
         "growth": [
-          { "name": "Curated investor access", "included": true },
-          { "name": "Closed-box investor messaging", "included": true },
-          { "name": "Unlimited search", "included": true },
-          { "name": "500 message credits/month", "included": true },
-          { "name": "Advanced filtering", "included": true },
-          { "name": "AI Pitch Generator", "included": true },
-          { "name": "CRM records for up to 500 investors", "included": true },
-          { "name": "Unlimited email tracking", "included": true },
-          { "name": "Monthly pipeline management", "included": true },
-          { "name": "25 bulk selections", "included": true },
-          { "name": "Priority live support", "included": false }
+          {
+            "name": "Curated investor access",
+            "included": true
+          },
+          {
+            "name": "Closed-box investor messaging",
+            "included": true
+          },
+          {
+            "name": "Unlimited search",
+            "included": true
+          },
+          {
+            "name": "500 message credits/month",
+            "included": true
+          },
+          {
+            "name": "Advanced filtering",
+            "included": true
+          },
+          {
+            "name": "AI Pitch Generator",
+            "included": true
+          },
+          {
+            "name": "CRM records for up to 500 investors",
+            "included": true
+          },
+          {
+            "name": "Unlimited email tracking",
+            "included": true
+          },
+          {
+            "name": "Monthly pipeline management",
+            "included": true
+          },
+          {
+            "name": "25 bulk selections",
+            "included": true
+          },
+          {
+            "name": "Priority live support",
+            "included": false
+          }
         ],
         "premium": [
-          { "name": "Curated investor access", "included": true },
-          { "name": "Closed-box investor messaging", "included": true },
-          { "name": "Unlimited search", "included": true },
-          { "name": "1000 message credits/month", "included": true },
-          { "name": "Advanced filtering", "included": true },
-          { "name": "AI Pitch Generator", "included": true },
-          { "name": "CRM records for up to 1000 investors", "included": true },
-          { "name": "Unlimited email tracking", "included": true },
-          { "name": "Monthly pipeline management", "included": true },
-          { "name": "75 bulk selections", "included": true },
-          { "name": "Priority live support", "included": true }
+          {
+            "name": "Curated investor access",
+            "included": true
+          },
+          {
+            "name": "Closed-box investor messaging",
+            "included": true
+          },
+          {
+            "name": "Unlimited search",
+            "included": true
+          },
+          {
+            "name": "1000 message credits/month",
+            "included": true
+          },
+          {
+            "name": "Advanced filtering",
+            "included": true
+          },
+          {
+            "name": "AI Pitch Generator",
+            "included": true
+          },
+          {
+            "name": "CRM records for up to 1000 investors",
+            "included": true
+          },
+          {
+            "name": "Unlimited email tracking",
+            "included": true
+          },
+          {
+            "name": "Monthly pipeline management",
+            "included": true
+          },
+          {
+            "name": "75 bulk selections",
+            "included": true
+          },
+          {
+            "name": "Priority live support",
+            "included": true
+          }
         ]
       },
       "faqTitle": "Frequently Asked Questions"

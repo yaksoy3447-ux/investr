@@ -15,7 +15,7 @@ export default function OutreachPage() {
   const locale = useLocale();
   
   const { items: crmItems } = useCRM();
-  const { limits } = usePlan();
+  const { limits, unlockedInvestorIds, credits } = usePlan();
   const [selectedInvestor, setSelectedInvestor] = useState('');
   
   useEffect(() => {
@@ -181,11 +181,14 @@ export default function OutreachPage() {
                 className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-glass-border bg-white text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary/50 transition-all appearance-none"
               >
                 <option value="">{t('selectInvestor')}</option>
-                {crmItems.map((item) => (
-                  <option key={item.investor_id} value={item.investor_id}>
-                    {item.investor?.name} — {item.investor?.company}
-                  </option>
-                ))}
+                {crmItems.map((item) => {
+                  const isUnlocked = unlockedInvestorIds.includes(item.investor_id);
+                  return (
+                    <option key={item.investor_id} value={item.investor_id} disabled={!isUnlocked}>
+                       {item.investor?.name} — {item.investor?.company} {!isUnlocked ? ' (Locked)' : ''}
+                    </option>
+                  );
+                })}
                 {crmItems.length === 0 && (
                   <option disabled>{locale === 'en' ? 'Add investors to CRM first' : 'Önce CRM\'e yatırımcı ekleyin'}</option>
                 )}

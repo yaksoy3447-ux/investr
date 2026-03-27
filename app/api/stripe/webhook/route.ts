@@ -32,32 +32,41 @@ export async function POST(req: Request) {
   // Handle successful checkout
   if (event.type === 'checkout.session.completed') {
     const session = event.data.object as Stripe.Checkout.Session;
-    
-    // We expect the user's ID to be passed in client_reference_id
     const userId = session.client_reference_id;
-    const customerEmail = session.customer_details?.email;
     
     if (userId) {
-      // Logic to map the purchased price ID to the internal plan name
       let newPlan = 'starter';
+      let addedCredits = 40;
       
-      // Determine plan by identifying the session's item
       const lineItems = await stripe.checkout.sessions.listLineItems(session.id);
       const priceId = lineItems.data[0]?.price?.id;
       
       if (priceId === process.env.STRIPE_PREMIUM_PRICE_ID) {
         newPlan = 'premium';
+        addedCredits = 500;
       } else if (priceId === process.env.STRIPE_GROWTH_PRICE_ID) {
         newPlan = 'pro';
+        addedCredits = 100;
       } else {
         newPlan = 'starter';
+        addedCredits = 40;
       }
 
-      // Update the user's plan in Supabase
+      // Fetch current credits to increment
+      const { data: user } = await supabase
+        .from('users')
+        .select('credits')
+        .eq('id', userId)
+        .single();
+        
+      const currentCredits = user?.credits || 0;
+
+      // Update the user's plan and credits in Supabase
       const { error } = await supabase
         .from('users')
         .update({
           plan: newPlan,
+          credits: currentCredits + addedCredits,
           stripe_customer_id: session.customer as string,
           stripe_subscription_id: session.subscription as string,
         })
@@ -68,9 +77,31 @@ export async function POST(req: Request) {
         return new NextResponse('Database Update Failed', { status: 500 });
       }
       
-      console.log(`User ${userId} upgraded to ${newPlan}`);
+      console.log(`User ${userId} upgraded to ${newPlan} and received ${addedCredits} credits.`);
     } else {
       console.warn('Checkout completed but no client_reference_id found.');
+    }
+  }
+
+  // Handle monthly subscription recurring payments
+  if (event.type === 'invoice.payment_succeeded') {
+    const invoice = event.data.object as any;
+    if (invoice.billing_reason === 'subscription_cycle') {
+       // Need to fetch user by stripe_subscription_id
+       const { data: user } = await supabase
+         .from('users')
+         .select('id, plan, credits')
+         .eq('stripe_subscription_id', invoice.subscription as string)
+         .single();
+         
+       if (user) {
+         let refill = 40;
+         if (user.plan === 'pro') refill = 100;
+         if (user.plan === 'premium') refill = 500;
+         
+         await supabase.from('users').update({ credits: user.credits + refill }).eq('id', user.id);
+         console.log(`Refilled ${refill} credits for recurring subscription of user ${user.id}`);
+       }
     }
   }
 

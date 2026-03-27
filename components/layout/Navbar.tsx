@@ -2,10 +2,11 @@
 
 import { useTranslations, useLocale } from 'next-intl';
 import { useRouter, usePathname } from '@/i18n/routing';
-import { Bell, Globe, User, LogOut, Settings } from 'lucide-react';
+import { Bell, Globe, User, LogOut, Settings, Coins } from 'lucide-react';
 import { useState, useRef, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 import { useAuth } from '@/components/providers/AuthProvider';
+import { usePlan } from '@/components/providers/PlanProvider';
 
 export default function Navbar() {
   const t = useTranslations('common');
@@ -13,6 +14,7 @@ export default function Navbar() {
   const router = useRouter();
   const pathname = usePathname();
   const { user, signOut } = useAuth();
+  const { credits } = usePlan();
   const [showNotifications, setShowNotifications] = useState(false);
   const [showLangMenu, setShowLangMenu] = useState(false);
   const [showUserMenu, setShowUserMenu] = useState(false);
@@ -56,6 +58,15 @@ export default function Navbar() {
 
       {/* Right side */}
       <div className="flex items-center gap-2">
+        {/* Credits Badge */}
+        <button
+          onClick={() => router.push('/pricing')}
+          className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-orange-50 border border-orange-200 text-orange-600 hover:bg-orange-100 transition-colors mr-2 cursor-pointer"
+          title={locale === 'en' ? 'Get more credits' : 'Kredi satın al'}
+        >
+          <Coins size={14} className="text-orange-500" />
+          <span className="font-bold text-sm tracking-tight">{credits}</span>
+        </button>
         {/* Notifications */}
         <div ref={notifRef} className="relative">
           <button

@@ -3,14 +3,15 @@
 import { useState, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { MapPin, Briefcase, DollarSign, Plus, Check, Mail, ExternalLink, X } from 'lucide-react';
+import { MapPin, Briefcase, DollarSign, Plus, Check, Mail, ExternalLink, X, Lock, Loader2, Coins } from 'lucide-react';
 import { Investor } from '@/lib/types';
+import { createClient } from '@/lib/supabase/client';
 import { INVESTOR_TYPES, SECTORS, INVESTMENT_STAGES } from '@/lib/constants';
 import { cn, formatCurrency } from '@/lib/utils';
 import { useCRM } from '@/components/providers/CRMProvider';
 import { usePlan, blurName } from '@/components/providers/PlanProvider';
 import { useLocale } from 'next-intl';
-import { Link } from '@/i18n/routing';
+import { Link, useRouter } from '@/i18n/routing';
 
 function getLabel(items: readonly { value: string; labelTr: string; labelEn: string }[], value: string, locale: string) {
   const item = items.find((i) => i.value === value);
@@ -22,8 +23,10 @@ export default function InvestorCard({ investor, index }: { investor: Investor; 
   const [showDetail, setShowDetail] = useState(false);
   const [mounted, setMounted] = useState(false);
   const { addToList, removeFromList, isInList, items: crmItems } = useCRM();
-  const { limits } = usePlan();
+  const { limits, unlockedInvestorIds, credits, refreshCredits } = usePlan();
   const locale = useLocale();
+  const router = useRouter();
+  const [unlocking, setUnlocking] = useState(false);
 
   useEffect(() => {
     setMounted(true);
@@ -31,10 +34,45 @@ export default function InvestorCard({ investor, index }: { investor: Investor; 
 
   const added = isInList(investor.id);
   const canSeeNames = limits.canSeeInvestorNames;
+  const isUnlocked = unlockedInvestorIds.includes(investor.id);
   const crmFull = crmItems.length >= limits.maxCrmItems;
 
   const displayName = canSeeNames ? investor.name : blurName(investor.name);
   const displayCompany = canSeeNames ? investor.company : (investor.company ? blurName(investor.company) : '');
+
+  const handleUnlock = async () => {
+    if (credits <= 0) {
+      router.push('/pricing');
+      return;
+    }
+    
+    setUnlocking(true);
+    try {
+      const supabase = createClient();
+      const { data: { user } } = await supabase.auth.getUser();
+      if (!user) {
+        router.push('/login');
+        return;
+      }
+
+      const res = await fetch('/api/investors/unlock', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ userId: user.id, investorId: investor.id })
+      });
+      const json = await res.json();
+      
+      if (json.success) {
+        await refreshCredits();
+      } else {
+        alert(json.error || 'Failed to unlock');
+      }
+    } catch(err) {
+      console.error(err);
+    } finally {
+      setUnlocking(false);
+    }
+  };
 
   const handleToggleList = (e?: React.MouseEvent) => {
     e?.stopPropagation();
@@ -216,36 +254,61 @@ export default function InvestorCard({ investor, index }: { investor: Investor; 
 
                   {/* LinkedIn */}
                   {investor.linkedin_url && (
-                    <a
-                      href={investor.linkedin_url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-sm text-blue-600 hover:underline"
-                    >
-                      <ExternalLink size={14} /> {locale === 'en' ? 'LinkedIn Profile' : 'LinkedIn Profili'}
-                    </a>
+                    isUnlocked ? (
+                      <a
+                        href={investor.linkedin_url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 text-sm text-blue-600 hover:underline"
+                      >
+                        <ExternalLink size={14} /> {locale === 'en' ? 'LinkedIn Profile' : 'LinkedIn Profili'}
+                      </a>
+                    ) : (
+                      <div className="flex items-center gap-2 text-sm text-foreground-muted select-none">
+                         <Lock size={14} /> <span className="blur-sm opacity-50">linkedin.com/in/investor-profile</span>
+                      </div>
+                    )
                   )}
                 </div>
 
                 {/* Modal Footer */}
                 <div className="p-6 border-t border-glass-border flex gap-3">
-                  <button
-                    onClick={() => handleToggleList()}
-                    className={cn(
-                      'flex-1 flex items-center justify-center gap-2 py-2.5 rounded-xl text-sm font-medium transition-all',
-                      added
-                        ? 'bg-success/10 text-success border border-success/20'
-                        : 'btn-secondary'
-                    )}
-                  >
-                    {added ? <Check size={16} /> : <Plus size={16} />}
-                    {added ? (locale === 'en' ? 'Remove from CRM' : 'CRM\'den Çıkar') : (locale === 'en' ? 'Add to CRM' : 'CRM\'e Ekle')}
-                  </button>
-                  <Link href={`/outreach?investor=${investor.id}`} className="flex-1">
-                    <button className="w-full btn-primary flex items-center justify-center gap-2 py-2.5 text-sm">
-                      <Mail size={16} /> {locale === 'en' ? 'Send Email' : 'Email Gönder'}
+                  {isUnlocked ? (
+                    <>
+                      <button
+                        onClick={() => handleToggleList()}
+                        className={cn(
+                          'flex-1 flex items-center justify-center gap-2 py-2.5 rounded-xl text-sm font-medium transition-all',
+                          added
+                            ? 'bg-success/10 text-success border border-success/20'
+                            : 'btn-secondary'
+                        )}
+                      >
+                        {added ? <Check size={16} /> : <Plus size={16} />}
+                        {added ? (locale === 'en' ? 'Remove from CRM' : 'CRM\'den Çıkar') : (locale === 'en' ? 'Add to CRM' : 'CRM\'e Ekle')}
+                      </button>
+                      <Link href={`/outreach?investor=${investor.id}`} className="flex-1">
+                        <button className="w-full btn-primary flex items-center justify-center gap-2 py-2.5 text-sm">
+                          <Mail size={16} /> {locale === 'en' ? 'Send Email' : 'Email Gönder'}
+                        </button>
+                      </Link>
+                    </>
+                  ) : (
+                    <button 
+                      onClick={handleUnlock} 
+                      disabled={unlocking}
+                      className="w-full btn-primary flex items-center justify-center gap-2 py-3 text-sm font-bold shadow-lg shadow-orange-500/20 bg-linear-to-r from-orange-500 to-rose-500 hover:from-orange-600 hover:to-rose-600 border-none transition-all"
+                    >
+                      {unlocking ? (
+                        <Loader2 size={18} className="animate-spin" />
+                      ) : (
+                        <>
+                          <Coins size={18} className="text-white" /> 
+                          {locale === 'en' ? 'Reveal Contact (1 Credit)' : 'İletişimi Aç (1 Kredi)'}
+                        </>
+                      )}
                     </button>
-                  </Link>
+                  )}
                 </div>
               </motion.div>
             </motion.div>

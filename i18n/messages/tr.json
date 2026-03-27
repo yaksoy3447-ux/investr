@@ -67,8 +67,8 @@
       "feature3Desc": "Ülkenizde ve bölgenizde sizin için aktif yatırım arayanları bulun"
     },
     "pricing": {
-      "title": "Basit ve Şeffaf Fiyatlandırma",
-      "subtitle": "7 gün ücretsiz dene. Kredi kartı gerekmez.",
+      "title": "Şeffaf ve Esnek Fiyatlandırma",
+      "subtitle": "Sadece iletişim bilgilerini açtığınız yatırımcılar için ödeyin.",
       "starter": "Başlangıç",
       "pro": "Pro",
       "yearly": "Yıllık",
@@ -76,7 +76,71 @@
       "perYear": "/yıl",
       "popular": "En Popüler",
       "freeTrial": "7 Gün Ücretsiz Dene",
-      "currentPlan": "Mevcut Plan"
+      "currentPlan": "Mevcut Plan",
+      "monthly": "Aylık Paketler",
+      "annual": "Kredi Satın Al",
+      "tiers": [
+        {
+          "name": "Ücretsiz",
+          "price": "0",
+          "period": "Süresiz",
+          "description": "Veritabanını keşfedin ve yatırımcıları görün. (İletişim bilgileri sansürlüdür)",
+          "features": [
+            "5.000+ yatırımcıya erişim",
+            "Gelişmiş filtreleme sistemi",
+            "CRM'e kaydetme",
+            "Sansürlü iletişim bilgileri"
+          ],
+          "cta": "Ücretsiz Başla",
+          "href": "/register",
+          "popular": false
+        },
+        {
+          "name": "Başlangıç",
+          "price": "29",
+          "period": "/ aylık",
+          "description": "Tohum turuna yeni başlayan girişimciler için ideal.",
+          "features": [
+            "Aylık 40 Yatırımcı Kilidi Açma",
+            "E-posta ve LinkedIn görme",
+            "Sistem üzerinden doğrudan e-posta",
+            "Temel e-posta şablonları"
+          ],
+          "cta": "Abone Ol",
+          "href": "#",
+          "popular": true
+        },
+        {
+          "name": "Pro",
+          "price": "69",
+          "period": "/ aylık",
+          "description": "Aktif olarak yatırım arayan ciddi girişimciler için.",
+          "features": [
+            "Aylık 100 Yatırımcı Kilidi Açma",
+            "Öncelikli destek",
+            "Gelişmiş e-posta analitiği",
+            "Açılan kişileri CSV olarak indirme"
+          ],
+          "cta": "Abone Ol",
+          "href": "#",
+          "popular": false
+        },
+        {
+          "name": "Premium",
+          "price": "149",
+          "period": "/ aylık",
+          "description": "Ajanslar, fonlar ve yoğun e-posta atanlar için.",
+          "features": [
+            "Aylık 500 Yatırımcı Kilidi Açma",
+            "Özel müşteri temsilcisi",
+            "Tüm veritabanı analizleri",
+            "CSV Dışa Aktarma"
+          ],
+          "cta": "Abone Ol",
+          "href": "#",
+          "popular": false
+        }
+      ]
     },
     "faq": {
       "title": "Sıkça Sorulan Sorular",
@@ -174,52 +238,172 @@
       "perYear": "/ ay (Yıllık Plan)",
       "planFeatures": {
         "free": [
-          { "name": "Yatırımcı veritabanına erişim (isimler gizli)", "included": true },
-          { "name": "5 yatırımcıya kadar CRM kaydı", "included": true },
-          { "name": "Temel filtreleme", "included": true },
-          { "name": "Kapalı kutu yatırımcı iletişimi", "included": false },
-          { "name": "Mesaj kredisi", "included": false },
-          { "name": "AI Pitch Oluşturucu", "included": false },
-          { "name": "Öncelikli canlı destek", "included": false }
+          {
+            "name": "Yatırımcı veritabanına erişim (isimler gizli)",
+            "included": true
+          },
+          {
+            "name": "5 yatırımcıya kadar CRM kaydı",
+            "included": true
+          },
+          {
+            "name": "Temel filtreleme",
+            "included": true
+          },
+          {
+            "name": "Kapalı kutu yatırımcı iletişimi",
+            "included": false
+          },
+          {
+            "name": "Mesaj kredisi",
+            "included": false
+          },
+          {
+            "name": "AI Pitch Oluşturucu",
+            "included": false
+          },
+          {
+            "name": "Öncelikli canlı destek",
+            "included": false
+          }
         ],
         "starter": [
-          { "name": "Nitelikli yatırımcıya erişim", "included": true },
-          { "name": "Kapalı kutu yatırımcı iletişimi", "included": true },
-          { "name": "Sınırsız arama", "included": true },
-          { "name": "Ayda 100 mesaj kredisi", "included": true },
-          { "name": "Detaylı filtreleme", "included": true },
-          { "name": "100 yatırımcıya kadar CRM kaydı", "included": true },
-          { "name": "Sınırsız email takibi", "included": true },
-          { "name": "Aylık pipeline yönetimi", "included": true },
-          { "name": "AI Pitch Oluşturucu", "included": false },
-          { "name": "Toplu seçim", "included": false },
-          { "name": "Öncelikli canlı destek", "included": false }
+          {
+            "name": "Nitelikli yatırımcıya erişim",
+            "included": true
+          },
+          {
+            "name": "Kapalı kutu yatırımcı iletişimi",
+            "included": true
+          },
+          {
+            "name": "Sınırsız arama",
+            "included": true
+          },
+          {
+            "name": "Ayda 100 mesaj kredisi",
+            "included": true
+          },
+          {
+            "name": "Detaylı filtreleme",
+            "included": true
+          },
+          {
+            "name": "100 yatırımcıya kadar CRM kaydı",
+            "included": true
+          },
+          {
+            "name": "Sınırsız email takibi",
+            "included": true
+          },
+          {
+            "name": "Aylık pipeline yönetimi",
+            "included": true
+          },
+          {
+            "name": "AI Pitch Oluşturucu",
+            "included": false
+          },
+          {
+            "name": "Toplu seçim",
+            "included": false
+          },
+          {
+            "name": "Öncelikli canlı destek",
+            "included": false
+          }
         ],
         "growth": [
-          { "name": "Nitelikli yatırımcıya erişim", "included": true },
-          { "name": "Kapalı kutu yatırımcı iletişimi", "included": true },
-          { "name": "Sınırsız arama", "included": true },
-          { "name": "Ayda 500 mesaj kredisi", "included": true },
-          { "name": "Detaylı filtreleme", "included": true },
-          { "name": "AI Pitch Oluşturucu", "included": true },
-          { "name": "500 yatırımcıya kadar CRM kaydı", "included": true },
-          { "name": "Sınırsız email takibi", "included": true },
-          { "name": "Aylık pipeline yönetimi", "included": true },
-          { "name": "25 toplu seçim", "included": true },
-          { "name": "Öncelikli canlı destek", "included": false }
+          {
+            "name": "Nitelikli yatırımcıya erişim",
+            "included": true
+          },
+          {
+            "name": "Kapalı kutu yatırımcı iletişimi",
+            "included": true
+          },
+          {
+            "name": "Sınırsız arama",
+            "included": true
+          },
+          {
+            "name": "Ayda 500 mesaj kredisi",
+            "included": true
+          },
+          {
+            "name": "Detaylı filtreleme",
+            "included": true
+          },
+          {
+            "name": "AI Pitch Oluşturucu",
+            "included": true
+          },
+          {
+            "name": "500 yatırımcıya kadar CRM kaydı",
+            "included": true
+          },
+          {
+            "name": "Sınırsız email takibi",
+            "included": true
+          },
+          {
+            "name": "Aylık pipeline yönetimi",
+            "included": true
+          },
+          {
+            "name": "25 toplu seçim",
+            "included": true
+          },
+          {
+            "name": "Öncelikli canlı destek",
+            "included": false
+          }
         ],
         "premium": [
-          { "name": "Nitelikli yatırımcıya erişim", "included": true },
-          { "name": "Kapalı kutu yatırımcı iletişimi", "included": true },
-          { "name": "Sınırsız arama", "included": true },
-          { "name": "Ayda 1000 mesaj kredisi", "included": true },
-          { "name": "Detaylı filtreleme", "included": true },
-          { "name": "AI Pitch Oluşturucu", "included": true },
-          { "name": "1000 yatırımcıya kadar CRM kaydı", "included": true },
-          { "name": "Sınırsız email takibi", "included": true },
-          { "name": "Aylık pipeline yönetimi", "included": true },
-          { "name": "75 toplu seçim", "included": true },
-          { "name": "Öncelikli canlı destek", "included": true }
+          {
+            "name": "Nitelikli yatırımcıya erişim",
+            "included": true
+          },
+          {
+            "name": "Kapalı kutu yatırımcı iletişimi",
+            "included": true
+          },
+          {
+            "name": "Sınırsız arama",
+            "included": true
+          },
+          {
+            "name": "Ayda 1000 mesaj kredisi",
+            "included": true
+          },
+          {
+            "name": "Detaylı filtreleme",
+            "included": true
+          },
+          {
+            "name": "AI Pitch Oluşturucu",
+            "included": true
+          },
+          {
+            "name": "1000 yatırımcıya kadar CRM kaydı",
+            "included": true
+          },
+          {
+            "name": "Sınırsız email takibi",
+            "included": true
+          },
+          {
+            "name": "Aylık pipeline yönetimi",
+            "included": true
+          },
+          {
+            "name": "75 toplu seçim",
+            "included": true
+          },
+          {
+            "name": "Öncelikli canlı destek",
+            "included": true
+          }
         ]
       },
       "faqTitle": "Sıkça Sorulan Sorular"
