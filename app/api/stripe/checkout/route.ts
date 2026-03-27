@@ -21,12 +21,12 @@ const MONTHLY_PRICES: Record<string, number> = {
   premium: 19900,  // $199
 };
 
-// Monthly credit refills per plan (for yearly purchases)
-const YEARLY_CREDITS: Record<string, number> = {
-  starter: 40 * 12,    // 480 credits for the full year
-  pro: 100 * 12,       // 1200
-  growth: 100 * 12,    // 1200
-  premium: 1000 * 12,  // 12000
+// Monthly credits given at purchase & refilled each month by cron
+const PLAN_MONTHLY_CREDITS: Record<string, number> = {
+  starter: 40,
+  pro: 100,
+  growth: 100,
+  premium: 1000,
 };
 
 export async function POST(req: Request) {
@@ -77,14 +77,14 @@ export async function POST(req: Request) {
 
       const yearlyAmount = monthlyPriceCents * YEARLY_MULTIPLIER;
       const planName = planLevel.charAt(0).toUpperCase() + planLevel.slice(1);
-      const yearlyCredits = YEARLY_CREDITS[planLevel] || 0;
+      const monthlyCredits = PLAN_MONTHLY_CREDITS[planLevel] || 0;
 
       lineItems = [{
         price_data: {
           currency: 'usd',
           product_data: {
             name: `GetInvestr ${planName} - Yıllık Plan`,
-            description: `12 aylık erişim (${YEARLY_MULTIPLIER} ay öde, 3 ay hediye) + ${yearlyCredits} kredi`,
+            description: `12 aylık erişim (${YEARLY_MULTIPLIER} ay öde, ${12 - YEARLY_MULTIPLIER} ay hediye) · Aylık ${monthlyCredits} kredi`,
           },
           unit_amount: yearlyAmount,
         },
@@ -99,7 +99,7 @@ export async function POST(req: Request) {
         metadata: {
           planLevel,
           isYearly: 'true',
-          yearlyCredits: yearlyCredits.toString(),
+          monthlyCredits: monthlyCredits.toString(),
         },
         line_items: lineItems,
         mode: 'payment',

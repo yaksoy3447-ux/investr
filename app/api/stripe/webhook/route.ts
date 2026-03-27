@@ -44,14 +44,16 @@ export async function POST(req: Request) {
         
       let newPlan = user?.plan || 'free';
       let addedCredits = 0;
+      let isYearlyPurchase = false;
 
       // ── Check if this is a YEARLY one-time purchase (via metadata) ──
       const isYearly = session.metadata?.isYearly === 'true';
       
       if (isYearly) {
         newPlan = session.metadata?.planLevel || newPlan;
-        addedCredits = parseInt(session.metadata?.yearlyCredits || '0');
-        console.log(`Yearly purchase detected: plan=${newPlan}, credits=${addedCredits}`);
+        addedCredits = parseInt(session.metadata?.monthlyCredits || '0'); // Only first month
+        console.log(`Yearly purchase detected: plan=${newPlan}, monthlyCredits=${addedCredits}`);
+        isYearlyPurchase = true;
       } else {
         // ── Standard monthly subscription / credit purchase ──
         const lineItems = await stripe.checkout.sessions.listLineItems(session.id);
@@ -78,7 +80,7 @@ export async function POST(req: Request) {
       const currentCredits = user?.credits || 0;
 
       // Prepare the update payload
-      const updatePayload: any = {
+      const updatePayload: Record<string, unknown> = {
         plan: newPlan,
         credits: currentCredits + addedCredits,
       };
@@ -89,6 +91,14 @@ export async function POST(req: Request) {
 
       if (session.subscription) {
         updatePayload.stripe_subscription_id = session.subscription as string;
+      }
+
+      // Yearly plan: set expiry date 12 months from now and last refill date
+      if (isYearlyPurchase) {
+        const expiresAt = new Date();
+        expiresAt.setFullYear(expiresAt.getFullYear() + 1);
+        updatePayload.yearly_plan_expires_at = expiresAt.toISOString();
+        updatePayload.last_credit_refill = new Date().toISOString();
       }
 
       // Update the user's plan and credits in Supabase
