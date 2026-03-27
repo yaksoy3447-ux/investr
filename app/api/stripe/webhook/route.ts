@@ -90,7 +90,7 @@ export async function POST(req: Request) {
 
       if (error) {
         console.error('Error updating user plan:', error);
-        return new NextResponse('Database Update Failed', { status: 500 });
+        return new NextResponse(`Database Update Failed: ${error.message || JSON.stringify(error)}`, { status: 500 });
       }
       
       console.log(`User ${userId} upgraded to ${newPlan} and received ${addedCredits} credits.`);
