@@ -55,7 +55,7 @@ export default function LandingHeader() {
         
         {/* Brand */}
           <Link href="/" className="flex items-center group">
-            <img src="/logo.png" alt="GetInvestr" width={28} height={28} className="mr-2" />
+            <img src="/logo.png" alt="GetInvestr" width={28} height={28} className="mr-2" style={{filter: 'brightness(0) invert(1) brightness(0.9) sepia(1) hue-rotate(190deg) saturate(5)'}} />
             <span className="text-xl font-bold text-white transition-opacity tracking-tight">
               GetInvestr
             </span>
