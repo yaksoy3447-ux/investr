@@ -477,8 +477,8 @@ export default function SettingsPage() {
                         </p>
                         <p className="text-xs text-amber-700 mt-0.5 leading-relaxed">
                           {locale === 'en' 
-                            ? `Your active subscription will remain valid until ${new Date(profile.currentPeriodEnd!).toLocaleDateString(locale === 'en' ? 'en-US' : 'tr-TR')}. Your card will not be charged again.` 
-                            : `Mevcut aboneliğiniz ${new Date(profile.currentPeriodEnd!).toLocaleDateString('tr-TR')} tarihine kadar geçerli kalacaktır. Bu tarihten sonra kartınızdan tekrar ödeme alınmayacaktır.`}
+                            ? `Your active subscription will remain valid until ${profile.currentPeriodEnd ? new Date(profile.currentPeriodEnd).toLocaleDateString('en-US') : 'the end of period'}. Your card will not be charged again.` 
+                            : `Mevcut aboneliğiniz ${profile.currentPeriodEnd ? new Date(profile.currentPeriodEnd).toLocaleDateString('tr-TR') : 'dönem sonuna'} kadar geçerli kalacaktır. Bu tarihten sonra kartınızdan tekrar ödeme alınmayacaktır.`}
                         </p>
                       </div>
                     </div>
