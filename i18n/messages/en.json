@@ -25,7 +25,8 @@
     "inbox": "Inbox",
     "settings": "Settings",
     "blog": "Publications",
-    "collapse": "Collapse"
+    "collapse": "Collapse",
+    "expand": "Expand"
   },
   "landing": {
     "heroTitle": "Access All Investors in Turkey From One Platform",

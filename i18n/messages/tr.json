@@ -24,7 +24,9 @@
     "outreach": "Email Gönder",
     "inbox": "Gelen Kutusu",
     "settings": "Ayarlar",
-    "blog": "Yayınlar"
+    "blog": "Yayınlar",
+    "collapse": "Daralt",
+    "expand": "Genişlet"
   },
   "landing": {
     "heroTitle": "Türkiye'nin Tüm Yatırımcılarına Tek Platformdan Ulaş",
