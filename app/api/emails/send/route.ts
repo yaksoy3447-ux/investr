@@ -52,8 +52,8 @@ export async function POST(req: Request) {
         <tr>
           <!-- Header Logo Alanı -->
           <td style="background-color: #0b2239; padding: 32px 24px; text-align: center;">
-            <div style="font-size: 28px; font-weight: 700; color: #ffffff; letter-spacing: -0.5px; display: inline-block;">
-              <span style="color: #3b82f6;">Get</span>Investr<span style="color: #3b82f6;">.</span>
+            <div style="font-size: 28px; font-weight: 700; letter-spacing: -0.5px; display: inline-block;">
+              <span style="color: #ffffff;">Get</span><span style="color: #3b82f6;">Investr</span>
             </div>
           </td>
         </tr>
