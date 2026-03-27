@@ -35,8 +35,15 @@ export async function POST(req: Request) {
     const userId = session.client_reference_id;
     
     if (userId) {
-      let newPlan = 'starter';
-      let addedCredits = 40;
+      // Fetch current plan and credits to increment
+      const { data: user } = await supabase
+        .from('users')
+        .select('plan, credits')
+        .eq('id', userId)
+        .single();
+        
+      let newPlan = user?.plan || 'free';
+      let addedCredits = 0;
       
       const lineItems = await stripe.checkout.sessions.listLineItems(session.id);
       const priceId = lineItems.data[0]?.price?.id;
@@ -47,18 +54,17 @@ export async function POST(req: Request) {
       } else if (priceId === process.env.STRIPE_GROWTH_PRICE_ID) {
         newPlan = 'pro';
         addedCredits = 100;
-      } else {
+      } else if (priceId === process.env.STRIPE_STARTER_PRICE_ID) {
         newPlan = 'starter';
         addedCredits = 40;
+      } else if (priceId === process.env.STRIPE_CREDITS_10_PRICE_ID) {
+        addedCredits = 10;
+      } else if (priceId === process.env.STRIPE_CREDITS_50_PRICE_ID) {
+        addedCredits = 50;
+      } else if (priceId === process.env.STRIPE_CREDITS_100_PRICE_ID) {
+        addedCredits = 100;
       }
 
-      // Fetch current credits to increment
-      const { data: user } = await supabase
-        .from('users')
-        .select('credits')
-        .eq('id', userId)
-        .single();
-        
       const currentCredits = user?.credits || 0;
 
       // Update the user's plan and credits in Supabase

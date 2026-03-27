@@ -19,16 +19,27 @@ export async function POST(req: Request) {
     const { planLevel } = body;
 
     let priceId = '';
+    let checkoutMode: 'subscription' | 'payment' = 'subscription';
+
     if (planLevel === 'premium') {
       priceId = process.env.STRIPE_PREMIUM_PRICE_ID as string;
-    } else if (planLevel === 'growth') {
+    } else if (planLevel === 'pro' || planLevel === 'growth') {
       priceId = process.env.STRIPE_GROWTH_PRICE_ID as string;
     } else if (planLevel === 'starter') {
       priceId = process.env.STRIPE_STARTER_PRICE_ID as string;
+    } else if (planLevel === 'credits-10') {
+      priceId = process.env.STRIPE_CREDITS_10_PRICE_ID as string;
+      checkoutMode = 'payment';
+    } else if (planLevel === 'credits-50') {
+      priceId = process.env.STRIPE_CREDITS_50_PRICE_ID as string;
+      checkoutMode = 'payment';
+    } else if (planLevel === 'credits-100') {
+      priceId = process.env.STRIPE_CREDITS_100_PRICE_ID as string;
+      checkoutMode = 'payment';
     }
 
     if (!priceId) {
-      return new NextResponse('Invalid or missing planLevel', { status: 400 });
+      return new NextResponse('Invalid or missing planLevel, or missing Stripe Price ID in Env.', { status: 400 });
     }
 
     // Determine return URL based on environments
@@ -45,7 +56,7 @@ export async function POST(req: Request) {
           quantity: 1,
         },
       ],
-      mode: 'subscription',
+      mode: checkoutMode,
       success_url: `${appUrl}/tr/settings?success=true`,
       cancel_url: `${appUrl}/tr/pricing?canceled=true`,
     });

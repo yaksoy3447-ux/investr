@@ -204,31 +204,134 @@
       "built": "Built with passion"
     },
     "pricingPage": {
-      "badge": "Select one of the plans below to complete your registration.",
-      "title1": "Connect with the best investors in minutes and",
-      "title2": "close your round today.",
-      "subtitle": "No hidden fees, no surprises. Get 3 months free with yearly billing.",
+      "badge": "Transparent Pricing",
+      "title1": "Only pay for the contacts",
+      "title2": "you reveal.",
+      "subtitle": "Choose a monthly package or buy credits individually.",
       "monthly": "Monthly",
       "yearly": "Yearly",
       "yearlyBadge": "3 Months Free",
       "tiers": {
-        "free": "Free",
-        "freeDesc": "Explore the platform, discover investors.",
-        "startup": "Starter",
-        "startupDesc": "For early-stage startups just beginning their funding rounds.",
-        "pro": "Pro",
-        "proDesc": "For professional startups actively securing growth capital.",
-        "enterprise": "Enterprise",
-        "enterpriseDesc": "For scaling teams seeking unlimited access to our entire investor network.",
-        "features": {
-          "investorDatabase": "Access to Global Investor Database",
-          "contactInfo": "Up-to-date Email & LinkedIn Contact Info",
-          "basicFilters": "Industry and Stage Filtering",
-          "crm": "Integrated Advanced CRM Hub",
-          "outreachAi": "AI-Powered Direct Email Templates (Outreach AI)",
-          "prioritySupport": "24/7 Priority Customer Support",
-          "teamMembers": "Multi-user Team Access (Unlimited)"
-        }
+        "monthly": [
+          {
+            "id": "starter",
+            "name": "Starter",
+            "price": 29,
+            "period": "/ mo",
+            "description": "Perfect for starting your fundraise.",
+            "features": [
+              {
+                "name": "40 Contact Reveals / month",
+                "included": true
+              },
+              {
+                "name": "Send emails via platform",
+                "included": true
+              },
+              {
+                "name": "CRM features",
+                "included": true
+              }
+            ]
+          },
+          {
+            "id": "pro",
+            "name": "Pro",
+            "price": 69,
+            "period": "/ mo",
+            "description": "For serious founders.",
+            "features": [
+              {
+                "name": "100 Contact Reveals / month",
+                "included": true
+              },
+              {
+                "name": "Send emails via platform",
+                "included": true
+              },
+              {
+                "name": "CRM features",
+                "included": true
+              }
+            ],
+            "popular": true
+          },
+          {
+            "id": "premium",
+            "name": "Premium",
+            "price": 149,
+            "period": "/ mo",
+            "description": "For agencies and heavy raisers.",
+            "features": [
+              {
+                "name": "500 Contact Reveals / month",
+                "included": true
+              },
+              {
+                "name": "Send emails via platform",
+                "included": true
+              },
+              {
+                "name": "CRM features",
+                "included": true
+              }
+            ]
+          }
+        ],
+        "credits": [
+          {
+            "id": "credits-10",
+            "name": "10 Credits",
+            "price": 9.9,
+            "period": "one-time",
+            "description": "Perfect for spot-checking investors.",
+            "features": [
+              {
+                "name": "10 Contact Reveals",
+                "included": true
+              },
+              {
+                "name": "Never expires",
+                "included": true
+              }
+            ]
+          },
+          {
+            "id": "credits-50",
+            "name": "50 Credits",
+            "price": 39,
+            "period": "one-time",
+            "description": "Standard top-up.",
+            "features": [
+              {
+                "name": "50 Contact Reveals",
+                "included": true
+              },
+              {
+                "name": "Never expires",
+                "included": true
+              }
+            ],
+            "popular": true
+          },
+          {
+            "id": "credits-100",
+            "name": "100 Credits",
+            "price": 69,
+            "period": "one-time",
+            "description": "For bulk email campaigns.",
+            "features": [
+              {
+                "name": "100 Contact Reveals",
+                "included": true
+              },
+              {
+                "name": "Never expires",
+                "included": true
+              }
+            ]
+          }
+        ]
       },
       "billedYearly": "Billed annually",
       "choosePlan": "Choose Plan",
@@ -406,7 +509,11 @@
           }
         ]
       },
-      "faqTitle": "Frequently Asked Questions"
+      "faqTitle": "Frequently Asked Questions",
+      "toggleMonthly": "Monthly Subscriptions",
+      "toggleAnnual": "Pay As You Go (Credits)",
+      "cta": "Get Started",
+      "ctaPremium": "Get Started"
     },
     "heroCards": {
       "matchAnalysis": "Match Analysis",

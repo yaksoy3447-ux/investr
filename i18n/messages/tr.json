@@ -204,31 +204,134 @@
       "built": "Tutkuyla geliştirildi"
     },
     "pricingPage": {
-      "badge": "Kayıt işlemini tamamlamak için aşağıdaki planlardan birini seçin.",
-      "title1": "Dakikalar içinde en iyi yatırımcılarla bağlantı kurun ve",
-      "title2": "hemen bugün turunuzu tamamlayın.",
-      "subtitle": "Gizli ücret yok, sürpriz yok. Yıllık ödemelerde 3 ay bizden hediye.",
+      "badge": "Şeffaf Fiyatlandırma",
+      "title1": "Sadece kilidini açtığınız",
+      "title2": "iletişimler için ödeyin.",
+      "subtitle": "İhtiyacınıza göre aylık paket seçin veya tekil kredi satın alın.",
       "monthly": "Aylık",
       "yearly": "Yıllık",
       "yearlyBadge": "3 Ay Hediye",
       "tiers": {
-        "free": "Ücretsiz",
-        "freeDesc": "Platformu keşfedin, yatırımcıları tanıyın.",
-        "startup": "Başlangıç",
-        "startupDesc": "Yatırım turuna yeni başlayan erken aşama girişimler için.",
-        "pro": "Büyüme",
-        "proDesc": "Aktif olarak büyüme fonu arayan profesyonel start-up'lar için.",
-        "enterprise": "Premium",
-        "enterpriseDesc": "Tüm ekibinizin kullanabileceği, limitsiz yatırımcı erişimi arayanlar için.",
-        "features": {
-          "investorDatabase": "Global Yatırımcı Veritabanına Erişim",
-          "contactInfo": "Güncel Email ve LinkedIn İletişim Bilgileri",
-          "basicFilters": "Sektör ve Aşama (Stage) Filtreleme",
-          "crm": "Entegre Gelişmiş CRM Panosu",
-          "outreachAi": "Yapay Zeka Destekli Mail Şablonları (Outreach AI)",
-          "prioritySupport": "7/24 Öncelikli Müşteri Desteği",
-          "teamMembers": "Çoklu Ekip Üyesi Kullanımı (Sınırsız)"
-        }
+        "monthly": [
+          {
+            "id": "starter",
+            "name": "Başlangıç",
+            "price": 29,
+            "period": "/ aylık",
+            "description": "Tohum turuna yeni başlayan girişimler için.",
+            "features": [
+              {
+                "name": "Ayda 40 İletişim Açma",
+                "included": true
+              },
+              {
+                "name": "Sistem üzerinden E-posta",
+                "included": true
+              },
+              {
+                "name": "Detaylı CRM takibi",
+                "included": true
+              }
+            ]
+          },
+          {
+            "id": "pro",
+            "name": "Pro",
+            "price": 69,
+            "period": "/ aylık",
+            "description": "Aktif olarak yatırım arayan ciddi girişimciler için.",
+            "features": [
+              {
+                "name": "Ayda 100 İletişim Açma",
+                "included": true
+              },
+              {
+                "name": "Sistem üzerinden E-posta",
+                "included": true
+              },
+              {
+                "name": "Detaylı CRM takibi",
+                "included": true
+              }
+            ],
+            "popular": true
+          },
+          {
+            "id": "premium",
+            "name": "Premium",
+            "price": 149,
+            "period": "/ aylık",
+            "description": "Ajanslar ve çok sayıda mail atanlar için.",
+            "features": [
+              {
+                "name": "Ayda 500 İletişim Açma",
+                "included": true
+              },
+              {
+                "name": "Sistem üzerinden E-posta",
+                "included": true
+              },
+              {
+                "name": "Detaylı CRM takibi",
+                "included": true
+              }
+            ]
+          }
+        ],
+        "credits": [
+          {
+            "id": "credits-10",
+            "name": "10 Kredi",
+            "price": 9.9,
+            "period": "tek seferlik",
+            "description": "Nokta atışı yatırımcı bulmak isteyenler için.",
+            "features": [
+              {
+                "name": "10 İletişim Kilidi Açma",
+                "included": true
+              },
+              {
+                "name": "Kredilerin süresi hiç dolmaz",
+                "included": true
+              }
+            ]
+          },
+          {
+            "id": "credits-50",
+            "name": "50 Kredi",
+            "price": 39,
+            "period": "tek seferlik",
+            "description": "Standart kredi paketi.",
+            "features": [
+              {
+                "name": "50 İletişim Kilidi Açma",
+                "included": true
+              },
+              {
+                "name": "Kredilerin süresi hiç dolmaz",
+                "included": true
+              }
+            ],
+            "popular": true
+          },
+          {
+            "id": "credits-100",
+            "name": "100 Kredi",
+            "price": 69,
+            "period": "tek seferlik",
+            "description": "Büyük mail kampanyaları için.",
+            "features": [
+              {
+                "name": "100 İletişim Kilidi Açma",
+                "included": true
+              },
+              {
+                "name": "Kredilerin süresi hiç dolmaz",
+                "included": true
+              }
+            ]
+          }
+        ]
       },
       "billedYearly": "Yıllık faturalandırılır",
       "choosePlan": "Planı Seç",
@@ -406,7 +509,11 @@
           }
         ]
       },
-      "faqTitle": "Sıkça Sorulan Sorular"
+      "faqTitle": "Sıkça Sorulan Sorular",
+      "toggleMonthly": "Aylık Paketler",
+      "toggleAnnual": "Kredi Satın Al (Tek Seferlik)",
+      "cta": "Hemen Başla",
+      "ctaPremium": "Hemen Başla"
     },
     "heroCards": {
       "matchAnalysis": "Eşleşme Analizi",
