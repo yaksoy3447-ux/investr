@@ -82,9 +82,12 @@ export default function Pricing() {
     setLoadingPlan(planId);
     
     try {
-      const payload: { planLevel: string; quantity?: number } = { planLevel: planId };
+      const payload: { planLevel: string; quantity?: number; isYearly?: boolean } = { planLevel: planId };
       if (isCredit) {
         payload.quantity = creditAmount;
+      }
+      if (isYearly && !isCredit) {
+        payload.isYearly = true;
       }
 
       const res = await fetch('/api/stripe/checkout', {

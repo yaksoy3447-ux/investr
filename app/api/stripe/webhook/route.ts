@@ -44,26 +44,35 @@ export async function POST(req: Request) {
         
       let newPlan = user?.plan || 'free';
       let addedCredits = 0;
+
+      // ── Check if this is a YEARLY one-time purchase (via metadata) ──
+      const isYearly = session.metadata?.isYearly === 'true';
       
-      const lineItems = await stripe.checkout.sessions.listLineItems(session.id);
-      const firstItem = lineItems.data[0];
-      const priceId = firstItem?.price?.id;
-      const quantity = firstItem?.quantity || 1;
-      
-      if (priceId === process.env.STRIPE_PREMIUM_PRICE_ID?.trim()) {
-        newPlan = 'premium';
-        addedCredits = 1000;
-      } else if (priceId === process.env.STRIPE_GROWTH_PRICE_ID?.trim()) {
-        newPlan = 'pro';
-        addedCredits = 100;
-      } else if (priceId === process.env.STRIPE_STARTER_PRICE_ID?.trim()) {
-        newPlan = 'starter';
-        addedCredits = 40;
-      } else if (priceId === process.env.STRIPE_CREDIT_PRICE_ID?.trim()) {
-        // Here, the quantity IS the exact number of credits purchased (e.g. 10, 15, 50)
-        addedCredits = quantity;
+      if (isYearly) {
+        newPlan = session.metadata?.planLevel || newPlan;
+        addedCredits = parseInt(session.metadata?.yearlyCredits || '0');
+        console.log(`Yearly purchase detected: plan=${newPlan}, credits=${addedCredits}`);
       } else {
-        console.warn(`Webhook received unknown priceId: ${priceId}`);
+        // ── Standard monthly subscription / credit purchase ──
+        const lineItems = await stripe.checkout.sessions.listLineItems(session.id);
+        const firstItem = lineItems.data[0];
+        const priceId = firstItem?.price?.id;
+        const quantity = firstItem?.quantity || 1;
+        
+        if (priceId === process.env.STRIPE_PREMIUM_PRICE_ID?.trim()) {
+          newPlan = 'premium';
+          addedCredits = 1000;
+        } else if (priceId === process.env.STRIPE_GROWTH_PRICE_ID?.trim()) {
+          newPlan = 'pro';
+          addedCredits = 100;
+        } else if (priceId === process.env.STRIPE_STARTER_PRICE_ID?.trim()) {
+          newPlan = 'starter';
+          addedCredits = 40;
+        } else if (priceId === process.env.STRIPE_CREDIT_PRICE_ID?.trim()) {
+          addedCredits = quantity;
+        } else {
+          console.warn(`Webhook received unknown priceId: ${priceId}`);
+        }
       }
 
       const currentCredits = user?.credits || 0;
@@ -97,14 +106,14 @@ export async function POST(req: Request) {
       
       // INSERT NOTIFICATION
       let notificationMessage = '';
-      if (addedCredits > 0 && newPlan === (user?.plan || 'free')) {
+      const planName = newPlan.charAt(0).toUpperCase() + newPlan.slice(1);
+      
+      if (isYearly) {
+        notificationMessage = `${planName} Yıllık Plan'a başarıyla geçiş yaptınız! ${addedCredits} kredi hesabınıza tanımlandı.`;
+      } else if (addedCredits > 0 && newPlan === (user?.plan || 'free')) {
         notificationMessage = `${addedCredits} yatırımcı kilidi açma krediniz başarıyla hesabınıza tanımlandı.`;
       } else if (newPlan !== (user?.plan || 'free')) {
-        const planName = newPlan.charAt(0).toUpperCase() + newPlan.slice(1);
-        notificationMessage = `${planName} paketine başarıyla geçiş yaptınız. Tüm özellikleriniz aktif!`;
-      } else if (addedCredits > 0 && newPlan !== (user?.plan || 'free')) {
-        const planName = newPlan.charAt(0).toUpperCase() + newPlan.slice(1);
-        notificationMessage = `${planName} paketine geçiş yaptınız ve ${addedCredits} krediniz eklendi.`;
+        notificationMessage = `${planName} paketine başarıyla geçiş yaptınız. ${addedCredits > 0 ? addedCredits + ' krediniz eklendi.' : 'Tüm özellikleriniz aktif!'}`;
       }
       
       if (notificationMessage) {
