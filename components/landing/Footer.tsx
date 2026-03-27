@@ -1,5 +1,5 @@
 import { Link } from '@/i18n/routing';
-import { ArrowRight, CheckCircle2, Radar } from 'lucide-react';
+import { ArrowRight, CheckCircle2 } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 
 export default function Footer() {
@@ -70,17 +70,21 @@ export default function Footer() {
           {/* Brand & Copyright */}
           <div>
             <div className="flex items-center gap-2 mb-4 text-white font-bold text-2xl tracking-tight">
-              <Radar className="text-primary mr-1" strokeWidth={2.5} size={32} /> GetInvestr
+              <span className="text-white">Get</span><span className="text-[#3b82f6]">Investr</span>
             </div>
             <p className="text-sm text-gray-500 max-w-xs mb-6">
               {t('desc')}
             </p>
             <div className="flex gap-4">
-              {['X (Twitter)', 'LinkedIn', 'Instagram'].map(social => (
-                <a key={social} href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-xs font-bold text-white/40 hover:text-primary transition-colors uppercase tracking-wider">
-                  {social}
-                </a>
-              ))}
+              <a href="https://x.com/xGetInvestr" target="_blank" rel="noopener noreferrer" className="text-xs font-bold text-white/40 hover:text-primary transition-colors uppercase tracking-wider">
+                X (Twitter)
+              </a>
+              <a href="https://linkedin.com/company/getinvestr" target="_blank" rel="noopener noreferrer" className="text-xs font-bold text-white/40 hover:text-primary transition-colors uppercase tracking-wider">
+                LinkedIn
+              </a>
+              <a href="https://instagram.com/getinvestr" target="_blank" rel="noopener noreferrer" className="text-xs font-bold text-white/40 hover:text-primary transition-colors uppercase tracking-wider">
+                Instagram
+              </a>
             </div>
           </div>
 
@@ -110,7 +114,7 @@ export default function Footer() {
 
         <div className="max-w-6xl mx-auto relative z-10 mt-16 pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-medium text-gray-500">
           <span>© {new Date().getFullYear()} GetInvestr Technologies.</span>
-          <span className="flex items-center gap-2">{t('built')} <Radar className="text-primary mx-1" strokeWidth={3} size={20} /></span>
+          <span className="flex items-center gap-2">{t('built')} <span className="text-white">Get</span><span className="text-[#3b82f6]">Investr</span></span>
         </div>
       </footer>
     </>
