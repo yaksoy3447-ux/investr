@@ -264,7 +264,7 @@ export default function Pricing() {
                 ) : (plan.isFree && userTier > 0) || (!plan.isCredit && planTiers[plan.id] !== undefined && planTiers[plan.id] < userTier) ? (
                   locale === 'tr' ? 'Kullanılamaz' : 'Unavailable'
                 ) : (
-                  plan.cta
+                  isYearly && !plan.isFree && !plan.isCredit ? (locale === 'tr' ? 'Yıllık Abone Ol' : 'Subscribe Yearly') : plan.cta
                 )}
               </button>
 
