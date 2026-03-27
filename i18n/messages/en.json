@@ -218,18 +218,26 @@
             "name": "Starter",
             "price": 29,
             "period": "/ mo",
-            "description": "Perfect for starting your fundraise.",
+            "description": "Perfect for founders starting their seed round.",
             "features": [
               {
                 "name": "40 Contact Reveals / month",
                 "included": true
               },
               {
-                "name": "Send emails via platform",
+                "name": "View Verified Emails & LinkedIn",
                 "included": true
               },
               {
-                "name": "CRM features",
+                "name": "Save up to 100 Investors (CRM)",
+                "included": true
+              },
+              {
+                "name": "Direct In-App Email Outreach",
+                "included": true
+              },
+              {
+                "name": "Basic Email Templates",
                 "included": true
               }
             ]
@@ -239,18 +247,30 @@
             "name": "Pro",
             "price": 69,
             "period": "/ mo",
-            "description": "For serious founders.",
+            "description": "For serious founders actively raising funds.",
             "features": [
               {
                 "name": "100 Contact Reveals / month",
                 "included": true
               },
               {
-                "name": "Send emails via platform",
+                "name": "View Verified Emails & LinkedIn",
                 "included": true
               },
               {
-                "name": "CRM features",
+                "name": "Save up to 500 Investors (CRM)",
+                "included": true
+              },
+              {
+                "name": "Export Unlocked Contacts to CSV",
+                "included": true
+              },
+              {
+                "name": "Direct In-App Email Outreach",
+                "included": true
+              },
+              {
+                "name": "Premium Support & Analytics",
                 "included": true
               }
             ],
@@ -261,18 +281,30 @@
             "name": "Premium",
             "price": 149,
             "period": "/ mo",
-            "description": "For agencies and heavy raisers.",
+            "description": "For agencies, VCs, and heavy raisers.",
             "features": [
               {
                 "name": "500 Contact Reveals / month",
                 "included": true
               },
               {
-                "name": "Send emails via platform",
+                "name": "View Verified Emails & LinkedIn",
                 "included": true
               },
               {
-                "name": "CRM features",
+                "name": "Save up to 1,000 Investors (CRM)",
+                "included": true
+              },
+              {
+                "name": "Export Unlocked Contacts to CSV",
+                "included": true
+              },
+              {
+                "name": "Direct In-App Email Outreach",
+                "included": true
+              },
+              {
+                "name": "24/7 Dedicated Account Manager",
                 "included": true
               }
             ]
@@ -284,14 +316,26 @@
             "name": "10 Credits",
             "price": 9.9,
             "period": "one-time",
-            "description": "Perfect for spot-checking investors.",
+            "description": "Perfect for spot-checking specific investors.",
             "features": [
               {
-                "name": "10 Contact Reveals",
+                "name": "10 Immediate Contact Reveals",
                 "included": true
               },
               {
-                "name": "Never expires",
+                "name": "Credits Never Expire",
+                "included": true
+              },
+              {
+                "name": "Access to Verified Direct Emails",
+                "included": true
+              },
+              {
+                "name": "View Hidden LinkedIn Profiles",
+                "included": true
+              },
+              {
+                "name": "Save Revealed Contacts to CRM",
                 "included": true
               }
             ]
@@ -301,14 +345,26 @@
             "name": "50 Credits",
             "price": 39,
             "period": "one-time",
-            "description": "Standard top-up.",
+            "description": "Standard top-up for active raisers.",
             "features": [
               {
-                "name": "50 Contact Reveals",
+                "name": "50 Immediate Contact Reveals",
                 "included": true
               },
               {
-                "name": "Never expires",
+                "name": "Credits Never Expire",
+                "included": true
+              },
+              {
+                "name": "Access to Verified Direct Emails",
+                "included": true
+              },
+              {
+                "name": "View Hidden LinkedIn Profiles",
+                "included": true
+              },
+              {
+                "name": "Save Revealed Contacts to CRM",
                 "included": true
               }
             ],
@@ -319,14 +375,30 @@
             "name": "100 Credits",
             "price": 69,
             "period": "one-time",
-            "description": "For bulk email campaigns.",
+            "description": "For bulk email campaigns and agencies.",
             "features": [
               {
-                "name": "100 Contact Reveals",
+                "name": "100 Immediate Contact Reveals",
                 "included": true
               },
               {
-                "name": "Never expires",
+                "name": "Best Value for Bulk Campaigns",
+                "included": true
+              },
+              {
+                "name": "Credits Never Expire",
+                "included": true
+              },
+              {
+                "name": "Access to Verified Direct Emails",
+                "included": true
+              },
+              {
+                "name": "Save Revealed Contacts to CRM",
+                "included": true
+              },
+              {
+                "name": "Export Capabilities Enabled",
                 "included": true
               }
             ]
