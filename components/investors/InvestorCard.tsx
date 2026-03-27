@@ -33,8 +33,8 @@ export default function InvestorCard({ investor, index }: { investor: Investor; 
   }, []);
 
   const added = isInList(investor.id);
-  const canSeeNames = limits.canSeeInvestorNames;
   const isUnlocked = unlockedInvestorIds.includes(investor.id);
+  const canSeeNames = limits.canSeeInvestorNames || isUnlocked;
   const crmFull = crmItems.length >= limits.maxCrmItems;
 
   const displayName = canSeeNames ? investor.name : blurName(investor.name);
@@ -252,23 +252,46 @@ export default function InvestorCard({ investor, index }: { investor: Investor; 
                     </div>
                   )}
 
-                  {/* LinkedIn */}
-                  {investor.linkedin_url && (
-                    isUnlocked ? (
-                      <a
-                        href={investor.linkedin_url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-2 text-sm text-blue-600 hover:underline"
-                      >
-                        <ExternalLink size={14} /> {locale === 'en' ? 'LinkedIn Profile' : 'LinkedIn Profili'}
-                      </a>
-                    ) : (
-                      <div className="flex items-center gap-2 text-sm text-foreground-muted select-none">
-                         <Lock size={14} /> <span className="blur-sm opacity-50">linkedin.com/in/investor-profile</span>
-                      </div>
-                    )
-                  )}
+                  {/* Contact Info Wrapper */}
+                  <div className="flex flex-col gap-3 pt-4 border-t border-glass-border">
+                    <div className="flex items-center gap-2 text-sm text-foreground font-semibold mb-1">
+                      {locale === 'en' ? 'Contact Details' : 'İletişim Bilgileri'}
+                    </div>
+
+                    {/* Email */}
+                    {investor.email && (
+                      canSeeNames ? (
+                        <a
+                          href={`mailto:${investor.email}`}
+                          className="flex items-center gap-2 text-sm text-foreground hover:underline px-3 py-2.5 bg-success/5 border border-success/10 rounded-xl"
+                        >
+                          <Mail size={16} className="text-success flex-shrink-0" /> {investor.email}
+                        </a>
+                      ) : (
+                        <div className="flex items-center gap-2 text-sm text-foreground-muted select-none px-3 py-2.5 bg-background-tertiary rounded-xl border border-glass-border">
+                           <Lock size={16} className="flex-shrink-0" /> <span className="blur-sm opacity-50">hidden_email@investor.com</span>
+                        </div>
+                      )
+                    )}
+
+                    {/* LinkedIn */}
+                    {investor.linkedin_url && (
+                      canSeeNames ? (
+                        <a
+                          href={investor.linkedin_url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-2 text-sm text-blue-600 hover:underline px-3 py-2.5 bg-blue-50 border border-blue-100 rounded-xl"
+                        >
+                          <ExternalLink size={16} className="flex-shrink-0" /> {locale === 'en' ? 'LinkedIn Profile' : 'LinkedIn Profili'}
+                        </a>
+                      ) : (
+                        <div className="flex items-center gap-2 text-sm text-foreground-muted select-none px-3 py-2.5 bg-background-tertiary rounded-xl border border-glass-border">
+                           <Lock size={16} className="flex-shrink-0" /> <span className="blur-sm opacity-50">linkedin.com/in/investor-profile</span>
+                        </div>
+                      )
+                    )}
+                  </div>
                 </div>
 
                 {/* Modal Footer */}

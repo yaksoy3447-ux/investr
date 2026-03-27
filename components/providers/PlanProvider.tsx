@@ -19,7 +19,7 @@ const PLAN_LIMITS: Record<Plan, PlanLimits> = {
     maxCrmItems: 5,
     maxEmailsPerMonth: 0,
     canSendEmail: false,
-    canSeeInvestorNames: true,
+    canSeeInvestorNames: false,
     canExportCsv: false,
     canUseAI: false,
   },

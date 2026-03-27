@@ -25,6 +25,7 @@ export interface Investor {
   name: string;
   title?: string;
   company?: string;
+  email?: string;
   email_verified: boolean;
   linkedin_url?: string;
   website?: string;
