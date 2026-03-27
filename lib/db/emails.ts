@@ -17,27 +17,7 @@ export async function createEmailThread(investorId: string, subject: string, bod
     .single();
 
   const investorEmail = investorData?.email || 'test@example.com'; 
-  
-  // 2) Send Email via Internal API
-  try {
-    const res = await fetch('/api/emails/send', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        to: investorEmail,
-        subject: subject,
-        body: body,
-        userId: user.id
-      })
-    });
-    
-    // In strict production, if !res.ok you might want to throw error
-    // but we can allow it to save as 'failed' status locally.
-  } catch (err) {
-    console.error('Failed to trigger email API:', err);
-  }
-
-  // 3) Save Thread in Local DB
+  // 2) Save Thread in Local DB First (to get thread_id)
   const { data: thread, error: threadError } = await supabase
     .from('email_threads')
     .insert({
@@ -54,6 +34,26 @@ export async function createEmailThread(investorId: string, subject: string, bod
   if (threadError || !thread) {
     console.error('Error creating thread:', threadError);
     return { error: threadError?.message || 'Failed to create thread' };
+  }
+
+  // 3) Send Email via Internal API
+  try {
+    await fetch(process.env.NEXT_PUBLIC_APP_URL ? `${process.env.NEXT_PUBLIC_APP_URL}/api/emails/send` : 'http://localhost:3000/api/emails/send', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        to: investorEmail,
+        subject: subject,
+        body: body,
+        userId: user.id,
+        threadId: thread.id
+      })
+    });
+    
+    // In strict production, if !res.ok you might want to throw error
+    // but we can allow it to save as 'failed' status locally.
+  } catch (err) {
+    console.error('Failed to trigger email API:', err);
   }
 
   // Create the outbound message
@@ -149,14 +149,15 @@ export async function addReplyToThread(threadId: string, body: string) {
     // 2) Send the actual reply email via API
     if (investorEmail && user) {
       try {
-        await fetch('/api/emails/send', {
+        await fetch(process.env.NEXT_PUBLIC_APP_URL ? `${process.env.NEXT_PUBLIC_APP_URL}/api/emails/send` : 'http://localhost:3000/api/emails/send', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
             to: investorEmail,
             subject: `Re: ${thread.subject}`,
             body: body,
-            userId: user.id
+            userId: user.id,
+            threadId: threadId
           })
         });
       } catch (err) {

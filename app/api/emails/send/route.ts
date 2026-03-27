@@ -23,7 +23,7 @@ export async function POST(req: Request) {
   try {
     const { resend, supabaseAdmin } = getClients();
     
-    const { to, subject, body, userId } = await req.json();
+    const { to, subject, body, userId, threadId } = await req.json();
 
     if (!to || !subject || !body || !userId) {
       return NextResponse.json(
@@ -87,6 +87,7 @@ export async function POST(req: Request) {
       subject: subject,
       html: htmlContent,
       replyTo: `info@getinvestr.com`,
+      tags: threadId ? [{ name: 'thread_id', value: threadId }] : undefined,
     });
 
     if (error) {
