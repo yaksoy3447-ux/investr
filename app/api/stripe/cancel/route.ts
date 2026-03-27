@@ -33,7 +33,7 @@ export async function POST(req: Request) {
     // Tell Stripe to cancel the subscription AT THE END of the current period
     const subscription = await stripe.subscriptions.update(userData.stripe_subscription_id, {
       cancel_at_period_end: true,
-    });
+    }) as any;
 
     // INSTANTLY update our database so the user sees the change right away
     await supabase.from('users').update({

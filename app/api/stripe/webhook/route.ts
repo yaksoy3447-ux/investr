@@ -171,7 +171,7 @@ export async function POST(req: Request) {
 
   // Handle subscription updates (like cancel_at_period_end)
   if (event.type === 'customer.subscription.updated') {
-    const subscription = event.data.object as Stripe.Subscription;
+    const subscription = event.data.object as any;
     const { error } = await supabase
       .from('users')
       .update({
