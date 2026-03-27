@@ -30,10 +30,9 @@ export async function POST(req: Request) {
     `;
 
     const modelsToTry = [
-      'claude-3-5-sonnet-20240620',
+      'claude-sonnet-4-20250514',
+      'claude-3-5-sonnet-20241022',
       'claude-3-5-haiku-20241022',
-      'claude-3-haiku-20240307',
-      'claude-3-opus-20240229'
     ];
 
     let response;
