@@ -244,10 +244,11 @@ export default function Pricing() {
                 disabled={
                   loadingPlan === plan.id || 
                   (plan.isFree && userTier > 0) || 
-                  (!isYearly && !plan.isCredit && planTiers[plan.id] !== undefined && planTiers[plan.id] <= userTier)
+                  (!plan.isCredit && planTiers[plan.id] !== undefined && planTiers[plan.id] < userTier) || // ALWAYS disable lower tiers
+                  (!plan.isCredit && !isYearly && planTiers[plan.id] === userTier) // Disable current tier ONLY in monthly view
                 }
                 className={`w-full text-center py-3 rounded-xl font-bold transition-all text-sm flex items-center justify-center gap-2 mt-auto ${
-                  currentPlan === plan.id || (plan.isFree && userTier > 0) || (!isYearly && !plan.isCredit && planTiers[plan.id] !== undefined && planTiers[plan.id] < userTier)
+                  (plan.isFree && userTier > 0) || (!plan.isCredit && planTiers[plan.id] !== undefined && planTiers[plan.id] < userTier) || (!isYearly && currentPlan === plan.id)
                     ? 'bg-white/10 text-white/40 cursor-not-allowed border border-white/5'
                     : plan.popular
                     ? 'bg-white hover:bg-gray-100 text-primary shadow-lg'
@@ -258,9 +259,9 @@ export default function Pricing() {
               >
                 {loadingPlan === plan.id ? (
                   <div className="w-4 h-4 border-2 border-current border-t-transparent rounded-full animate-spin" />
-                ) : currentPlan === plan.id ? (
+                ) : !isYearly && currentPlan === plan.id ? (
                   locale === 'tr' ? 'Mevcut Planınız' : 'Your Current Plan'
-                ) : (plan.isFree && userTier > 0) || (!isYearly && !plan.isCredit && planTiers[plan.id] !== undefined && planTiers[plan.id] < userTier) ? (
+                ) : (plan.isFree && userTier > 0) || (!plan.isCredit && planTiers[plan.id] !== undefined && planTiers[plan.id] < userTier) ? (
                   locale === 'tr' ? 'Kullanılamaz' : 'Unavailable'
                 ) : (
                   plan.cta
