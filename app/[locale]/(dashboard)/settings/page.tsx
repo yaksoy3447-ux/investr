@@ -18,6 +18,7 @@ export default function SettingsPage() {
   const locale = useLocale();
   const [activeTab, setActiveTab] = useState('profile');
   const [saving, setSaving] = useState(false);
+  const [canceling, setCanceling] = useState(false);
   const [saved, setSaved] = useState(false);
   const [passwordError, setPasswordError] = useState('');
   const [avatarUrl, setAvatarUrl] = useState<string | null>(null);
@@ -147,6 +148,28 @@ export default function SettingsPage() {
     setSaving(false);
     setSaved(true);
     setTimeout(() => setSaved(false), 2000);
+  };
+
+  const handleCancelSubscription = async () => {
+    if (!window.confirm(locale === 'en' ? 'Are you sure you want to cancel your subscription? Your plan will be downgraded to Free at the end of your billing period.' : 'Üyeliğinizi iptal etmek istediğinize emin misiniz? Faturalandırma döneminizin sonunda üyeliğiniz Ücretsiz plana düşecektir.')) {
+      return;
+    }
+
+    setCanceling(true);
+    try {
+      const res = await fetch('/api/stripe/cancel', { method: 'POST' });
+      const data = await res.json();
+      if (res.ok) {
+        alert(locale === 'en' ? 'Your subscription will cancel at the end of the period.' : 'Aboneliğiniz dönem sonunda iptal edilecek.');
+      } else {
+        alert(data.error || (locale === 'en' ? 'Failed to cancel subscription.' : 'Abonelik iptal edilemedi.'));
+      }
+    } catch (err) {
+      console.error(err);
+      alert(locale === 'en' ? 'An error occurred. Please try again later.' : 'Bir hata oluştu. Lütfen daha sonra tekrar deneyin.');
+    } finally {
+      setCanceling(false);
+    }
   };
 
   const tabs = [
@@ -430,6 +453,22 @@ export default function SettingsPage() {
                 />
               </div>
             </div>
+
+            {plan !== 'free' && (
+              <div className="pb-6 border-b border-glass-border">
+                <h3 className="text-sm font-semibold text-foreground mb-1">{locale === 'en' ? 'Membership Management' : 'Üyelik Yönetimi'}</h3>
+                <p className="text-xs text-foreground-muted mb-3">
+                  {locale === 'en' ? 'Cancel your subscription. You will keep your features until the end of the billing period.' : 'Paketinizi iptal edin. Mevcut özelliklerinizi fatura dönemi bitene kadar kullanmaya devam edersiniz.'}
+                </p>
+                <button 
+                  onClick={handleCancelSubscription}
+                  disabled={canceling}
+                  className="px-4 py-2 rounded-lg border border-glass-border text-foreground-secondary text-sm font-medium hover:bg-background-tertiary transition-all"
+                >
+                  {canceling ? (locale === 'en' ? 'Canceling...' : 'İptal Ediliyor...') : (locale === 'en' ? 'Cancel Membership' : 'Üyeliğimi İptal Et')}
+                </button>
+              </div>
+            )}
 
             <div>
               <h3 className="text-sm font-semibold text-error mb-1">{locale === 'en' ? 'Delete Account' : 'Hesabı Sil'}</h3>

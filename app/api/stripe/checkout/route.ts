@@ -87,6 +87,9 @@ export async function POST(req: Request) {
             description: `12 aylık erişim (${YEARLY_MULTIPLIER} ay öde, ${12 - YEARLY_MULTIPLIER} ay hediye) · Aylık ${monthlyCredits} kredi`,
           },
           unit_amount: yearlyAmount,
+          recurring: {
+            interval: 'year' as const,
+          },
         },
         quantity: 1,
       }];
@@ -102,7 +105,7 @@ export async function POST(req: Request) {
           monthlyCredits: monthlyCredits.toString(),
         },
         line_items: lineItems,
-        mode: 'payment',
+        mode: 'subscription',
         success_url: `${appUrl}/tr/settings?success=true`,
         cancel_url: `${appUrl}/tr/upgrade?canceled=true`,
       });
