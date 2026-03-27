@@ -38,7 +38,7 @@ export async function createEmailThread(investorId: string, subject: string, bod
 
   // 3) Send Email via Internal API
   try {
-    await fetch(process.env.NEXT_PUBLIC_APP_URL ? `${process.env.NEXT_PUBLIC_APP_URL}/api/emails/send` : 'http://localhost:3000/api/emails/send', {
+    await fetch('/api/emails/send', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -149,7 +149,7 @@ export async function addReplyToThread(threadId: string, body: string) {
     // 2) Send the actual reply email via API
     if (investorEmail && user) {
       try {
-        await fetch(process.env.NEXT_PUBLIC_APP_URL ? `${process.env.NEXT_PUBLIC_APP_URL}/api/emails/send` : 'http://localhost:3000/api/emails/send', {
+        await fetch('/api/emails/send', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
