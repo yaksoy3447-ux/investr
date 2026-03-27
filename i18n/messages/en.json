@@ -205,206 +205,12 @@
     },
     "pricingPage": {
       "badge": "Transparent Pricing",
-      "title1": "Only pay for the contacts",
-      "title2": "you reveal.",
-      "subtitle": "Choose a monthly package or buy credits individually.",
+      "title1": "Simple & Predictable",
+      "title2": "Pricing Plans",
+      "subtitle": "Choose a monthly or yearly plan. You can also buy standalone credits.",
       "monthly": "Monthly",
       "yearly": "Yearly",
-      "yearlyBadge": "3 Months Free",
-      "tiers": {
-        "monthly": [
-          {
-            "id": "starter",
-            "name": "Starter",
-            "price": 29,
-            "period": "/ mo",
-            "description": "Perfect for founders starting their seed round.",
-            "features": [
-              {
-                "name": "40 Contact Reveals / month",
-                "included": true
-              },
-              {
-                "name": "View Verified Emails & LinkedIn",
-                "included": true
-              },
-              {
-                "name": "Save up to 100 Investors (CRM)",
-                "included": true
-              },
-              {
-                "name": "Direct In-App Email Outreach",
-                "included": true
-              },
-              {
-                "name": "Basic Email Templates",
-                "included": true
-              }
-            ]
-          },
-          {
-            "id": "pro",
-            "name": "Pro",
-            "price": 69,
-            "period": "/ mo",
-            "description": "For serious founders actively raising funds.",
-            "features": [
-              {
-                "name": "100 Contact Reveals / month",
-                "included": true
-              },
-              {
-                "name": "View Verified Emails & LinkedIn",
-                "included": true
-              },
-              {
-                "name": "Save up to 500 Investors (CRM)",
-                "included": true
-              },
-              {
-                "name": "Export Unlocked Contacts to CSV",
-                "included": true
-              },
-              {
-                "name": "Direct In-App Email Outreach",
-                "included": true
-              },
-              {
-                "name": "Premium Support & Analytics",
-                "included": true
-              }
-            ],
-            "popular": true
-          },
-          {
-            "id": "premium",
-            "name": "Premium",
-            "price": 149,
-            "period": "/ mo",
-            "description": "For agencies, VCs, and heavy raisers.",
-            "features": [
-              {
-                "name": "500 Contact Reveals / month",
-                "included": true
-              },
-              {
-                "name": "View Verified Emails & LinkedIn",
-                "included": true
-              },
-              {
-                "name": "Save up to 1,000 Investors (CRM)",
-                "included": true
-              },
-              {
-                "name": "Export Unlocked Contacts to CSV",
-                "included": true
-              },
-              {
-                "name": "Direct In-App Email Outreach",
-                "included": true
-              },
-              {
-                "name": "24/7 Dedicated Account Manager",
-                "included": true
-              }
-            ]
-          }
-        ],
-        "credits": [
-          {
-            "id": "credits-10",
-            "name": "10 Credits",
-            "price": 9.9,
-            "period": "one-time",
-            "description": "Perfect for spot-checking specific investors.",
-            "features": [
-              {
-                "name": "10 Immediate Contact Reveals",
-                "included": true
-              },
-              {
-                "name": "Credits Never Expire",
-                "included": true
-              },
-              {
-                "name": "Access to Verified Direct Emails",
-                "included": true
-              },
-              {
-                "name": "View Hidden LinkedIn Profiles",
-                "included": true
-              },
-              {
-                "name": "Save Revealed Contacts to CRM",
-                "included": true
-              }
-            ]
-          },
-          {
-            "id": "credits-50",
-            "name": "50 Credits",
-            "price": 39,
-            "period": "one-time",
-            "description": "Standard top-up for active raisers.",
-            "features": [
-              {
-                "name": "50 Immediate Contact Reveals",
-                "included": true
-              },
-              {
-                "name": "Credits Never Expire",
-                "included": true
-              },
-              {
-                "name": "Access to Verified Direct Emails",
-                "included": true
-              },
-              {
-                "name": "View Hidden LinkedIn Profiles",
-                "included": true
-              },
-              {
-                "name": "Save Revealed Contacts to CRM",
-                "included": true
-              }
-            ],
-            "popular": true
-          },
-          {
-            "id": "credits-100",
-            "name": "100 Credits",
-            "price": 69,
-            "period": "one-time",
-            "description": "For bulk email campaigns and agencies.",
-            "features": [
-              {
-                "name": "100 Immediate Contact Reveals",
-                "included": true
-              },
-              {
-                "name": "Best Value for Bulk Campaigns",
-                "included": true
-              },
-              {
-                "name": "Credits Never Expire",
-                "included": true
-              },
-              {
-                "name": "Access to Verified Direct Emails",
-                "included": true
-              },
-              {
-                "name": "Save Revealed Contacts to CRM",
-                "included": true
-              },
-              {
-                "name": "Export Capabilities Enabled",
-                "included": true
-              }
-            ]
-          }
-        ]
-      },
+      "yearlyBadge": "GET 3 MONTHS FREE",
       "billedYearly": "Billed annually",
       "choosePlan": "Choose Plan",
       "mostPopular": "Most Popular",
@@ -585,7 +391,200 @@
       "toggleMonthly": "Monthly Subscriptions",
       "toggleAnnual": "Pay As You Go (Credits)",
       "cta": "Get Started",
-      "ctaPremium": "Get Started"
+      "ctaPremium": "Get Started",
+      "plans": [
+        {
+          "id": "free",
+          "name": "Free",
+          "badge": "Browse the platform",
+          "price": "0",
+          "period": "Forever",
+          "description": "Discover our database and filter investors.",
+          "isFree": true,
+          "limits": [
+            "Access to 50,000+ Database",
+            "Advanced Market Filters",
+            "Save up to 5 Investors (CRM)",
+            "Blurred Contact Info"
+          ],
+          "features": [
+            {
+              "name": "Verified Direct Emails",
+              "included": false
+            },
+            {
+              "name": "View LinkedIn Profiles",
+              "included": false
+            },
+            {
+              "name": "Send In-App Emails",
+              "included": false
+            },
+            {
+              "name": "Export to CSV",
+              "included": false
+            },
+            {
+              "name": "Dedicated Support",
+              "included": false
+            }
+          ],
+          "cta": "Sign Up for Free"
+        },
+        {
+          "id": "credits",
+          "name": "Pay As You Go",
+          "badge": "Spot-checking",
+          "price": "9.90",
+          "period": "one-time",
+          "description": "Buy standalone credits. Credits never expire.",
+          "isCredit": true,
+          "limits": [
+            "Minimum 10 Credits",
+            "Credits Never Expire",
+            "Save Revealed Contacts",
+            "Flexible top-ups"
+          ],
+          "features": [
+            {
+              "name": "Verified Direct Emails",
+              "included": true
+            },
+            {
+              "name": "View LinkedIn Profiles",
+              "included": true
+            },
+            {
+              "name": "Send In-App Emails",
+              "included": false
+            },
+            {
+              "name": "Export to CSV",
+              "included": false
+            },
+            {
+              "name": "Dedicated Support",
+              "included": false
+            }
+          ],
+          "cta": "Buy Credits"
+        },
+        {
+          "id": "starter",
+          "name": "Starter",
+          "badge": "Solo founder outreach",
+          "price": "29",
+          "period": "per month",
+          "description": "Perfect for founders starting their seed round.",
+          "isSubscription": true,
+          "limits": [
+            "40 Contact Reveals / month",
+            "Save up to 100 Investors to CRM",
+            "Unlimited Pipelines",
+            "Email up to 40 investors/month"
+          ],
+          "features": [
+            {
+              "name": "Verified Direct Emails",
+              "included": true
+            },
+            {
+              "name": "View LinkedIn Profiles",
+              "included": true
+            },
+            {
+              "name": "Send In-App Emails",
+              "included": true
+            },
+            {
+              "name": "Export to CSV",
+              "included": false
+            },
+            {
+              "name": "Dedicated Support",
+              "included": false
+            }
+          ],
+          "cta": "Start Your Subscription"
+        },
+        {
+          "id": "pro",
+          "name": "Pro",
+          "badge": "Growing startup outreach",
+          "price": "69",
+          "period": "per month",
+          "description": "For serious founders actively raising funds.",
+          "popular": true,
+          "isSubscription": true,
+          "limits": [
+            "100 Contact Reveals / month",
+            "Save up to 500 Investors to CRM",
+            "Unlimited Pipelines",
+            "Email up to 100 investors/month"
+          ],
+          "features": [
+            {
+              "name": "Verified Direct Emails",
+              "included": true
+            },
+            {
+              "name": "View LinkedIn Profiles",
+              "included": true
+            },
+            {
+              "name": "Send In-App Emails",
+              "included": true
+            },
+            {
+              "name": "Export to CSV",
+              "included": true
+            },
+            {
+              "name": "Dedicated Support",
+              "included": false
+            }
+          ],
+          "cta": "Start Your Subscription"
+        },
+        {
+          "id": "premium",
+          "name": "Premium",
+          "badge": "High-volume team",
+          "price": "199",
+          "period": "per month",
+          "description": "For agencies, VCs, and heavy raisers.",
+          "isSubscription": true,
+          "limits": [
+            "1,000 Contact Reveals / month",
+            "Save unlimited Investors to CRM",
+            "Unlimited Pipelines",
+            "Email up to 1,000 investors/month"
+          ],
+          "features": [
+            {
+              "name": "Verified Direct Emails",
+              "included": true
+            },
+            {
+              "name": "View LinkedIn Profiles",
+              "included": true
+            },
+            {
+              "name": "Send In-App Emails",
+              "included": true
+            },
+            {
+              "name": "Export to CSV",
+              "included": true
+            },
+            {
+              "name": "Dedicated Support",
+              "included": true
+            }
+          ],
+          "cta": "Start Your Subscription"
+        }
+      ]
     },
     "heroCards": {
       "matchAnalysis": "Match Analysis",

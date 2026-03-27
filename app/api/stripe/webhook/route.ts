@@ -46,23 +46,22 @@ export async function POST(req: Request) {
       let addedCredits = 0;
       
       const lineItems = await stripe.checkout.sessions.listLineItems(session.id);
-      const priceId = lineItems.data[0]?.price?.id;
+      const firstItem = lineItems.data[0];
+      const priceId = firstItem?.price?.id;
+      const quantity = firstItem?.quantity || 1;
       
       if (priceId === process.env.STRIPE_PREMIUM_PRICE_ID) {
         newPlan = 'premium';
-        addedCredits = 500;
+        addedCredits = 1000;
       } else if (priceId === process.env.STRIPE_GROWTH_PRICE_ID) {
         newPlan = 'pro';
         addedCredits = 100;
       } else if (priceId === process.env.STRIPE_STARTER_PRICE_ID) {
         newPlan = 'starter';
         addedCredits = 40;
-      } else if (priceId === process.env.STRIPE_CREDITS_10_PRICE_ID) {
-        addedCredits = 10;
-      } else if (priceId === process.env.STRIPE_CREDITS_50_PRICE_ID) {
-        addedCredits = 50;
-      } else if (priceId === process.env.STRIPE_CREDITS_100_PRICE_ID) {
-        addedCredits = 100;
+      } else if (priceId === process.env.STRIPE_CREDIT_PRICE_ID) {
+        // Here, the quantity IS the exact number of credits purchased (e.g. 10, 15, 50)
+        addedCredits = quantity;
       }
 
       const currentCredits = user?.credits || 0;

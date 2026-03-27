@@ -16,10 +16,11 @@ export async function POST(req: Request) {
     }
 
     const body = await req.json();
-    const { planLevel } = body;
+    const { planLevel, quantity } = body;
 
     let priceId = '';
     let checkoutMode: 'subscription' | 'payment' = 'subscription';
+    let checkoutQuantity = 1;
 
     if (planLevel === 'premium') {
       priceId = process.env.STRIPE_PREMIUM_PRICE_ID as string;
@@ -27,15 +28,11 @@ export async function POST(req: Request) {
       priceId = process.env.STRIPE_GROWTH_PRICE_ID as string;
     } else if (planLevel === 'starter') {
       priceId = process.env.STRIPE_STARTER_PRICE_ID as string;
-    } else if (planLevel === 'credits-10') {
-      priceId = process.env.STRIPE_CREDITS_10_PRICE_ID as string;
+    } else if (planLevel === 'credits') {
+      // 1 Credit = $0.99. Minimum checkout quantity should be 10.
+      priceId = process.env.STRIPE_CREDIT_PRICE_ID as string;
       checkoutMode = 'payment';
-    } else if (planLevel === 'credits-50') {
-      priceId = process.env.STRIPE_CREDITS_50_PRICE_ID as string;
-      checkoutMode = 'payment';
-    } else if (planLevel === 'credits-100') {
-      priceId = process.env.STRIPE_CREDITS_100_PRICE_ID as string;
-      checkoutMode = 'payment';
+      checkoutQuantity = quantity ? parseInt(quantity.toString()) : 10;
     }
 
     if (!priceId) {
@@ -53,7 +50,7 @@ export async function POST(req: Request) {
       line_items: [
         {
           price: priceId,
-          quantity: 1,
+          quantity: checkoutQuantity,
         },
       ],
       mode: checkoutMode,
