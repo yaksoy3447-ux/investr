@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { Check, X } from 'lucide-react';
 import { Link } from '@/i18n/routing';
 import { useState } from 'react';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import { usePlan } from '@/components/providers/PlanProvider';
 
 export default function Pricing() {
@@ -12,6 +12,7 @@ export default function Pricing() {
   const [loadingPlan, setLoadingPlan] = useState<string | null>(null);
   const [creditAmount, setCreditAmount] = useState<number>(10);
   const t = useTranslations('landing.pricingPage');
+  const locale = useLocale();
   
   // Safe context extraction for when used outside PlanProvider (Landing Page)
   let currentPlan: string | undefined = undefined;
@@ -240,9 +241,9 @@ export default function Pricing() {
 
               <button
                 onClick={() => handleCheckout(plan.id, plan.isFree || false, plan.isCredit || false)}
-                disabled={loadingPlan === plan.id || (!plan.isCredit && planTiers[plan.id] !== undefined && planTiers[plan.id] <= userTier)}
+                disabled={loadingPlan === plan.id || (!isYearly && !plan.isCredit && planTiers[plan.id] !== undefined && planTiers[plan.id] <= userTier)}
                 className={`w-full text-center py-3 rounded-xl font-bold transition-all text-sm flex items-center justify-center gap-2 mt-auto ${
-                  currentPlan === plan.id || (!plan.isCredit && planTiers[plan.id] !== undefined && planTiers[plan.id] < userTier)
+                  (!isYearly && currentPlan === plan.id) || (!isYearly && !plan.isCredit && planTiers[plan.id] !== undefined && planTiers[plan.id] < userTier)
                     ? 'bg-white/10 text-white/40 cursor-not-allowed border border-white/5'
                     : plan.popular
                     ? 'bg-white hover:bg-gray-100 text-primary shadow-lg'
@@ -253,10 +254,10 @@ export default function Pricing() {
               >
                 {loadingPlan === plan.id ? (
                   <div className="w-4 h-4 border-2 border-current border-t-transparent rounded-full animate-spin" />
-                ) : currentPlan === plan.id ? (
-                  t('currentPlan', { defaultValue: 'Mevcut Planınız' })
-                ) : !plan.isCredit && planTiers[plan.id] !== undefined && planTiers[plan.id] < userTier ? (
-                  t('unavailable', { defaultValue: 'Kullanılamaz' })
+                ) : !isYearly && currentPlan === plan.id ? (
+                  locale === 'tr' ? 'Mevcut Planınız' : 'Your Current Plan'
+                ) : !isYearly && !plan.isCredit && planTiers[plan.id] !== undefined && planTiers[plan.id] < userTier ? (
+                  locale === 'tr' ? 'Kullanılamaz' : 'Unavailable'
                 ) : (
                   plan.cta
                 )}
