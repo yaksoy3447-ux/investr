@@ -165,6 +165,7 @@ export default function SettingsPage() {
       const data = await res.json();
       if (res.ok) {
         alert(locale === 'en' ? 'Your subscription will cancel at the end of the period.' : 'Aboneliğiniz dönem sonunda iptal edilecek.');
+        window.location.reload();
       } else {
         alert(data.error || (locale === 'en' ? 'Failed to cancel subscription.' : 'Abonelik iptal edilemedi.'));
       }
