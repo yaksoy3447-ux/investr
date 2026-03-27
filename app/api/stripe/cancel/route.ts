@@ -36,9 +36,14 @@ export async function POST(req: Request) {
     }) as any;
 
     // INSTANTLY update our database so the user sees the change right away
+    // Stripe returns timestamp in seconds, JS needs milliseconds.
+    const periodEnd = subscription.current_period_end 
+      ? new Date(subscription.current_period_end * 1000).toISOString() 
+      : new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toISOString(); // Fallback 30 days if not present
+
     await supabase.from('users').update({
       cancel_at_period_end: true,
-      current_period_end: new Date(subscription.current_period_end * 1000).toISOString(),
+      current_period_end: periodEnd,
     }).eq('auth_id', user.id);
 
     // Create a notification for the user
