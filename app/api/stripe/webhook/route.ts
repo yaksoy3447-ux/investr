@@ -66,15 +66,24 @@ export async function POST(req: Request) {
 
       const currentCredits = user?.credits || 0;
 
+      // Prepare the update payload
+      const updatePayload: any = {
+        plan: newPlan,
+        credits: currentCredits + addedCredits,
+      };
+
+      if (session.customer) {
+        updatePayload.stripe_customer_id = session.customer as string;
+      }
+
+      if (session.subscription) {
+        updatePayload.stripe_subscription_id = session.subscription as string;
+      }
+
       // Update the user's plan and credits in Supabase
       const { error } = await supabase
         .from('users')
-        .update({
-          plan: newPlan,
-          credits: currentCredits + addedCredits,
-          stripe_customer_id: session.customer as string,
-          stripe_subscription_id: session.subscription as string,
-        })
+        .update(updatePayload)
         .eq('id', userId);
 
       if (error) {
