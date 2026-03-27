@@ -39,7 +39,7 @@ export async function POST(req: Request) {
       const { data: user } = await supabase
         .from('users')
         .select('plan, credits')
-        .eq('id', userId)
+        .eq('auth_id', userId)
         .single();
         
       let newPlan = user?.plan || 'free';
@@ -84,7 +84,7 @@ export async function POST(req: Request) {
       const { error } = await supabase
         .from('users')
         .update(updatePayload)
-        .eq('id', userId);
+        .eq('auth_id', userId);
 
       if (error) {
         console.error('Error updating user plan:', error);
