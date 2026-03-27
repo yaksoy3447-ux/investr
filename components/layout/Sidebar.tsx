@@ -13,7 +13,6 @@ import {
   PanelLeftOpen,
   Crown,
   ArrowUpRight,
-  Radar,
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useState } from 'react';
@@ -52,8 +51,8 @@ export default function Sidebar() {
       {/* Logo + Collapse Toggle */}
       <div className="flex items-center justify-between h-16 px-4 border-b border-glass-border">
         <Link href="/" className="flex items-center gap-1.5 group overflow-hidden">
-          <div className="flex-shrink-0 flex items-center justify-center w-8">
-            <Radar className="text-primary w-6 h-6" strokeWidth={2.5} />
+          <div className="shrink-0 flex items-center justify-center w-8">
+            <img src="/logo.png" alt="GetInvestr" width={24} height={24} />
           </div>
           {!collapsed && (
             <span className="text-xl font-bold text-foreground transition-opacity tracking-tight">
