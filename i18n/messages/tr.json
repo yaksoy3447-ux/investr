@@ -158,7 +158,7 @@
       "q6": "Girişimimi yatırımcılara nasıl daha iyi sunabilirim?",
       "a6": "Platform içerisindeki kaynaklar ve Outreach AI özelliği sayesinde, yatırımcılara göndereceğiniz mesajların daha etkili olmasını sağlayacak şablonlar ve yönlendirmeler alabilirsiniz.",
       "q7": "Kredi kartı bilgilerim güvende mi?",
-      "a7": "Kesinlikle. Ödeme altyapımız tamamen Stripe & Iyzico (bölgenize göre) güvencesi altındadır ve kredi kartı bilgileriniz hiçbir şekilde sunucularımızda saklanmamaktadır."
+      "a7": "Kesinlikle. Ödeme altyapımız tamamen Stripe güvencesi altındadır ve kredi kartı bilgileriniz hiçbir şekilde sunucularımızda saklanmamaktadır."
     },
     "header": {
       "howItWorks": "Nasıl Çalışır",

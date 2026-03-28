@@ -27,7 +27,7 @@ tr.landing.faq = {
   q6: "Girişimimi yatırımcılara nasıl daha iyi sunabilirim?",
   a6: "Platform içerisindeki kaynaklar ve Outreach AI özelliği sayesinde, yatırımcılara göndereceğiniz mesajların daha etkili olmasını sağlayacak şablonlar ve yönlendirmeler alabilirsiniz.",
   q7: "Kredi kartı bilgilerim güvende mi?",
-  a7: "Kesinlikle. Ödeme altyapımız tamamen Stripe & Iyzico (bölgenize göre) güvencesi altındadır ve kredi kartı bilgileriniz hiçbir şekilde sunucularımızda saklanmamaktadır."
+  a7: "Kesinlikle. Ödeme altyapımız tamamen Stripe güvencesi altındadır ve kredi kartı bilgileriniz hiçbir şekilde sunucularımızda saklanmamaktadır."
 };
 
 en.landing.faq = {
@@ -46,7 +46,7 @@ en.landing.faq = {
   q6: "How can I pitch my startup better?",
   a6: "Thanks to our in-platform resources and the Outreach AI feature, you can access powerful templates and guidance to ensure your messages to investors make a great impression.",
   q7: "Is my credit card information secure?",
-  a7: "Absolutely. Our payment infrastructure is entirely secured by Stripe & Iyzico (depending on your region), and your credit card information is never stored on our servers."
+  a7: "Absolutely. Our payment infrastructure is entirely secured by Stripe, and your credit card information is never stored on our servers."
 };
 
 // Update Pricing Features using correct context

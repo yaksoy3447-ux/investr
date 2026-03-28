@@ -158,7 +158,7 @@
       "q6": "How can I pitch my startup better?",
       "a6": "Thanks to our in-platform resources and the Outreach AI feature, you can access powerful templates and guidance to ensure your messages to investors make a great impression.",
       "q7": "Is my credit card information secure?",
-      "a7": "Absolutely. Our payment infrastructure is entirely secured by Stripe & Iyzico (depending on your region), and your credit card information is never stored on our servers."
+      "a7": "Absolutely. Our payment infrastructure is entirely secured by Stripe, and your credit card information is never stored on our servers."
     },
     "header": {
       "howItWorks": "How it Works",
