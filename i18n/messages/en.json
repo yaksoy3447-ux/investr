@@ -787,7 +787,7 @@
         {
           "id": 1,
           "title": "Top 10 Fastest Growing Turkish Fintech Startups Securing Funds in 2024",
-          "author": "GetInvestr Editorial",
+          "author": "GetInvestr Team",
           "date": "June 15, 2024",
           "readMinutes": 5,
           "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
@@ -796,7 +796,7 @@
         {
           "id": 2,
           "title": "Critical Metrics You Need to Prepare Before Securing a Pre-Seed Fund Round",
-          "author": "Yasin AKSOY",
+          "author": "GetInvestr Team",
           "date": "June 10, 2024",
           "readMinutes": 7,
           "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
@@ -805,11 +805,38 @@
         {
           "id": 3,
           "title": "Actively Searching For HealthTech? Connect with These Top Tier Angel Investors",
-          "author": "GetInvestr Editorial",
+          "author": "GetInvestr Team",
           "date": "June 05, 2024",
           "readMinutes": 4,
           "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=800",
           "category": "Sector Analysis"
+        },
+        {
+          "id": 4,
+          "title": "Winning Tactics for AI Startup Fundraising",
+          "author": "GetInvestr Team",
+          "date": "June 20, 2024",
+          "readMinutes": 6,
+          "image": "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800",
+          "category": "AI Guide"
+        },
+        {
+          "id": 5,
+          "title": "2024 Investment Outlook for B2B SaaS Startups",
+          "author": "GetInvestr Team",
+          "date": "June 18, 2024",
+          "readMinutes": 5,
+          "image": "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=800",
+          "category": "Market Analysis"
+        },
+        {
+          "id": 6,
+          "title": "Top 3 Mistakes When Preparing for Series A",
+          "author": "GetInvestr Team",
+          "date": "June 12, 2024",
+          "readMinutes": 8,
+          "image": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&q=80&w=800",
+          "category": "Financial Strategy"
         }
       ],
       "lastUpdated": "Last updated:"

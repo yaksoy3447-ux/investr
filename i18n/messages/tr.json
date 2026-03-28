@@ -796,7 +796,7 @@
         {
           "id": 2,
           "title": "Tohum (Seed) Öncesi Yatırım Turuna Çıkarken Dikkat Edilmesi Gereken Kritik Metrikler",
-          "author": "Yasin AKSOY",
+          "author": "GetInvestr Ekibi",
           "date": "10 Haziran 2024",
           "readMinutes": 7,
           "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
@@ -810,6 +810,33 @@
           "readMinutes": 4,
           "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=800",
           "category": "Sektör Analizi"
+        },
+        {
+          "id": 4,
+          "title": "Yapay Zeka Girişimlerinde Yatırım Almanın Püf Noktaları",
+          "author": "GetInvestr Ekibi",
+          "date": "20 Haziran 2024",
+          "readMinutes": 6,
+          "image": "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800",
+          "category": "AI Rehberi"
+        },
+        {
+          "id": 5,
+          "title": "B2B SaaS Girişimleri İçin 2024 Yatırım Görünümü",
+          "author": "GetInvestr Ekibi",
+          "date": "18 Haziran 2024",
+          "readMinutes": 5,
+          "image": "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=800",
+          "category": "Pazar Analizi"
+        },
+        {
+          "id": 6,
+          "title": "Seri A Turuna Hazırlanırken Yapılan En Büyük 3 Hata",
+          "author": "GetInvestr Ekibi",
+          "date": "12 Haziran 2024",
+          "readMinutes": 8,
+          "image": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&q=80&w=800",
+          "category": "Finansal Strateji"
         }
       ],
       "lastUpdated": "Son güncelleme:"
