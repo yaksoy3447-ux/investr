@@ -788,6 +788,7 @@
         {
           "id": 1,
           "title": "Top 10 Fastest Growing Turkish Fintech Startups Securing Funds in 2024",
+          "content": "The Turkish fintech ecosystem continued its growth in the first half of 2024 despite global economic fluctuations. In particular, investments received by giants like Colendi and Midas show how hungry the market still is.\n\nKey startups highlighting our list:\n1. Colendi: Leading with a massive investment in digital banking and financial services.\n2. Midas: Raised funds as interest in investment platforms surged.\n3. Param: Continues its dominance in payment systems.\n\nThese investments support Turkey's vision of becoming a regional fintech hub.",
           "author": "GetInvestr Team",
           "date": "June 15, 2024",
           "readMinutes": 5,
@@ -797,6 +798,7 @@
         {
           "id": 2,
           "title": "Critical Metrics You Need to Prepare Before Securing a Pre-Seed Fund Round",
+          "content": "The pre-seed stage is the most challenging process when an idea turns into a product. A pitch deck alone might not be enough for investors to believe in you. Here are the 3 main metrics you should focus on:\n\n1. Customer Acquisition Cost (CAC): How much do you spend to sell your product?\n2. Customer Lifetime Value (LTV): How much does a customer earn you in total?\n3. Retention Rate: Do your users come back?\n\nAlignment between these metrics proves the sustainability of your business model.",
           "author": "GetInvestr Team",
           "date": "June 10, 2024",
           "readMinutes": 7,
@@ -806,6 +808,7 @@
         {
           "id": 3,
           "title": "Actively Searching For HealthTech? Connect with These Top Tier Angel Investors",
+          "content": "The healthcare sector is undergoing a major transformation under the influence of AI and digitalization. Successful examples in Turkey like Salus and SpiroHome have increased investor interest in this area.\n\nActive investment networks in HealthTech:\n- Galata Business Angels (GBA)\n- Keiretsu Forum Turkey\n- TR Angel\n\nFor these investors, the most important criteria are clinical validation of the product and global scalability.",
           "author": "GetInvestr Team",
           "date": "June 05, 2024",
           "readMinutes": 4,
@@ -815,6 +818,7 @@
         {
           "id": 4,
           "title": "Winning Tactics for AI Startup Fundraising",
+          "content": "Artificial Intelligence (AI) is no longer just a hype; it's an integral part of business processes. However, building an AI startup is difficult due to high GPU costs and data needs.\n\nTo impress AI investors:\n- Have a differentiated dataset.\n- Focus on the value delivered to the end user, not just the AI model.\n- Prove the depth of your technical team.\n\nInvestors expect you to say 'we solve this problem with AI', not just 'we use AI too'.",
           "author": "GetInvestr Team",
           "date": "June 20, 2024",
           "readMinutes": 6,
@@ -824,6 +828,7 @@
         {
           "id": 5,
           "title": "2024 Investment Outlook for B2B SaaS Startups",
+          "content": "The SaaS (Software as a Service) world has entered a new era focused on efficiency. Investors now value profitability as much as rapid growth.\n\n2024 Trends:\n- Product-Led Growth (PLG): Software that can grow without a sales team is more valuable.\n- Low Churn: Those who can retain their customers win.\n- Integration Capability: SaaS that can talk to other tools stand out.",
           "author": "GetInvestr Team",
           "date": "June 18, 2024",
           "readMinutes": 5,
@@ -833,6 +838,7 @@
         {
           "id": 6,
           "title": "Top 3 Mistakes When Preparing for Series A",
+          "content": "The Series A round is the time to turn into a real enterprise. Many founders fail in this round due to the following mistakes:\n\n1. Not Being Data-Driven: You should now talk with Excel sheets, not just dreams.\n2. Valuation Stubbornness: A very high valuation brings the risk of a 'Down Round' in the next round.\n3. Not Completing the Team: Investors expect middle and upper management of the team to be filled.\n\nAvoiding these mistakes increases your chances of closing the round by 40%.",
           "author": "GetInvestr Team",
           "date": "June 12, 2024",
           "readMinutes": 8,
@@ -840,7 +846,11 @@
           "category": "Financial Strategy"
         }
       ],
-      "lastUpdated": "Last updated:"
+      "lastUpdated": "Last updated:",
+      "back": "Return to All Publications",
+      "ctaTitle": "Start Fundraising For Your Startup Today",
+      "ctaSub": "Access thousands of verified investors and accelerate your investment process.",
+      "ctaBtn": "Join Now For Free"
     }
   },
   "auth": {

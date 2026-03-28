@@ -788,6 +788,7 @@
         {
           "id": 1,
           "title": "Türkiye'de 2024 Yılının En Çok Yatırım Alan 10 Fintech Girişimi",
+          "content": "Türkiye fintech ekosistemi, 2024 yılının ilk yarısında global ekonomik dalgalanmalara rağmen büyümesini sürdürdü. Özellikle Colendi ve Midas gibi devlerin aldığı yatırımlar pazarın hala ne kadar iştahlı olduğunu gösteriyor.\n\nListemizde öne çıkan başlıca girişimler:\n1. Colendi: Dijital bankacılık ve finansal hizmetler alanındaki dev yatırımıyla zirvede.\n2. Midas: Yatırım platformlarına olan ilginin artmasıyla fon topladı.\n3. Param: Ödeme sistemlerindeki dominasyonunu sürdürüyor.\n\nBu yatırımlar, Türkiye'nin bölgedeki fintech merkezi olma vizyonunu destekler nitelikte.",
           "author": "GetInvestr Ekibi",
           "date": "15 Haziran 2024",
           "readMinutes": 5,
@@ -797,6 +798,7 @@
         {
           "id": 2,
           "title": "Tohum (Seed) Öncesi Yatırım Turuna Çıkarken Dikkat Edilmesi Gereken Kritik Metrikler",
+          "content": "Tohum öncesi (Pre-seed) aşaması, bir fikrin ürüne dönüştüğü en zorlu süreçtir. Yatırımcıların size inanması için sadece bir sunum yeterli olmayabilir. İşte odaklanmanız gereken 3 ana metrik:\n\n1. Müşteri Edinme Maliyeti (CAC): Ürününüzü satmak için ne kadar harcıyorsunuz?\n2. Müşteri Yaşam Boyu Değeri (LTV): Bir müşteri size toplamda ne kadar kazandırıyor?\n3. Elde Tutma Oranı (Retention): Kullanıcılarınız geri geliyor mu?\n\nBu metrikler arasındaki uyum, iş modelinizin sürdürülebilirliğini kanıtlar.",
           "author": "GetInvestr Ekibi",
           "date": "10 Haziran 2024",
           "readMinutes": 7,
@@ -806,6 +808,7 @@
         {
           "id": 3,
           "title": "Sağlık Teknolojileri (HealthTech) Sektörüne İlgi Duyan En Aktif Melek Yatırımcılar",
+          "content": "Sağlık sektörü, yapay zeka ve dijitalleşmenin etkisiyle büyük bir dönüşüm yaşıyor. Türkiye'de Salus ve SpiroHome gibi başarılı örnekler, yatırımcıların bu alana olan ilgisini artırdı.\n\nHealthTech alanında aktif yatırım yapan ağlar:\n- Galata Business Angels (GBA)\n- Keiretsu Forum Türkiye\n- TR Angel\n\nBu yatırımcılar için en önemli kriter, ürünün klinik validasyonu ve global ölçeklenebilirliğidir.",
           "author": "GetInvestr Ekibi",
           "date": "05 Haziran 2024",
           "readMinutes": 4,
@@ -815,6 +818,7 @@
         {
           "id": 4,
           "title": "Yapay Zeka Girişimlerinde Yatırım Almanın Püf Noktaları",
+          "content": "Yapay zeka (AI) artık sadece bir 'hype' değil, iş süreçlerinin ayrılmaz bir parçası. Ancak AI girişimi kurmak, yüksek GPU maliyetleri ve veri ihtiyacı nedeniyle zordur.\n\nAI yatırımcılarını ikilemek için:\n- Diferansiye edilmiş bir veri setine sahip olun.\n- Sadece AI modeline değil, son kullanıcıya sunulan değere odaklanın.\n- Teknik ekibinizin derinliğini kanıtlayın.\n\nYatırımcılar 'biz de yapay zeka kullanıyoruz' demenizi değil, 'biz yapay zeka ile bu problemi çözüyoruz' demenizi bekliyor.",
           "author": "GetInvestr Ekibi",
           "date": "20 Haziran 2024",
           "readMinutes": 6,
@@ -824,6 +828,7 @@
         {
           "id": 5,
           "title": "B2B SaaS Girişimleri İçin 2024 Yatırım Görünümü",
+          "content": "SaaS (Yazılım Servisi) dünyası verimlilik odaklı yeni bir döneme girdi. Yatırımcılar artık hızlı büyüme kadar kârlılığı da önemsiyor.\n\n2024 trendleri:\n- Ürün Odaklı Büyüme (PLG): Satış ekibi olmadan büyüyebilen yazılımlar daha değerli.\n- Düşük Churn (Kullanıcı Kaybı): Müşterisini içeride tutabilenler kazanıyor.\n- Entegrasyon Kabiliyeti: Diğer tool'larla konuşabilen SaaS'lar öne çıkıyor.",
           "author": "GetInvestr Ekibi",
           "date": "18 Haziran 2024",
           "readMinutes": 5,
@@ -833,6 +838,7 @@
         {
           "id": 6,
           "title": "Seri A Turuna Hazırlanırken Yapılan En Büyük 3 Hata",
+          "content": "Seri A (Series A) turu, artık gerçek bir işletmeye dönüşme vaktidir. Birçok kurucu bu turda aşağıdaki hatalar nedeniyle başarısız oluyor:\n\n1. Veri Odaklı Olmamak: Artık sadece hayallerle değil, Excel tablolarıyla konuşmalısınız.\n2. Yanlış Değerleme İnatçılığı: Çok yüksek değerleme bir sonraki turda 'Down Round' riskini getirir.\n3. Ekibi Tamamlamamak: Yatırımcılar ekibin orta ve üst kademelerinin dolmuş olmasını bekler.\n\nBu hatalardan kaçınmak turu kapatma şansınızı %40 artırır.",
           "author": "GetInvestr Ekibi",
           "date": "12 Haziran 2024",
           "readMinutes": 8,
@@ -840,7 +846,11 @@
           "category": "Finansal Strateji"
         }
       ],
-      "lastUpdated": "Son güncelleme:"
+      "lastUpdated": "Son güncelleme:",
+      "back": "Tüm Yayınlara Dön",
+      "ctaTitle": "Siz de Girişiminiz İçin Fon Aramaya Başlayın",
+      "ctaSub": "Binlerce doğrulanmış yatırımcıya erişin ve yatırım sürecinizi hızlandırın.",
+      "ctaBtn": "Hemen Ücretsiz Katılın"
     }
   },
   "auth": {

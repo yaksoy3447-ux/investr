@@ -4,6 +4,7 @@ import LandingHeader from '@/components/landing/LandingHeader';
 import Footer from '@/components/landing/Footer';
 import Image from 'next/image';
 import { Clock } from 'lucide-react';
+import { Link } from '@/i18n/routing';
 
 export default async function BlogPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -37,9 +38,10 @@ export default async function BlogPage({ params }: { params: Promise<{ locale: s
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {posts.map((post) => (
-            <div 
+            <Link 
+              href={`/blog/${post.id}`}
               key={post.id} 
-              className="bg-[#1A1A1A] rounded-2xl overflow-hidden border border-white/10 shadow-sm hover:shadow-xl transition-all duration-300 group cursor-pointer flex flex-col"
+              className="bg-[#1A1A1A] rounded-2xl overflow-hidden border border-white/10 shadow-sm hover:shadow-xl hover:border-primary/50 transition-all duration-300 group cursor-pointer flex flex-col"
             >
               {/* Image Section */}
               <div className="relative h-56 w-full overflow-hidden bg-[#222]">
@@ -47,7 +49,7 @@ export default async function BlogPage({ params }: { params: Promise<{ locale: s
                   src={post.image} 
                   alt={post.title}
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100"
                 />
                 <div className="absolute top-4 left-4 bg-primary text-white text-xs font-bold px-3 py-1.5 rounded-md shadow-lg backdrop-blur-md bg-primary/90">
                   {post.category}
@@ -70,7 +72,7 @@ export default async function BlogPage({ params }: { params: Promise<{ locale: s
                   </div>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
