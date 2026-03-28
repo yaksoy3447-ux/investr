@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
-import { Inbox as InboxIcon, Mail, Clock, Check, CheckCheck, ArrowRight, Loader2, Lock } from 'lucide-react';
+import { Inbox as InboxIcon, Mail, Clock, Check, CheckCheck, ArrowRight, Loader2, Lock, Send } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { getEmailThreads, addReplyToThread } from '@/lib/db/emails';
 import { usePlan } from '@/components/providers/PlanProvider';
@@ -114,7 +114,7 @@ export default function InboxPage() {
             <Lock size={28} className="text-gray-400" />
           </div>
           <h2 className="text-xl font-semibold text-foreground mb-2">
-            {locale === 'en' ? 'Inbox is a Paid Feature' : 'Gelen Kutusu Ücretli Bir Özelliktir'}
+            {locale === 'en' ? 'Sent Messages is a Paid Feature' : 'Giden Kutusu Ücretli Bir Özelliktir'}
           </h2>
           <p className="text-foreground-muted text-sm max-w-md mb-6">
             {locale === 'en'
@@ -160,9 +160,9 @@ export default function InboxPage() {
               </div>
             ) : threads.length === 0 ? (
               <div className="flex flex-col items-center justify-center py-12 text-foreground-muted">
-                <InboxIcon size={32} className="mb-2 opacity-30" />
-                <p className="text-sm">{locale === 'en' ? 'No emails yet' : 'Henüz email yok'}</p>
-                <p className="text-xs mt-1">{locale === 'en' ? 'Send your first email from Outreach' : 'İlk emailinizi Email Gönder sayfasından gönderin'}</p>
+                <Send size={32} className="mb-2 opacity-30" />
+                <p className="text-sm">{locale === 'en' ? 'No sent messages yet' : 'Henüz gönderilmiş mesaj yok'}</p>
+                <p className="text-xs mt-1">{locale === 'en' ? 'Send your first investment pitch from the Outreach page' : 'İlk yatırımcı mesajınızı Email Gönder sayfasından gönderin'}</p>
               </div>
             ) : (
               threads.map((thread) => (

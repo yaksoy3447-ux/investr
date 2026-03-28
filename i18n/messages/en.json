@@ -22,7 +22,7 @@
     "investors": "Investors",
     "crm": "CRM",
     "outreach": "Email Outreach",
-    "inbox": "Inbox",
+    "inbox": "Sent Messages",
     "settings": "Settings",
     "blog": "Publications",
     "collapse": "Collapse",
@@ -945,15 +945,15 @@
     "subtitle": "Send emails to investors through the platform"
   },
   "inbox": {
-    "title": "Inbox",
-    "subtitle": "Track replies from investors"
+    "title": "Sent Messages",
+    "subtitle": "Track your sent messages"
   },
   "dashboard": {
     "sidebar": {
       "investors": "Investors",
       "crm": "CRM",
       "outreach": "Email Outreach",
-      "inbox": "Inbox",
+      "inbox": "Sent Messages",
       "settings": "Settings",
       "collapse": "Collapse",
       "expand": "Expand",
@@ -1020,13 +1020,13 @@
       "historyEmpty": "You haven't sent any emails yet."
     },
     "inbox": {
-      "title": "Inbox",
+      "title": "Sent Messages",
       "subtitle": "Your conversations with investors",
       "all": "All",
       "unread": "Unread",
       "replied": "Replied",
       "archived": "Archived",
-      "noMessages": "No messages yet.",
+      "noMessages": "No sent messages yet.",
       "replyPlaceholder": "Type your reply...",
       "send": "Send"
     },

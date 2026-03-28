@@ -243,8 +243,8 @@ export default function OutreachPage() {
             <AlertCircle size={16} className="text-info flex-shrink-0 mt-0.5" />
             <p className="text-xs text-foreground-secondary leading-relaxed">
               {locale === 'en'
-                ? 'Email will be sent through the platform. The investor\'s email address will not be shown to you. Replies will appear in your Inbox.'
-                : 'Email, platform üzerinden gönderilecektir. Yatırımcının email adresi size gösterilmez. Yanıtlar Gelen Kutusu\'nda görünecektir.'}
+                ? 'Email will be sent through the platform. The investor\'s email address will not be shown to you. You can track your sent messages in the Sent Messages section. Replies will be sent to your registered email address.'
+                : 'Email, platform üzerinden gönderilecektir. Yatırımcının email adresi size gösterilmez. Gönderdiğiniz mesajları Giden Kutusu bölümünden takip edebilirsiniz. Yanıtlar kayıtlı email adresinize gelecektir.'}
             </p>
           </div>
 

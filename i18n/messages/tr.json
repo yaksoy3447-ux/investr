@@ -22,7 +22,7 @@
     "investors": "Yatırımcılar",
     "crm": "CRM",
     "outreach": "Email Gönder",
-    "inbox": "Gelen Kutusu",
+    "inbox": "Giden Kutusu",
     "settings": "Ayarlar",
     "blog": "Yayınlar",
     "collapse": "Daralt",
@@ -945,7 +945,7 @@
     "subtitle": "Yatırımcılara platform üzerinden email gönder"
   },
   "inbox": {
-    "title": "Gelen Kutusu",
+    "title": "Giden Kutusu",
     "subtitle": "Yatırımcılardan gelen yanıtları takip et"
   },
   "dashboard": {
@@ -953,7 +953,7 @@
       "investors": "Yatırımcılar",
       "crm": "CRM",
       "outreach": "Email Outreach",
-      "inbox": "Gelen Kutusu",
+      "inbox": "Giden Kutusu",
       "settings": "Ayarlar",
       "collapse": "Kapat",
       "expand": "Aç",
@@ -1020,7 +1020,7 @@
       "historyEmpty": "Henüz bir email gönderimi bulunmamaktadır."
     },
     "inbox": {
-      "title": "Gelen Kutusu",
+      "title": "Giden Kutusu",
       "subtitle": "Yatırımcılarla olan mesajlaşmalarınız",
       "all": "Tümü",
       "unread": "Okunmamış",

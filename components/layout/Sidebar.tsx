@@ -7,7 +7,7 @@ import {
   Users,
   LayoutDashboard,
   Mail,
-  Inbox,
+  Send,
   Settings,
   PanelLeftClose,
   PanelLeftOpen,
@@ -22,7 +22,7 @@ const navItems = [
   { href: '/investors', icon: Users, labelKey: 'investors' },
   { href: '/crm', icon: LayoutDashboard, labelKey: 'crm' },
   { href: '/outreach', icon: Mail, labelKey: 'outreach' },
-  { href: '/inbox', icon: Inbox, labelKey: 'inbox' },
+  { href: '/inbox', icon: Send, labelKey: 'inbox' },
   { href: '/settings', icon: Settings, labelKey: 'settings' },
 ] as const;
 

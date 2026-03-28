@@ -164,8 +164,12 @@ export default function SettingsPage() {
       const res = await fetch('/api/stripe/cancel', { method: 'POST' });
       const data = await res.json();
       if (res.ok) {
-        // INSTANTLY update the local state so we don't even need a reload
-        setProfile(prev => ({ ...prev, cancelAtPeriodEnd: true, currentPeriodEnd: new Date().toISOString() })); 
+        // Use the returned period end from the API
+        setProfile(prev => ({ 
+          ...prev, 
+          cancelAtPeriodEnd: true, 
+          currentPeriodEnd: data.current_period_end || prev.currentPeriodEnd 
+        })); 
         alert(locale === 'en' ? 'Your subscription will cancel at the end of the period.' : 'Aboneliğiniz dönem sonunda iptal edilecek.');
         window.location.reload();
       } else {
@@ -241,7 +245,7 @@ export default function SettingsPage() {
             <div>
               <div className="flex items-center justify-between mb-1.5">
                 <span className="text-xs font-medium text-foreground-secondary">
-                  {locale === 'en' ? 'Monthly Messages' : 'Aylık Mesaj'}
+                  {locale === 'en' ? 'Sent Messages' : 'Aylık Giden Mesaj'}
                 </span>
                 <span className="text-xs font-bold text-foreground">
                   {monthlyEmails} / {emailMax}

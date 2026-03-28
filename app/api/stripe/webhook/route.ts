@@ -172,6 +172,8 @@ export async function POST(req: Request) {
   // Handle subscription updates (like cancel_at_period_end)
   if (event.type === 'customer.subscription.updated') {
     const subscription = event.data.object as any;
+    console.log(`Subscription updated for ${subscription.id}: status=${subscription.status}, cancel_at_period_end=${subscription.cancel_at_period_end}`);
+    
     const { error } = await supabase
       .from('users')
       .update({
@@ -188,10 +190,14 @@ export async function POST(req: Request) {
   // Handle subscription cancellations
   if (event.type === 'customer.subscription.deleted') {
     const subscription = event.data.object as Stripe.Subscription;
+    console.log(`Subscription deleted: ${subscription.id}. Downgrading user to free.`);
     
     const { error } = await supabase
       .from('users')
-      .update({ plan: 'free' })
+      .update({ 
+        plan: 'free',
+        cancel_at_period_end: false // Reset
+      })
       .eq('stripe_subscription_id', subscription.id);
       
     if (error) {
