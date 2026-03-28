@@ -69,7 +69,7 @@ export default function Footer() {
           
           {/* Brand & Copyright */}
           <div>
-            <div className="flex items-center gap-2 mb-4 text-white font-bold text-2xl tracking-tight">
+            <div className="flex items-center mb-4 text-white font-bold text-2xl tracking-tight">
               <span className="text-white">Get</span><span className="text-[#3b82f6]">Investr</span>
             </div>
             <p className="text-sm text-gray-500 max-w-xs mb-6">
@@ -114,7 +114,7 @@ export default function Footer() {
 
         <div className="max-w-6xl mx-auto relative z-10 mt-16 pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-medium text-gray-500">
           <span>© {new Date().getFullYear()} GetInvestr Technologies.</span>
-          <span className="flex items-center gap-2">{t('built')} <span className="text-white">Get</span><span className="text-[#3b82f6]">Investr</span></span>
+          <span className="flex items-center gap-2">{t('built')} <span className="font-bold"><span className="text-white">Get</span><span className="text-[#3b82f6]">Investr</span></span></span>
         </div>
       </footer>
     </>
