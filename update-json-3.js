@@ -9,10 +9,12 @@ const en = JSON.parse(fs.readFileSync(enPath, 'utf8'));
 // Update Footer Built
 tr.landing.footer.built = "Tutkuyla geliştirildi";
 tr.landing.footer.links.platform3 = "Fiyatlandırma";
+tr.landing.footer.links.platform4 = "Başarı Hikayeleri";
 tr.landing.footer.ctaAction = "Fiyatlandırmayı İncele";
 
 en.landing.footer.built = "Built with passion";
 en.landing.footer.links.platform3 = "Pricing";
+en.landing.footer.links.platform4 = "Testimonials";
 en.landing.footer.ctaAction = "View Pricing";
 
 // Update FAQ Content (Relevant to a startup/investor database CRM)
