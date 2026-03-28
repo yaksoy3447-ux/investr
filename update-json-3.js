@@ -15,7 +15,7 @@ tr.landing.faq = {
   title: "Sıkça Sorulan Sorular",
   description: "Investr hakkında en çok merak edilen soruları sizin için yanıtladık. Platformun yeteneklerinden güvenliğe kadar her detay aşağıda.",
   q1: "Investr tam olarak nedir ve kimler içindir?",
-  a1: "Investr, girişimciler ve start-up kurucuları için özel olarak tasarlanmış kapsayıcı bir yatırımcı veritabanı ve CRM platformudur. Binlerce melek yatırımcı ve girişim sermayesi fonunun yer aldığı bu platformda, girişimize en uygun yatırımcıları filtreleyebilir ve iletişim süreçlerinizi tek bir noktadan yönetebilirsiniz.",
+  a1: "Investr, girişimciler ve start-up kurucuları için özel olarak tasarlanmış kapsayıcı bir yatırımcı veritabanı ve CRM platformudur. Binlerce melek yatırımcı ve girişim sermayesi fonunun yer aldığı bu platformda, girişiminize en uygun yatırımcıları filtreleyebilir ve iletişim süreçlerinizi tek bir noktadan yönetebilirsiniz.",
   q2: "Veritabanınız ne sıklıkla güncellenmektedir?",
   a2: "Yatırımcı veritabanımız, iletişim bilgileri ve yatırım aşamaları (Seed, Series A vb.) göz önünde bulundurularak sürekli otomatik taramalar ve ekibimizin manuel doğrulamaları ile haftalık olarak güncellenir.",
   q3: "Yatırımcılarla nasıl iletişime geçeceğim?",

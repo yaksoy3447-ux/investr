@@ -146,7 +146,7 @@
       "title": "Sıkça Sorulan Sorular",
       "description": "GetInvestr hakkında en çok merak edilen soruları sizin için yanıtladık. Platformun yeteneklerinden güvenliğe kadar her detay aşağıda.",
       "q1": "GetInvestr tam olarak nedir ve kimler içindir?",
-      "a1": "GetInvestr, girişimciler ve start-up kurucuları için özel olarak tasarlanmış kapsayıcı bir yatırımcı veritabanı ve CRM platformudur. Binlerce melek yatırımcı ve girişim sermayesi fonunun yer aldığı bu platformda, girişimize en uygun yatırımcıları filtreleyebilir ve iletişim süreçlerinizi tek bir noktadan yönetebilirsiniz.",
+      "a1": "GetInvestr, girişimciler ve start-up kurucuları için özel olarak tasarlanmış kapsayıcı bir yatırımcı veritabanı ve CRM platformudur. Binlerce melek yatırımcı ve girişim sermayesi fonunun yer aldığı bu platformda, girişiminize en uygun yatırımcıları filtreleyebilir ve iletişim süreçlerinizi tek bir noktadan yönetebilirsiniz.",
       "q2": "Veritabanınız ne sıklıkla güncellenmektedir?",
       "a2": "Veritabanımız, portföy eşleşmesi alanında maksimum etkiyi yaratan Türkiye ekosistemindeki aktif yatırımcılara odaklanmıştır. Seçkin Melek Yatırımcılar (Angel), VC (Girişim Sermayesi) fonları ve ülkemizdeki kurumsal yatırım yapılarına doğrudan ulaşabilirsiniz.",
       "q3": "Yatırımcılarla nasıl iletişime geçeceğim?",
@@ -156,7 +156,7 @@
       "q5": "Platformda hangi ülkelerden yatırımcılar var?",
       "a5": "GetInvestr'ın veritabanı global bir ağı kapsar. Amerika (Silikon Vadisi), Avrupa, MENA bölgesi ve Türkiye başta olmak üzere dünyanın dört bir yanından binlerce yatırımcı profiline erişim sağlayabilirsiniz.",
       "q6": "Girişimimi yatırımcılara nasıl daha iyi sunabilirim?",
-      "a6": "Kesinlikle. Ödeme altyapımız dünya standartlarındaki Stripe güvencesi altındadır ve kredi kartı bilgileriniz hiçbir şekilde sunucularımızda saklanmamaktadır.",
+      "a6": "Platform içerisindeki kaynaklar ve Outreach AI özelliği sayesinde, yatırımcılara göndereceğiniz mesajların daha etkili olmasını sağlayacak şablonlar ve yönlendirmeler alabilirsiniz.",
       "q7": "Kredi kartı bilgilerim güvende mi?",
       "a7": "Kesinlikle. Ödeme altyapımız tamamen Stripe & Iyzico (bölgenize göre) güvencesi altındadır ve kredi kartı bilgileriniz hiçbir şekilde sunucularımızda saklanmamaktadır."
     },
