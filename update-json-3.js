@@ -8,7 +8,12 @@ const en = JSON.parse(fs.readFileSync(enPath, 'utf8'));
 
 // Update Footer Built
 tr.landing.footer.built = "Tutkuyla geliştirildi";
+tr.landing.footer.links.platform3 = "Fiyatlandırma";
+tr.landing.footer.ctaAction = "Fiyatlandırmayı İncele";
+
 en.landing.footer.built = "Built with passion";
+en.landing.footer.links.platform3 = "Pricing";
+en.landing.footer.ctaAction = "View Pricing";
 
 // Update FAQ Content (Relevant to a startup/investor database CRM)
 tr.landing.faq = {
@@ -17,7 +22,7 @@ tr.landing.faq = {
   q1: "Investr tam olarak nedir ve kimler içindir?",
   a1: "Investr, girişimciler ve start-up kurucuları için özel olarak tasarlanmış kapsayıcı bir yatırımcı veritabanı ve CRM platformudur. Binlerce melek yatırımcı ve girişim sermayesi fonunun yer aldığı bu platformda, girişiminize en uygun yatırımcıları filtreleyebilir ve iletişim süreçlerinizi tek bir noktadan yönetebilirsiniz.",
   q2: "Veritabanınız ne sıklıkla güncellenmektedir?",
-  a2: "Yatırımcı veritabanımız, iletişim bilgileri ve yatırım aşamaları (Seed, Series A vb.) göz önünde bulundurularak sürekli otomatik taramalar ve ekibimizin manuel doğrulamaları ile haftalık olarak güncellenir.",
+  a2: "Veritabanımız, yeni yatırımcıların eklenmesi ve mevcut bilgilerin doğrulanması amacıyla hem otomatik taramalar hem de ekibimizin manuel kontrolleriyle haftalık olarak güncellenmektedir.",
   q3: "Yatırımcılarla nasıl iletişime geçeceğim?",
   a3: "Platformumuz üzerinden dilediğiniz yatırımcının e-posta adresini ve LinkedIn profilini görüntüleyerek kendi mail adresinizle doğrudan iletişime geçebilir veya entegre CRM sistemimiz sayesinde ilk mesajınızı / sunumunuzu (pitch) doğrudan sistem üzerinden yollayarak süreci tek bir noktadan yönetebilirsiniz.",
   q4: "Yıllık planlardaki 3 ay ücretsiz avantajı nasıl işliyor?",
@@ -36,7 +41,7 @@ en.landing.faq = {
   q1: "What exactly is Investr and who is it for?",
   a1: "Investr is a comprehensive investor database and CRM platform exclusively designed for entrepreneurs and start-up founders. With thousands of angel investors and VC funds, you can securely filter the best matches for your startup and manage all your communications from a single hub.",
   q2: "How often is your database updated?",
-  a2: "Our investor database, including contact details and investment stages (Seed, Series A, etc.), is updated weekly using a combination of automated scans and manual verifications by our dedicated team.",
+  a2: "Our database is updated weekly through both automated scans and manual verification by our team to ensure new investors are added and existing information remains accurate.",
   q3: "How do I contact the investors?",
   a3: "You can view the email address and LinkedIn profile of any investor right on the platform to reach out directly from your own email. Alternatively, you can use our integrated CRM system to send your first message / pitch directly within the platform and manage the entire process from a single hub.",
   q4: "How does the '3 months free' on yearly plans work?",

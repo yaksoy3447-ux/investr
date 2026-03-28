@@ -178,7 +178,7 @@
     "testimonialsSubtitle": "GetInvestr ile hedefledikleri yatırım turlarını başarıyla kapatan girişimcilerin hikayelerine kulak verin.",
     "footer": {
       "ctaAlert": "Kayıt işlemini tamamlamak için bir plan seçin.",
-      "ctaAction": "Planları İncele",
+      "ctaAction": "Fiyatlandırmayı İncele",
       "ctaHeading1": "Geleceğin Yatırım Ağında",
       "ctaHeading2": "Yerinizi Alın",
       "ctaDesc": "GetInvestr'ın benzersiz yapay zeka ve CRM destekli ekosistemiyle girişiminizin ihtiyaç duyduğu finansmanı saniyeler içerisinde bulun.",
@@ -189,7 +189,7 @@
         "platform": "Platform",
         "platform1": "Nasıl Çalışır",
         "platform2": "Yatırımcı Ağı",
-        "platform3": "Planlar",
+        "platform3": "Fiyatlandırma",
         "company": "Şirket",
         "company1": "Hakkımızda",
         "company2": "İletişim",
