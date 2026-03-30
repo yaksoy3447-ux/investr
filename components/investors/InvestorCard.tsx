@@ -38,7 +38,14 @@ export default function InvestorCard({ investor, index }: { investor: Investor; 
   const crmFull = crmItems.length >= limits.maxCrmItems;
 
   const displayName = canSeeNames ? investor.name : blurName(investor.name);
-  const displayCompany = canSeeNames ? investor.company : (investor.company ? blurName(investor.company) : '');
+  
+  const validTitle = investor.title && String(investor.title).toLowerCase() !== 'null' ? investor.title : '';
+  const validCompany = investor.company && String(investor.company).toLowerCase() !== 'null' ? investor.company : '';
+  const displayCompany = canSeeNames ? validCompany : (validCompany ? blurName(validCompany) : '');
+  
+  const subtitleTextVisible = [validTitle, validCompany].filter(Boolean).join(' · ');
+  const subtitleTextBlurred = [validTitle ? '****' : '', displayCompany].filter(Boolean).join(' · ') || '****';
+  const subtitleFinal = canSeeNames ? subtitleTextVisible : subtitleTextBlurred;
 
   const handleUnlock = async () => {
     if (credits <= 0) {
@@ -102,7 +109,7 @@ export default function InvestorCard({ investor, index }: { investor: Investor; 
           <div className="min-w-0 flex-1">
             <h3 className={cn("font-semibold text-foreground text-sm truncate", !canSeeNames && "select-none")}>{displayName}</h3>
             <p className={cn("text-foreground-muted text-xs truncate", !canSeeNames && "select-none")}>
-              {canSeeNames ? `${investor.title} · ${investor.company}` : `${investor.title ? '****' : ''} · ${displayCompany}`}
+              {subtitleFinal || (locale === 'en' ? 'Investor' : 'Yatırımcı')}
             </p>
           </div>
         </div>
@@ -182,7 +189,7 @@ export default function InvestorCard({ investor, index }: { investor: Investor; 
                       <div>
                         <h2 className={cn("text-lg font-semibold text-foreground", !canSeeNames && "select-none")}>{displayName}</h2>
                         <p className={cn("text-foreground-secondary text-sm", !canSeeNames && "select-none")}>
-                          {canSeeNames ? `${investor.title} · ${investor.company}` : `**** · ${displayCompany}`}
+                          {subtitleFinal || (locale === 'en' ? 'Investor' : 'Yatırımcı')}
                         </p>
                         <div className="flex items-center gap-3 mt-2 text-xs text-foreground-muted">
                           <span className="flex items-center gap-1">
