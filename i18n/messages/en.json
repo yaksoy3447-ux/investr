@@ -844,6 +844,46 @@
           "readMinutes": 8,
           "image": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&q=80&w=800",
           "category": "Financial Strategy"
+        },
+        {
+          "title": "Turkish Startup Ecosystem Raised $1.4 Billion in 2025",
+          "content": "According to the newly published 'Turkey Startup Investments' report in collaboration with KPMG Turkey and 212, the Turkish startup ecosystem successfully raised a total of $1.4 billion across 360 investments in 2025.\n\nDespite the absence of mega-rounds or newly minted decacorns, this figure once again proved the resilience and strong growth potential of the market. Experts highlight that while investors have become more selective during periods of global economic tightening, interest in startups with solid, proven business models remains unwavering.\n\nThe ecosystem is witnessing continued activity, especially in early-stage (seed) investments. Platforms like GetInvestr are expected to further accelerate early-stage growth by bridging the gap between innovative founders and active angel networks or VCs globally.",
+          "author": "GetInvestr Team",
+          "date": "March 29, 2026",
+          "readMinutes": 3,
+          "image": "/blog/turkiye_yatirim_2026.png",
+          "category": "Ecosystem",
+          "id": 7
+        },
+        {
+          "title": "Mega Growth in Fintech: $214 Million Investment in Turkey",
+          "content": "Financial technology (Fintech) continues to be the locomotive of the investment ecosystem in Turkey. According to recent data, fintech startups attracted $214 million in funding last year, ranking among the top verticals.\n\nThis maturity level reflects investors' growing interest in digital wallets, embedded finance, B2B payment solutions, and regulatory technologies (regtech). Supported by open banking regulations, the number of innovative players is scaling fast across the market.\n\nForeign VCs' engagement with Turkish fintech is also snowballing. GetInvestr data reveals that interactions between global investment funds and Turkey-based fintech companies have doubled over the past year.",
+          "author": "GetInvestr Team",
+          "date": "March 28, 2026",
+          "readMinutes": 4,
+          "image": "/blog/fintech_buyume_2026.png",
+          "category": "Fintech",
+          "id": 8
+        },
+        {
+          "title": "Global AI Funding Peaks in March 2026: The Rise of 'Agentic' Technologies",
+          "content": "As we close the first quarter of 2026, the Artificial Intelligence frenzy continues unabated in the global VC landscape. In the final week of March alone, startups focusing on AI infrastructure raised millions.\n\nStandout seed investments included AI personal memory platform Littlebird ($11M), AI-native Human Capital Management platform Novaworks ($8M), and AI design agent Moda ($7.5M).\n\nInvestors are fundamentally shifting their thesis: Rather than funding startups that simply bolt AI features onto existing products, capital is aggressively flowing toward core technologies utilizing AI to automate end-to-end workflows (AI Agents) and disrupt traditional paradigms.",
+          "author": "GetInvestr Research",
+          "date": "March 27, 2026",
+          "readMinutes": 5,
+          "image": "/blog/ai_yatirim_2026.png",
+          "category": "Global Investment",
+          "id": 9
+        },
+        {
+          "title": "Cleantech Surtge: Helix Earth Secures $12 Million Seed Funding",
+          "content": "Sustainability and carbon reduction goals are creating lucrative new opportunities in the startup ecosystem, shifting the VC radar heavily toward Energy and Climate Tech (Cleantech).\n\nIn one of March's largest seed rounds, Helix Earth secured $12 million in an oversubscribed Seed 2 round to transform HVAC energy efficiency.\n\nWhile hardware-focused startups are generally perceived as harder to fund compared to SaaS, 'DeepTech' ventures tackling the severe climate crisis with tangible solutions are breaking funding records. The growing emphasis on ESG (Environmental, Social, Governance) criteria ensures that capital allocated to cleantech and energy startups will multiply in the coming quarters.",
+          "author": "GetInvestr Research",
+          "date": "March 26, 2026",
+          "readMinutes": 3,
+          "image": "/blog/cleantech_enerji_2026.png",
+          "category": "Cleantech & DeepTech",
+          "id": 10
         }
       ],
       "lastUpdated": "Last updated:",

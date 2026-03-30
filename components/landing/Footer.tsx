@@ -82,7 +82,7 @@ export default function Footer() {
               <a href="https://linkedin.com/company/getinvestr" target="_blank" rel="noopener noreferrer" className="text-xs font-bold text-white/40 hover:text-primary transition-colors uppercase tracking-wider">
                 LinkedIn
               </a>
-              <a href="https://instagram.com/getinvestr" target="_blank" rel="noopener noreferrer" className="text-xs font-bold text-white/40 hover:text-primary transition-colors uppercase tracking-wider">
+              <a href="https://www.instagram.com/get.investr/" target="_blank" rel="noopener noreferrer" className="text-xs font-bold text-white/40 hover:text-primary transition-colors uppercase tracking-wider">
                 Instagram
               </a>
             </div>

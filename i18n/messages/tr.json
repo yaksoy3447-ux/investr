@@ -844,6 +844,46 @@
           "readMinutes": 8,
           "image": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&q=80&w=800",
           "category": "Finansal Strateji"
+        },
+        {
+          "title": "2025 Yılında Türkiye Startup Ekosistemi 1,4 Milyar Dolar Yatırım Aldı",
+          "content": "KPMG Türkiye ve 212 iş birliğiyle hazırlanan 'Türkiye Startup Yatırımları' raporu yayınlandı. Rapora göre, Türkiye startup ekosistemi 2025 yılında toplam 360 işlemle 1,4 milyar dolar yatırım almayı başardı.\n\nMega ölçekli yatırım turlarının veya 'decacorn' statüsüne ulaşan girişimlerin yokluğuna rağmen, bu rakam pazarın dayanıklılığını ve büyüme potansiyelini bir kez daha kanıtladı. Uzmanlar, küresel ekonomik daralmanın yaşandığı bu dönemde yatırımcıların daha seçici davrandığını, ancak iş modeli sağlam girişimlere olan ilginin azalmadığını vurguluyor.\n\nÖzellikle erken aşama (seed) yatırımlarda hareketliliğin devam ettiği pazarda, GetInvestr gibi platformların melek yatırımcı ve VC'lere erişimi kolaylaştırmasının ekosistem büyümesine ivme kazandırması bekleniyor.",
+          "author": "GetInvestr Ekibi",
+          "date": "29 Mart 2026",
+          "readMinutes": 3,
+          "image": "/blog/turkiye_yatirim_2026.png",
+          "category": "Ekosistem",
+          "id": 7
+        },
+        {
+          "title": "Türkiye Fintech Sektöründe Mega Büyüme: 2025'te 214 Milyon Dolar Yatırım",
+          "content": "Türkiye'de finansal teknolojiler (Fintech) sektörü, yatırım ekosisteminin lokomotifi olmaya devam ediyor. Açıklanan son verilere göre fintech girişimleri, geçtiğimiz yıl boyunca toplam 214 milyon dolar yatırım çekerek en çok fonlanan sektörlerin başında geldi.\n\nSektörün ulaştığı olgunluk seviyesi, yatırımcıların dijital cüzdan, gömülü finans (embedded finance), B2B ödeme çözümleri ve regtech (düzenleyici teknolojiler) alanlarına yönelik ilgisini yansıtıyor. Açık bankacılık düzenlemelerinin de etkisiyle, pazardaki oyuncuların sayısı hızla artarken inovasyon daha tabana yayılıyor.\n\nYabancı VC'lerin (Venture Capital) Türk fintech'lerine olan ilgisi de giderek büyüyor. GetInvestr verilerine göre, global yatırım fonlarının Türkiye merkezli finansal teknoloji şirketleriyle kurduğu etkileşim son bir yılda iki katına çıkmış durumda.",
+          "author": "GetInvestr Ekibi",
+          "date": "28 Mart 2026",
+          "readMinutes": 4,
+          "image": "/blog/fintech_buyume_2026.png",
+          "category": "Fintech",
+          "id": 8
+        },
+        {
+          "title": "Global AI Yatırımları Mart 2026'da Zirve Yaptı: Yeni Trend 'Ajan (Agent)' Teknolojileri",
+          "content": "2026 yılının ilk çeyreğini geride bırakırken, küresel girişim sermayesi (VC) dünyasında Yapay Zeka rüzgarı esmeye devam ediyor. Yalnızca Mart ayının son haftasında bile yapay zeka altyapısına odaklanan startuplar milyonlarca dolar fon aldı.\n\nÖne çıkan yatırımlar arasında, AI destekli kişisel hafıza platformu Littlebird'ün 11 milyon dolarlık, AI tabanlı insan kaynakları (HCM) yazılımı Novaworks'ün 8 milyon dolarlık ve yapay zeka tasarım ajanı Moda'nın 7.5 milyon dolarlık tohum (seed) yatırımları bulunuyor.\n\nYatırımcıların odak noktası değişiyor: Artık mevcut ürünlere basit AI özellikleri ekleyen girişimler yerine, yapay zekayı iş akışlarını uçtan uca otomatize etmek (AI Agents) için kullanan çekirdek (core) teknoloji girişimleri daha yüksek yatırım değerlemeleriyle fona ulaşıyor.",
+          "author": "GetInvestr Research",
+          "date": "27 Mart 2026",
+          "readMinutes": 5,
+          "image": "/blog/ai_yatirim_2026.png",
+          "category": "Global Yatırım",
+          "id": 9
+        },
+        {
+          "title": "İklim Teknolojilerine (Cleantech) İlgi Büyüyor: Helix Earth 12 Milyon Dolar Tohum Yatırımı Aldı",
+          "content": "Sürdürülebilirlik ve karbon emisyonu azaltma hedefleri, girişimcilik ekosisteminde yeni fırsatlar yaratırken VC'lerin radarı Enerji ve İklim Teknolojileri'ne (Cleantech) dönmüş durumda.\n\nMart ayının en büyük tohum turlarından birini gerçekleştiren Helix Earth, HVAC sistemlerinin enerji verimliliğini dönüştürmek amacıyla 12 milyon dolar tutarında aşırı talep gören (oversubscribed) bir tohum yatırım (Seed 2) aldı.\n\nDonanım odaklı girişimlerin yatırım almasının genellikle yazılıma (SaaS) kıyasla daha zor olduğu düşünülse de, iklim kriziyle mücadele eden ve somut çözümler sunan 'DeepTech' girişimleri rekor seviyelerde fon toplamayı sürdürüyor. Yatırımcıların ESG (Çevresel, Sosyal, Yönetişim) kriterlerini portföylerinde ön sıralara alması, önümüzdeki çeyreklerde cleantech ve enerji startuplarına akacak sermayenin katlanarak artacağına işaret ediyor.",
+          "author": "GetInvestr Research",
+          "date": "26 Mart 2026",
+          "readMinutes": 3,
+          "image": "/blog/cleantech_enerji_2026.png",
+          "category": "Cleantech & DeepTech",
+          "id": 10
         }
       ],
       "lastUpdated": "Son güncelleme:",
