@@ -37,7 +37,7 @@ export default async function BlogPage({ params }: { params: Promise<{ locale: s
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {posts.map((post) => (
+          {[...posts].reverse().map((post) => (
             <Link 
               href={`/blog/${post.id}`}
               key={post.id} 
