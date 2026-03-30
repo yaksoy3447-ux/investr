@@ -786,66 +786,6 @@
       "min": "min",
       "posts": [
         {
-          "id": 1,
-          "title": "Top 10 Fastest Growing Turkish Fintech Startups Securing Funds in 2024",
-          "content": "The Turkish fintech ecosystem continued its growth in the first half of 2024 despite global economic fluctuations. In particular, investments received by giants like Colendi and Midas show how hungry the market still is. Here are the 10 most talked-about fintech startups of 2024:\n\n1. Colendi: At the top of the list with its global vision in digital banking and 'buy now pay later' (BNPL) services.\n\n2. Midas: A platform that democratizes access to American stock markets and BIST for local investors, it closed a massive funding round with an aggressive increase in the number of users.\n\n3. Param: It is taking firm steps towards becoming one of Turkey's most valuable fintechs with its payment systems and wallet solutions.\n\n4. Papara: Reaching millions with its user experience-oriented financial services, the startup continues its strategy of opening up to global markets.\n\n5. Figopara: It has become an indispensable partner for SMEs with its supplier financing solutions that help businesses manage their cash flow.\n\n6. United Payment: One of the strongest players in the region with its 'invisible finance' solutions offered to corporate companies.\n\n7. Craftgate: With its online payment gateway solutions, it allows managing the complex payment processes of the e-commerce world from a single point.\n\n8. Sipay: One of the fast-growing fintech stars with its innovative approaches in wallet, card, and payment systems.\n\n9. Pay TR: As a payment institution, it crowns its stability for many years by strengthening its technological infrastructure with new investments.\n\n10. Hadi (Fuat): An innovative startup that spreads digital financial services to the base with market chain integrations.\n\nThese investments strengthen Turkey's vision of becoming a regional fintech hub day by day.",
-          "author": "GetInvestr Team",
-          "date": "June 15, 2024",
-          "readMinutes": 5,
-          "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
-          "category": "Fintech Special"
-        },
-        {
-          "id": 2,
-          "title": "Critical Metrics You Need to Prepare Before Securing a Pre-Seed Fund Round",
-          "content": "The pre-seed stage is the most challenging process when an idea turns into a concrete product. A pitch deck alone is not always enough for investors to believe in you. Here are the 3 main metrics you should focus on:\n\n1. Customer Acquisition Cost (CAC): How much do you spend per unit to sell your product? It is essential that this figure is sustainable.\n\n2. Customer Lifetime Value (LTV): The total value a customer earns you should be at least 3 times higher than the acquisition cost.\n\n3. Retention Rate: Do your users come back after first use? If not, you should reconsider your product-market fit.\n\nConsistency among these metrics is your strongest proof of the long-term success of your business model.",
-          "author": "GetInvestr Team",
-          "date": "June 10, 2024",
-          "readMinutes": 7,
-          "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
-          "category": "Founder's Guide"
-        },
-        {
-          "id": 3,
-          "title": "Actively Searching For HealthTech? Connect with These Top Tier Angel Investors",
-          "content": "The healthcare sector is undergoing a major transformation under the influence of AI and digitalization. Successful examples in Turkey like Salus and SpiroHome have brought investor interest in this area to its peak.\n\nMain networks and focuses actively investing in HealthTech:\n\n- Galata Business Angels (GBA): Attaches great importance to digital health solutions with its wide portal.\n\n- Keiretsu Forum Turkey: Opens local health startups to the world with its global network advantage.\n\n- TR Angel: Provides cash support and mentoring in early-stage health technology startups.\n\nThe most important criteria for these investors are clinical validation of the product, patient safety, and global scalability.",
-          "author": "GetInvestr Team",
-          "date": "June 05, 2024",
-          "readMinutes": 4,
-          "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=800",
-          "category": "Sector Analysis"
-        },
-        {
-          "id": 4,
-          "title": "Winning Tactics for AI Startup Fundraising",
-          "content": "Artificial Intelligence (AI) is no longer just a 'hype'; it has become an integral part of business processes. However, building an AI startup is quite costly due to high GPU costs and the need for qualified data.\n\nThings you should pay attention to to impress AI investors:\n\n- Have a differentiated dataset. You cannot make a difference with data that everyone can access.\n\n- Focus on the concrete value this model offers to the end user, not just the AI model.\n\n- Prove the depth of your technical team. Investors look at the capacity to develop this algorithm.\n\nInvestors expect you to say 'we solve this problem faster than ever before with AI', not just 'we use AI too'.",
-          "author": "GetInvestr Team",
-          "date": "June 20, 2024",
-          "readMinutes": 6,
-          "image": "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800",
-          "category": "AI Guide"
-        },
-        {
-          "id": 5,
-          "title": "2024 Investment Outlook for B2B SaaS Startups",
-          "content": "The SaaS (Software as a Service) world has entered a new era focused on efficiency and profitability. Investors are now looking for operational sustainability as well as fast growth.\n\nProminent SaaS trends of 2024:\n\n- Product-Led Growth (PLG): Models where the product sells itself without establishing a large sales team are considered more valuable.\n\n- Low Churn: SaaS that manage to keep their customers inside are always one step ahead.\n\n- Integration Capability: In today's complex technology stack, SaaS that can talk fluently with other tools are preferred.",
-          "author": "GetInvestr Team",
-          "date": "June 18, 2024",
-          "readMinutes": 5,
-          "image": "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=800",
-          "category": "Market Analysis"
-        },
-        {
-          "id": 6,
-          "title": "Top 3 Mistakes When Preparing for Series A",
-          "content": "The Series A round is the time for a start-up to turn into a real and corporate enterprise. Many founders cannot complete the process due to the following critical mistakes in this round:\n\n1. Not Being Data-Driven: In Series A, you are expected to talk with deeply analyzed Excel tables, not just dreams.\n\n2. Valuation Stubbornness: Closing a round with a very high valuation brings the risk of a 'Down Round' in the next round and extreme dilution of the founder.\n\n3. Not Completing the Team: Investors now expect middle and upper level managers to be in place outside the founder team.\n\nAvoiding these mistakes and preparing a professional Data Room greatly increases your chances of successfully closing the round.",
-          "author": "GetInvestr Team",
-          "date": "June 12, 2024",
-          "readMinutes": 8,
-          "image": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&q=80&w=800",
-          "category": "Financial Strategy"
-        },
-        {
           "title": "Turkish Startup Ecosystem Raised $1.4 Billion in 2025",
           "content": "According to the newly published 'Turkey Startup Investments' report in collaboration with KPMG Turkey and 212, the Turkish startup ecosystem successfully raised a total of $1.4 billion across 360 investments in 2025.\n\nDespite the absence of mega-rounds or newly minted decacorns, this figure once again proved the resilience and strong growth potential of the market. Experts highlight that while investors have become more selective during periods of global economic tightening, interest in startups with solid, proven business models remains unwavering.\n\nThe ecosystem is witnessing continued activity, especially in early-stage (seed) investments. Platforms like GetInvestr are expected to further accelerate early-stage growth by bridging the gap between innovative founders and active angel networks or VCs globally.",
           "author": "GetInvestr Team",
@@ -884,6 +824,66 @@
           "image": "/blog/cleantech_enerji_2026.png",
           "category": "Cleantech & DeepTech",
           "id": 10
+        },
+        {
+          "id": 4,
+          "title": "Winning Tactics for AI Startup Fundraising",
+          "content": "Artificial Intelligence (AI) is no longer just a 'hype'; it has become an integral part of business processes. However, building an AI startup is quite costly due to high GPU costs and the need for qualified data.\n\nThings you should pay attention to to impress AI investors:\n\n- Have a differentiated dataset. You cannot make a difference with data that everyone can access.\n\n- Focus on the concrete value this model offers to the end user, not just the AI model.\n\n- Prove the depth of your technical team. Investors look at the capacity to develop this algorithm.\n\nInvestors expect you to say 'we solve this problem faster than ever before with AI', not just 'we use AI too'.",
+          "author": "GetInvestr Team",
+          "date": "June 20, 2024",
+          "readMinutes": 6,
+          "image": "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800",
+          "category": "AI Guide"
+        },
+        {
+          "id": 5,
+          "title": "2024 Investment Outlook for B2B SaaS Startups",
+          "content": "The SaaS (Software as a Service) world has entered a new era focused on efficiency and profitability. Investors are now looking for operational sustainability as well as fast growth.\n\nProminent SaaS trends of 2024:\n\n- Product-Led Growth (PLG): Models where the product sells itself without establishing a large sales team are considered more valuable.\n\n- Low Churn: SaaS that manage to keep their customers inside are always one step ahead.\n\n- Integration Capability: In today's complex technology stack, SaaS that can talk fluently with other tools are preferred.",
+          "author": "GetInvestr Team",
+          "date": "June 18, 2024",
+          "readMinutes": 5,
+          "image": "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=800",
+          "category": "Market Analysis"
+        },
+        {
+          "id": 1,
+          "title": "Top 10 Fastest Growing Turkish Fintech Startups Securing Funds in 2024",
+          "content": "The Turkish fintech ecosystem continued its growth in the first half of 2024 despite global economic fluctuations. In particular, investments received by giants like Colendi and Midas show how hungry the market still is. Here are the 10 most talked-about fintech startups of 2024:\n\n1. Colendi: At the top of the list with its global vision in digital banking and 'buy now pay later' (BNPL) services.\n\n2. Midas: A platform that democratizes access to American stock markets and BIST for local investors, it closed a massive funding round with an aggressive increase in the number of users.\n\n3. Param: It is taking firm steps towards becoming one of Turkey's most valuable fintechs with its payment systems and wallet solutions.\n\n4. Papara: Reaching millions with its user experience-oriented financial services, the startup continues its strategy of opening up to global markets.\n\n5. Figopara: It has become an indispensable partner for SMEs with its supplier financing solutions that help businesses manage their cash flow.\n\n6. United Payment: One of the strongest players in the region with its 'invisible finance' solutions offered to corporate companies.\n\n7. Craftgate: With its online payment gateway solutions, it allows managing the complex payment processes of the e-commerce world from a single point.\n\n8. Sipay: One of the fast-growing fintech stars with its innovative approaches in wallet, card, and payment systems.\n\n9. Pay TR: As a payment institution, it crowns its stability for many years by strengthening its technological infrastructure with new investments.\n\n10. Hadi (Fuat): An innovative startup that spreads digital financial services to the base with market chain integrations.\n\nThese investments strengthen Turkey's vision of becoming a regional fintech hub day by day.",
+          "author": "GetInvestr Team",
+          "date": "June 15, 2024",
+          "readMinutes": 5,
+          "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
+          "category": "Fintech Special"
+        },
+        {
+          "id": 6,
+          "title": "Top 3 Mistakes When Preparing for Series A",
+          "content": "The Series A round is the time for a start-up to turn into a real and corporate enterprise. Many founders cannot complete the process due to the following critical mistakes in this round:\n\n1. Not Being Data-Driven: In Series A, you are expected to talk with deeply analyzed Excel tables, not just dreams.\n\n2. Valuation Stubbornness: Closing a round with a very high valuation brings the risk of a 'Down Round' in the next round and extreme dilution of the founder.\n\n3. Not Completing the Team: Investors now expect middle and upper level managers to be in place outside the founder team.\n\nAvoiding these mistakes and preparing a professional Data Room greatly increases your chances of successfully closing the round.",
+          "author": "GetInvestr Team",
+          "date": "June 12, 2024",
+          "readMinutes": 8,
+          "image": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&q=80&w=800",
+          "category": "Financial Strategy"
+        },
+        {
+          "id": 2,
+          "title": "Critical Metrics You Need to Prepare Before Securing a Pre-Seed Fund Round",
+          "content": "The pre-seed stage is the most challenging process when an idea turns into a concrete product. A pitch deck alone is not always enough for investors to believe in you. Here are the 3 main metrics you should focus on:\n\n1. Customer Acquisition Cost (CAC): How much do you spend per unit to sell your product? It is essential that this figure is sustainable.\n\n2. Customer Lifetime Value (LTV): The total value a customer earns you should be at least 3 times higher than the acquisition cost.\n\n3. Retention Rate: Do your users come back after first use? If not, you should reconsider your product-market fit.\n\nConsistency among these metrics is your strongest proof of the long-term success of your business model.",
+          "author": "GetInvestr Team",
+          "date": "June 10, 2024",
+          "readMinutes": 7,
+          "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
+          "category": "Founder's Guide"
+        },
+        {
+          "id": 3,
+          "title": "Actively Searching For HealthTech? Connect with These Top Tier Angel Investors",
+          "content": "The healthcare sector is undergoing a major transformation under the influence of AI and digitalization. Successful examples in Turkey like Salus and SpiroHome have brought investor interest in this area to its peak.\n\nMain networks and focuses actively investing in HealthTech:\n\n- Galata Business Angels (GBA): Attaches great importance to digital health solutions with its wide portal.\n\n- Keiretsu Forum Turkey: Opens local health startups to the world with its global network advantage.\n\n- TR Angel: Provides cash support and mentoring in early-stage health technology startups.\n\nThe most important criteria for these investors are clinical validation of the product, patient safety, and global scalability.",
+          "author": "GetInvestr Team",
+          "date": "June 05, 2024",
+          "readMinutes": 4,
+          "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=800",
+          "category": "Sector Analysis"
         }
       ],
       "lastUpdated": "Last updated:",
