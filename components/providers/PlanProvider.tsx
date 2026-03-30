@@ -153,8 +153,6 @@ export const usePlan = () => useContext(PlanContext);
  * Blur a name for free plan users: "Ali Koç" → "A** K**"
  */
 export function blurName(name: string): string {
-  return name
-    .split(' ')
-    .map((word) => word[0] + '*'.repeat(Math.max(word.length - 1, 2)))
-    .join(' ');
+  // Prevent users from guessing the length of the name/company
+  return 'E***** Y*****';
 }
