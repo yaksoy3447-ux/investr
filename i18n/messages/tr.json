@@ -786,6 +786,36 @@
       "min": "dakika",
       "posts": [
         {
+          "title": "2026'nın İlk Çeyreğinde Küresel Girişim Sermayesi 300 Milyar Dolara Ulaştı",
+          "content": "2026 yılının ilk üç ayı, teknoloji dünyasında tarihi bir dönüm noktası oldu. Yapay zeka yatırımlarının başı çektiği süreçte, küresel çapta toplamda 300 milyar doların üzerinde fon girişimlerle buluştu. OpenAI'ın devasa fonlama turu bu büyümenin ana motoruyken, Anthropic ve xAI gibi devler de milyarlarca dolarlık yeni yatırımlar kapattı. Yatırımcılar artık sadece AI uygulamalarına değil, veri merkezleri ve özel yarı iletkenler gibi altyapı katmanlarına devasa sermayeler ayırıyor.",
+          "author": "GetInvestr Research",
+          "date": "03 Nisan 2026",
+          "readMinutes": 3,
+          "image": "/blog/global_funding_2026.png",
+          "category": "Küresel Yatırım",
+          "id": 11
+        },
+        {
+          "title": "Finans Dünyasında Dev Satın Alma: Capital One, Brex'i 5,15 Milyar Dolara Bünyesine Katıyor",
+          "content": "Fintech ekosistemi, 2026'nın en büyük birleşme haberlerinden biriyle sarsıldı. Bankacılık devi Capital One, popüler kurumsal harcama yönetimi platformu Brex'i 5,15 milyar dolar bedelle satın alacağını duyurdu. Bu stratejik hamle, geleneksel bankalar ile çevik fintech platformları arasındaki sınırların giderek belirsizleştiğini gösteriyor. Satın almanın ardından Brex'in inovatif finansal araçlarının Capital One'ın KOBİ bankacılığı operasyonlarına entegre edilmesi bekleniyor.",
+          "author": "GetInvestr Ekibi",
+          "date": "02 Nisan 2026",
+          "readMinutes": 4,
+          "image": "/blog/capital_one_brex_2026.png",
+          "category": "Fintech",
+          "id": 12
+        },
+        {
+          "title": "Yapay Zeka Destekli Finansal Altyapı: Cloak, B Serisinde 375 Milyon Dolar Topladı",
+          "content": "Fintech güvenliğine odaklanan 'AI-Native' girişim Cloak, B serisi yatırım turunda 375 milyon dolar fon sağlayarak piyasa değerlemesini milyar doların üzerine taşıdı. 2026'da hız kazanan 'fiziksel-dijital AI' ve 'güvenli finansal raylar' trendinin en güçlü temsilcilerinden biri olan Cloak, finansal verilerin korunması ve otonom dolandırıcılık tespiti alanında yeni bir standart belirliyor. Şirket, bu fonu küresel genişleme ve Ar-Ge çalışmaları için kullanacak.",
+          "author": "GetInvestr Research",
+          "date": "01 Nisan 2026",
+          "readMinutes": 5,
+          "image": "/blog/cloak_security_2026.png",
+          "category": "AI Güvenlik",
+          "id": 13
+        },
+        {
           "title": "2025 Yılında Türkiye Startup Ekosistemi 1,4 Milyar Dolar Yatırım Aldı",
           "content": "KPMG Türkiye ve 212 iş birliğiyle hazırlanan 'Türkiye Startup Yatırımları' raporu yayınlandı. Rapora göre, Türkiye startup ekosistemi 2025 yılında toplam 360 işlemle 1,4 milyar dolar yatırım almayı başardı.\n\nMega ölçekli yatırım turlarının veya 'decacorn' statüsüne ulaşan girişimlerin yokluğuna rağmen, bu rakam pazarın dayanıklılığını ve büyüme potansiyelini bir kez daha kanıtladı. Uzmanlar, küresel ekonomik daralmanın yaşandığı bu dönemde yatırımcıların daha seçici davrandığını, ancak iş modeli sağlam girişimlere olan ilginin azalmadığını vurguluyor.\n\nÖzellikle erken aşama (seed) yatırımlarda hareketliliğin devam ettiği pazarda, GetInvestr gibi platformların melek yatırımcı ve VC'lere erişimi kolaylaştırmasının ekosistem büyümesine ivme kazandırması bekleniyor.",
           "author": "GetInvestr Ekibi",

@@ -11,79 +11,61 @@ def update_json(lang, file_path):
     if lang == 'tr':
         new_posts = [
             {
-                "title": "2025 Yılında Türkiye Startup Ekosistemi 1,4 Milyar Dolar Yatırım Aldı",
-                "content": "KPMG Türkiye ve 212 iş birliğiyle hazırlanan 'Türkiye Startup Yatırımları' raporu yayınlandı. Rapora göre, Türkiye startup ekosistemi 2025 yılında toplam 360 işlemle 1,4 milyar dolar yatırım almayı başardı.\n\nMega ölçekli yatırım turlarının veya 'decacorn' statüsüne ulaşan girişimlerin yokluğuna rağmen, bu rakam pazarın dayanıklılığını ve büyüme potansiyelini bir kez daha kanıtladı. Uzmanlar, küresel ekonomik daralmanın yaşandığı bu dönemde yatırımcıların daha seçici davrandığını, ancak iş modeli sağlam girişimlere olan ilginin azalmadığını vurguluyor.\n\nÖzellikle erken aşama (seed) yatırımlarda hareketliliğin devam ettiği pazarda, GetInvestr gibi platformların melek yatırımcı ve VC'lere erişimi kolaylaştırmasının ekosistem büyümesine ivme kazandırması bekleniyor.",
-                "author": "GetInvestr Ekibi",
-                "date": "29 Mart 2026",
+                "title": "2026'nın İlk Çeyreğinde Küresel Girişim Sermayesi 300 Milyar Dolara Ulaştı",
+                "content": "2026 yılının ilk üç ayı, teknoloji dünyasında tarihi bir dönüm noktası oldu. Yapay zeka yatırımlarının başı çektiği süreçte, küresel çapta toplamda 300 milyar doların üzerinde fon girişimlerle buluştu. OpenAI'ın devasa fonlama turu bu büyümenin ana motoruyken, Anthropic ve xAI gibi devler de milyarlarca dolarlık yeni yatırımlar kapattı. Yatırımcılar artık sadece AI uygulamalarına değil, veri merkezleri ve özel yarı iletkenler gibi altyapı katmanlarına devasa sermayeler ayırıyor.",
+                "author": "GetInvestr Research",
+                "date": "03 Nisan 2026",
                 "readMinutes": 3,
-                "image": "/blog/turkiye_yatirim_2026.png",
-                "category": "Ekosistem"
+                "image": "/blog/global_funding_2026.png",
+                "category": "Küresel Yatırım"
             },
             {
-                "title": "Türkiye Fintech Sektöründe Mega Büyüme: 2025'te 214 Milyon Dolar Yatırım",
-                "content": "Türkiye'de finansal teknolojiler (Fintech) sektörü, yatırım ekosisteminin lokomotifi olmaya devam ediyor. Açıklanan son verilere göre fintech girişimleri, geçtiğimiz yıl boyunca toplam 214 milyon dolar yatırım çekerek en çok fonlanan sektörlerin başında geldi.\n\nSektörün ulaştığı olgunluk seviyesi, yatırımcıların dijital cüzdan, gömülü finans (embedded finance), B2B ödeme çözümleri ve regtech (düzenleyici teknolojiler) alanlarına yönelik ilgisini yansıtıyor. Açık bankacılık düzenlemelerinin de etkisiyle, pazardaki oyuncuların sayısı hızla artarken inovasyon daha tabana yayılıyor.\n\nYabancı VC'lerin (Venture Capital) Türk fintech'lerine olan ilgisi de giderek büyüyor. GetInvestr verilerine göre, global yatırım fonlarının Türkiye merkezli finansal teknoloji şirketleriyle kurduğu etkileşim son bir yılda iki katına çıkmış durumda.",
+                "title": "Finans Dünyasında Dev Satın Alma: Capital One, Brex'i 5,15 Milyar Dolara Bünyesine Katıyor",
+                "content": "Fintech ekosistemi, 2026'nın en büyük birleşme haberlerinden biriyle sarsıldı. Bankacılık devi Capital One, popüler kurumsal harcama yönetimi platformu Brex'i 5,15 milyar dolar bedelle satın alacağını duyurdu. Bu stratejik hamle, geleneksel bankalar ile çevik fintech platformları arasındaki sınırların giderek belirsizleştiğini gösteriyor. Satın almanın ardından Brex'in inovatif finansal araçlarının Capital One'ın KOBİ bankacılığı operasyonlarına entegre edilmesi bekleniyor.",
                 "author": "GetInvestr Ekibi",
-                "date": "28 Mart 2026",
+                "date": "02 Nisan 2026",
                 "readMinutes": 4,
-                "image": "/blog/fintech_buyume_2026.png",
+                "image": "/blog/capital_one_brex_2026.png",
                 "category": "Fintech"
             },
             {
-                "title": "Global AI Yatırımları Mart 2026'da Zirve Yaptı: Yeni Trend 'Ajan (Agent)' Teknolojileri",
-                "content": "2026 yılının ilk çeyreğini geride bırakırken, küresel girişim sermayesi (VC) dünyasında Yapay Zeka rüzgarı esmeye devam ediyor. Yalnızca Mart ayının son haftasında bile yapay zeka altyapısına odaklanan startuplar milyonlarca dolar fon aldı.\n\nÖne çıkan yatırımlar arasında, AI destekli kişisel hafıza platformu Littlebird'ün 11 milyon dolarlık, AI tabanlı insan kaynakları (HCM) yazılımı Novaworks'ün 8 milyon dolarlık ve yapay zeka tasarım ajanı Moda'nın 7.5 milyon dolarlık tohum (seed) yatırımları bulunuyor.\n\nYatırımcıların odak noktası değişiyor: Artık mevcut ürünlere basit AI özellikleri ekleyen girişimler yerine, yapay zekayı iş akışlarını uçtan uca otomatize etmek (AI Agents) için kullanan çekirdek (core) teknoloji girişimleri daha yüksek yatırım değerlemeleriyle fona ulaşıyor.",
+                "title": "Yapay Zeka Destekli Finansal Altyapı: Cloak, B Serisinde 375 Milyon Dolar Topladı",
+                "content": "Fintech güvenliğine odaklanan 'AI-Native' girişim Cloak, B serisi yatırım turunda 375 milyon dolar fon sağlayarak piyasa değerlemesini milyar doların üzerine taşıdı. 2026'da hız kazanan 'fiziksel-dijital AI' ve 'güvenli finansal raylar' trendinin en güçlü temsilcilerinden biri olan Cloak, finansal verilerin korunması ve otonom dolandırıcılık tespiti alanında yeni bir standart belirliyor. Şirket, bu fonu küresel genişleme ve Ar-Ge çalışmaları için kullanacak.",
                 "author": "GetInvestr Research",
-                "date": "27 Mart 2026",
+                "date": "01 Nisan 2026",
                 "readMinutes": 5,
-                "image": "/blog/ai_yatirim_2026.png",
-                "category": "Global Yatırım"
-            },
-            {
-                "title": "İklim Teknolojilerine (Cleantech) İlgi Büyüyor: Helix Earth 12 Milyon Dolar Tohum Yatırımı Aldı",
-                "content": "Sürdürülebilirlik ve karbon emisyonu azaltma hedefleri, girişimcilik ekosisteminde yeni fırsatlar yaratırken VC'lerin radarı Enerji ve İklim Teknolojileri'ne (Cleantech) dönmüş durumda.\n\nMart ayının en büyük tohum turlarından birini gerçekleştiren Helix Earth, HVAC sistemlerinin enerji verimliliğini dönüştürmek amacıyla 12 milyon dolar tutarında aşırı talep gören (oversubscribed) bir tohum yatırım (Seed 2) aldı.\n\nDonanım odaklı girişimlerin yatırım almasının genellikle yazılıma (SaaS) kıyasla daha zor olduğu düşünülse de, iklim kriziyle mücadele eden ve somut çözümler sunan 'DeepTech' girişimleri rekor seviyelerde fon toplamayı sürdürüyor. Yatırımcıların ESG (Çevresel, Sosyal, Yönetişim) kriterlerini portföylerinde ön sıralara alması, önümüzdeki çeyreklerde cleantech ve enerji startuplarına akacak sermayenin katlanarak artacağına işaret ediyor.",
-                "author": "GetInvestr Research",
-                "date": "26 Mart 2026",
-                "readMinutes": 3,
-                "image": "/blog/cleantech_enerji_2026.png",
-                "category": "Cleantech & DeepTech"
+                "image": "/blog/cloak_security_2026.png",
+                "category": "AI Güvenlik"
             }
         ]
     else:
         new_posts = [
             {
-                "title": "Turkish Startup Ecosystem Raised $1.4 Billion in 2025",
-                "content": "According to the newly published 'Turkey Startup Investments' report in collaboration with KPMG Turkey and 212, the Turkish startup ecosystem successfully raised a total of $1.4 billion across 360 investments in 2025.\n\nDespite the absence of mega-rounds or newly minted decacorns, this figure once again proved the resilience and strong growth potential of the market. Experts highlight that while investors have become more selective during periods of global economic tightening, interest in startups with solid, proven business models remains unwavering.\n\nThe ecosystem is witnessing continued activity, especially in early-stage (seed) investments. Platforms like GetInvestr are expected to further accelerate early-stage growth by bridging the gap between innovative founders and active angel networks or VCs globally.",
-                "author": "GetInvestr Team",
-                "date": "March 29, 2026",
-                "readMinutes": 3,
-                "image": "/blog/turkiye_yatirim_2026.png",
-                "category": "Ecosystem"
-            },
-            {
-                "title": "Mega Growth in Fintech: $214 Million Investment in Turkey",
-                "content": "Financial technology (Fintech) continues to be the locomotive of the investment ecosystem in Turkey. According to recent data, fintech startups attracted $214 million in funding last year, ranking among the top verticals.\n\nThis maturity level reflects investors' growing interest in digital wallets, embedded finance, B2B payment solutions, and regulatory technologies (regtech). Supported by open banking regulations, the number of innovative players is scaling fast across the market.\n\nForeign VCs' engagement with Turkish fintech is also snowballing. GetInvestr data reveals that interactions between global investment funds and Turkey-based fintech companies have doubled over the past year.",
-                "author": "GetInvestr Team",
-                "date": "March 28, 2026",
-                "readMinutes": 4,
-                "image": "/blog/fintech_buyume_2026.png",
-                "category": "Fintech"
-            },
-            {
-                "title": "Global AI Funding Peaks in March 2026: The Rise of 'Agentic' Technologies",
-                "content": "As we close the first quarter of 2026, the Artificial Intelligence frenzy continues unabated in the global VC landscape. In the final week of March alone, startups focusing on AI infrastructure raised millions.\n\nStandout seed investments included AI personal memory platform Littlebird ($11M), AI-native Human Capital Management platform Novaworks ($8M), and AI design agent Moda ($7.5M).\n\nInvestors are fundamentally shifting their thesis: Rather than funding startups that simply bolt AI features onto existing products, capital is aggressively flowing toward core technologies utilizing AI to automate end-to-end workflows (AI Agents) and disrupt traditional paradigms.",
+                "title": "Global Venture Funding Hits Record $300 Billion in Q1 2026",
+                "content": "The first quarter of 2026 marked a historic milestone for the technology world. Driven by the AI boom, global venture capital funding surpassed $300 billion in just three months. While OpenAI's massive funding rounds were a key driver, other giants like Anthropic and xAI also secured multi-billion dollar investments. Investors are now shifting significant capital toward the infrastructure layer, including data centers and specialized semiconductors, moving beyond just applied AI models.",
                 "author": "GetInvestr Research",
-                "date": "March 27, 2026",
-                "readMinutes": 5,
-                "image": "/blog/ai_yatirim_2026.png",
+                "date": "April 03, 2026",
+                "readMinutes": 3,
+                "image": "/blog/global_funding_2026.png",
                 "category": "Global Investment"
             },
             {
-                "title": "Cleantech Surtge: Helix Earth Secures $12 Million Seed Funding",
-                "content": "Sustainability and carbon reduction goals are creating lucrative new opportunities in the startup ecosystem, shifting the VC radar heavily toward Energy and Climate Tech (Cleantech).\n\nIn one of March's largest seed rounds, Helix Earth secured $12 million in an oversubscribed Seed 2 round to transform HVAC energy efficiency.\n\nWhile hardware-focused startups are generally perceived as harder to fund compared to SaaS, 'DeepTech' ventures tackling the severe climate crisis with tangible solutions are breaking funding records. The growing emphasis on ESG (Environmental, Social, Governance) criteria ensures that capital allocated to cleantech and energy startups will multiply in the coming quarters.",
+                "title": "FinTech Giant Deal: Capital One to Acquire Brex for $5.15 Billion",
+                "content": "The fintech ecosystem was shaken by one of the largest merger announcements of 2026. Banking giant Capital One has announced its acquisition of Brex, the popular corporate spend management platform, for $5.15 billion. This strategic move highlights the blurring lines between traditional banking and agile fintech platforms. Following the acquisition, Brex's innovative financial tools are expected to be fully integrated into Capital One's SME banking operations.",
+                "author": "GetInvestr Team",
+                "date": "April 02, 2026",
+                "readMinutes": 4,
+                "image": "/blog/capital_one_brex_2026.png",
+                "category": "Fintech"
+            },
+            {
+                "title": "AI-Native Financial Infrastructure: Cloak Raises $375M in Series B",
+                "content": "Cloak, an 'AI-Native' startup focused on fintech security, has secured $375 million in its Series B funding round, pushing its valuation well above the billion-dollar mark. As a prime beneficiary of the 2026 trend toward 'physical-digital AI' and 'secure financial rails,' Cloak is setting new standards in financial data protection and autonomous fraud detection. The company plans to use the new capital for aggressive global expansion and intensive R&D efforts.",
                 "author": "GetInvestr Research",
-                "date": "March 26, 2026",
-                "readMinutes": 3,
-                "image": "/blog/cleantech_enerji_2026.png",
-                "category": "Cleantech & DeepTech"
+                "date": "April 01, 2026",
+                "readMinutes": 5,
+                "image": "/blog/cloak_security_2026.png",
+                "category": "AI Security"
             }
         ]
         
@@ -91,11 +73,12 @@ def update_json(lang, file_path):
         max_id += 1
         p['id'] = max_id
         
-    data['landing']['blog']['posts'].extend(new_posts)
+    # Prepend new posts so they appear first
+    data['landing']['blog']['posts'] = new_posts + data['landing']['blog']['posts']
     
     with open(file_path, 'w', encoding='utf-8') as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
 
 update_json('tr', r'c:\Users\Yasin AKSOY\Yatırımcı platformu\investr\i18n\messages\tr.json')
 update_json('en', r'c:\Users\Yasin AKSOY\Yatırımcı platformu\investr\i18n\messages\en.json')
-print("Successfully appended 4 new posts localized in TR and EN.")
+print("Successfully prepended 3 new posts localized in TR and EN.")
