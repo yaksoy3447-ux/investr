@@ -82,22 +82,53 @@ export default async function BlogPostPage({ params }: { params: Promise<{ local
 
         {/* Article Content */}
         <div className="prose prose-invert prose-lg max-w-none">
-          {post.content.split('\n\n').map((paragraph, index) => (
-            <p key={index} className="text-white/80 leading-[1.8] mb-8 text-lg md:text-xl font-light">
-              {paragraph}
-            </p>
-          ))}
+          {post.content.split('\n\n').map((paragraph, index) => {
+            // Get secondary images if they exist
+            const secondaryImages = (post as any).secondaryImages || [];
+            
+            return (
+              <div key={index}>
+                <p className={`text-white/90 leading-[1.8] mb-10 text-lg md:text-xl font-normal ${index === 0 ? 'first-letter:text-7xl first-letter:font-bold first-letter:text-primary first-letter:mr-3 first-letter:float-left' : ''}`}>
+                  {paragraph}
+                </p>
+                
+                {/* Insert secondary images at specific points (after p0, p2, p4, p5) */}
+                {secondaryImages.length > 0 && (
+                  (index === 0 && secondaryImages[0]) ||
+                  (index === 2 && secondaryImages[1]) ||
+                  (index === 4 && secondaryImages[2]) ||
+                  (index === 5 && secondaryImages[3])
+                ) && (
+                  <div className="relative h-[300px] md:h-[500px] w-full rounded-3xl overflow-hidden my-16 shadow-2xl ring-1 ring-white/20 group transition-all duration-500 hover:ring-primary/40">
+                    <Image 
+                      src={
+                        index === 0 ? secondaryImages[0] :
+                        index === 2 ? secondaryImages[1] :
+                        index === 4 ? secondaryImages[2] :
+                        secondaryImages[3]
+                      } 
+                      alt={`${post.title} detail ${index}`}
+                      fill
+                      className="object-cover transition-transform duration-700 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  </div>
+                )}
+              </div>
+            );
+          })}
         </div>
 
         {/* CTA Section */}
-        <div className="mt-24 p-8 md:p-12 rounded-3xl bg-gradient-to-br from-primary/20 to-transparent border border-primary/20 text-center">
-            <h3 className="text-2xl md:text-3xl font-bold mb-4">{t('ctaTitle')}</h3>
-            <p className="text-white/60 mb-8 max-w-xl mx-auto text-lg">
+        <div className="mt-32 p-10 md:p-16 rounded-[40px] bg-[#0A0A0A] border border-white/10 text-center relative overflow-hidden group">
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
+            <h3 className="text-3xl md:text-4xl font-bold mb-6 relative z-10">{t('ctaTitle')}</h3>
+            <p className="text-white/60 mb-10 max-w-2xl mx-auto text-lg md:text-xl relative z-10">
                 {t('ctaSub')}
             </p>
             <Link 
                 href="/register"
-                className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-primary text-white font-bold hover:scale-105 transition-transform shadow-lg shadow-primary/20"
+                className="inline-flex items-center justify-center px-10 py-5 rounded-full bg-primary text-white font-bold hover:scale-105 transition-all shadow-xl shadow-primary/20 relative z-10 hover:shadow-primary/40"
             >
                 {t('ctaBtn')}
             </Link>
