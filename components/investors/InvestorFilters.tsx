@@ -24,7 +24,7 @@ type Props = {
   investorTypes: readonly FilterConfig[];
   sectors: readonly FilterConfig[];
   stages: readonly FilterConfig[];
-  locations: readonly FilterConfig[];
+  locations?: readonly FilterConfig[];
   locale: string;
   labels: {
     title: string;
@@ -32,7 +32,7 @@ type Props = {
     type: string;
     sector: string;
     stage: string;
-    location: string;
+    location?: string;
   };
 };
 
@@ -85,7 +85,6 @@ export default function InvestorFilters({
   investorTypes,
   sectors,
   stages,
-  locations,
   locale,
   labels,
 }: Props) {
@@ -138,13 +137,7 @@ export default function InvestorFilters({
           locale={locale}
         />
 
-        <FilterSection
-          title={labels.location}
-          items={locations}
-          selectedValues={filters.locations}
-          onToggle={(v) => toggleFilter('locations', v)}
-          locale={locale}
-        />
+
 
         {/* Verified Only (Removed) */}
       </div>
