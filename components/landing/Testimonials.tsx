@@ -8,7 +8,9 @@ export default function Testimonials() {
   const t = useTranslations('landing.testimonials');
   const tLanding = useTranslations('landing');
 
-  const testimonialsList = t.raw('stories') as { text: string; image: string; name: string; role: string }[];
+  const testimonialsList = (t.raw('stories') || []) as { text: string; image: string; name: string; role: string }[];
+  if (!testimonialsList || testimonialsList.length === 0) return null;
+
   const firstColumn = testimonialsList.slice(0, 3);
   const secondColumn = testimonialsList.slice(3, 6);
   const thirdColumn = testimonialsList.slice(6, 9);
