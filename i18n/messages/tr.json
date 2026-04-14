@@ -793,10 +793,10 @@
           "readMinutes": 8,
           "image": "/blog/round_treasury_main.png",
           "secondaryImages": [
-            "/blog/round_treasury_main.png",
-            "/blog/round_treasury_main.png",
-            "/blog/round_treasury_main.png",
-            "/blog/round_treasury_main.png"
+            "/blog/round_treasury_1.png",
+            "/blog/round_treasury_2.png",
+            "/blog/round_treasury_3.png",
+            "/blog/round_treasury_4.png"
           ],
           "category": "Fintech",
           "id": 28
@@ -809,10 +809,10 @@
           "readMinutes": 8,
           "image": "/blog/peakmetrics_ai_main.png",
           "secondaryImages": [
-            "/blog/peakmetrics_ai_main.png",
-            "/blog/peakmetrics_ai_main.png",
-            "/blog/peakmetrics_ai_main.png",
-            "/blog/peakmetrics_ai_main.png"
+            "/blog/peakmetrics_ai_1.png",
+            "/blog/peakmetrics_ai_2.png",
+            "/blog/peakmetrics_ai_3.png",
+            "/blog/peakmetrics_ai_4.png"
           ],
           "category": "Yapay Zeka",
           "id": 29
@@ -826,9 +826,9 @@
           "image": "/blog/attention_crm_main.png",
           "secondaryImages": [
             "/blog/attention_crm_1.png",
-            "/blog/attention_crm_main.png",
-            "/blog/attention_crm_main.png",
-            "/blog/attention_crm_main.png"
+            "/blog/attention_crm_2.png",
+            "/blog/attention_crm_3.png",
+            "/blog/attention_crm_4.png"
           ],
           "category": "Yapay Zeka",
           "id": 30
@@ -843,8 +843,8 @@
           "secondaryImages": [
             "/blog/eka_ventures_1.png",
             "/blog/eka_ventures_2.png",
-            "/blog/eka_ventures_main.png",
-            "/blog/eka_ventures_main.png"
+            "/blog/eka_ventures_3.png",
+            "/blog/eka_ventures_4.png"
           ],
           "category": "Venture Capital",
           "id": 31
