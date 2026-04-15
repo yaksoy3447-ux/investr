@@ -12,8 +12,61 @@ export default function Pricing() {
   const [loadingPlan, setLoadingPlan] = useState<string | null>(null);
   const [creditAmount, setCreditAmount] = useState<number>(10);
   const [promoCode, setPromoCode] = useState<string>("");
+  const [discount, setDiscount] = useState<{
+    percent_off?: number | null;
+    amount_off?: number | null;
+  } | null>(null);
+  const [promoError, setPromoError] = useState<string | null>(null);
+  const [validatingPromo, setValidatingPromo] = useState(false);
   const t = useTranslations("landing.pricingPage");
   const locale = useLocale();
+
+  const handleValidatePromo = async () => {
+    if (!promoCode) return;
+    setValidatingPromo(true);
+    setPromoError(null);
+    try {
+      const res = await fetch("/api/stripe/validate-promo", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ promoCode }),
+      });
+      if (res.ok) {
+        const data = await res.json();
+        setDiscount(data);
+      } else {
+        const err = await res.text();
+        setPromoError(err);
+        setDiscount(null);
+      }
+    } catch {
+      setPromoError(locale === "tr" ? "Bir hata oluştu" : "An error occurred");
+      setDiscount(null);
+    } finally {
+      setValidatingPromo(false);
+    }
+  };
+
+  const getDiscountedPrice = (originalPrice: string | number) => {
+    if (
+      !discount ||
+      originalPrice === undefined ||
+      originalPrice === null ||
+      originalPrice === ""
+    )
+      return originalPrice;
+    const numPrice = Number(originalPrice);
+    if (isNaN(numPrice)) return originalPrice;
+    if (discount.percent_off) {
+      const calc = numPrice * ((100 - discount.percent_off) / 100);
+      return calc % 1 === 0 ? calc.toString() : calc.toFixed(2);
+    }
+    if (discount.amount_off) {
+      const calc = Math.max(0, numPrice - discount.amount_off / 100);
+      return calc % 1 === 0 ? calc.toString() : calc.toFixed(2);
+    }
+    return originalPrice;
+  };
 
   // Safe context extraction for when used outside PlanProvider (Landing Page)
   let currentPlan: string | undefined = undefined;
@@ -163,18 +216,40 @@ export default function Pricing() {
           </div>
 
           {/* Promo Code Input */}
-          <div className="flex items-center gap-2 max-w-sm w-full relative">
-            <input
-              type="text"
-              placeholder={
-                locale === "tr"
-                  ? "Promosyon Kodu (İsteğe Bağlı)"
-                  : "Promo Code (Optional)"
-              }
-              value={promoCode}
-              onChange={(e) => setPromoCode(e.target.value)}
-              className="w-full bg-white/5 border border-white/10 rounded-full px-5 py-3 text-sm text-white placeholder-white/40 focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all text-center"
-            />
+          <div className="flex flex-col items-center gap-2 max-w-md w-full relative">
+            <div className="flex items-center gap-2 w-full relative">
+              <input
+                type="text"
+                placeholder={
+                  locale === "tr"
+                    ? "Promosyon Kodu (İsteğe Bağlı)"
+                    : "Promo Code (Optional)"
+                }
+                value={promoCode}
+                onChange={(e) => setPromoCode(e.target.value)}
+                onKeyDown={(e) => e.key === "Enter" && handleValidatePromo()}
+                className="w-full bg-white/5 border border-white/10 rounded-full pl-5 pr-24 py-3 text-sm text-white placeholder-white/40 focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all text-center"
+              />
+              <button
+                onClick={handleValidatePromo}
+                disabled={validatingPromo || !promoCode}
+                className="absolute right-1 top-1 bottom-1 px-4 bg-white/10 hover:bg-white/20 border border-white/5 rounded-full text-xs font-semibold whitespace-nowrap transition-colors disabled:opacity-50"
+              >
+                {validatingPromo ? "..." : locale === "tr" ? "Uygula" : "Apply"}
+              </button>
+            </div>
+            {promoError && (
+              <span className="text-red-400 text-xs font-medium">
+                {promoError}
+              </span>
+            )}
+            {discount && (
+              <span className="text-emerald-400 text-xs font-medium">
+                {locale === "tr"
+                  ? "Promosyon kodu uygulandı!"
+                  : "Promo code applied!"}
+              </span>
+            )}
           </div>
         </div>
 
@@ -217,15 +292,31 @@ export default function Pricing() {
               <div className="flex flex-col items-start gap-1 mb-5">
                 {plan.isCredit ? (
                   // Credit dynamic pricing UI
-                  <div className="flex flex-col w-full">
-                    <div className="flex items-end gap-1 mb-3">
-                      <span className="text-3xl font-extrabold tracking-tighter text-white">
-                        ${(creditAmount * 0.99).toFixed(2)}
-                      </span>
-                      <span className="font-medium mb-1 text-white/50 text-sm">
-                        {plan.period}
-                      </span>
-                    </div>
+                  <div className="flex flex-col w-full h-[76px] justify-end">
+                    {discount ? (
+                      <div className="flex flex-col">
+                        <span className="text-sm line-through text-white/40 -mb-1">
+                          ${(creditAmount * 0.99).toFixed(2)}
+                        </span>
+                        <div className="flex items-end gap-1 mb-3">
+                          <span className="text-3xl font-extrabold tracking-tighter text-emerald-400">
+                            ${getDiscountedPrice(creditAmount * 0.99)}
+                          </span>
+                          <span className="font-medium mb-1 text-white/50 text-sm">
+                            {plan.period}
+                          </span>
+                        </div>
+                      </div>
+                    ) : (
+                      <div className="flex items-end gap-1 mb-3">
+                        <span className="text-3xl font-extrabold tracking-tighter text-white">
+                          ${(creditAmount * 0.99).toFixed(2)}
+                        </span>
+                        <span className="font-medium mb-1 text-white/50 text-sm">
+                          {plan.period}
+                        </span>
+                      </div>
+                    )}
 
                     {/* Counter Control */}
                     <div className="flex items-center justify-between bg-white/10 rounded-lg overflow-hidden border border-white/10 p-1 mb-2">
@@ -250,15 +341,35 @@ export default function Pricing() {
                   </div>
                 ) : (
                   // Standard Pricing UI
-                  <div className="flex items-center gap-1 h-[72px]">
-                    <span className="text-4xl font-extrabold tracking-tighter text-white">
-                      ${plan.price}
-                    </span>
-                    <span
-                      className={`font-medium mb-1 text-sm ${plan.popular ? "text-blue-200" : "text-white/50"}`}
-                    >
-                      {plan.isFree ? "" : plan.period}
-                    </span>
+                  <div className="flex flex-col gap-1 h-[76px] justify-end pb-[10px]">
+                    {discount && !plan.isFree ? (
+                      <div className="flex flex-col">
+                        <span className="text-sm line-through text-white/40 -mb-1">
+                          ${plan.price}
+                        </span>
+                        <div className="flex items-center gap-1">
+                          <span className="text-4xl font-extrabold tracking-tighter text-emerald-400">
+                            ${getDiscountedPrice(plan.price)}
+                          </span>
+                          <span
+                            className={`font-medium mb-1 text-sm ${plan.popular ? "text-blue-200" : "text-white/50"}`}
+                          >
+                            {plan.period}
+                          </span>
+                        </div>
+                      </div>
+                    ) : (
+                      <div className="flex items-center gap-1">
+                        <span className="text-4xl font-extrabold tracking-tighter text-white">
+                          ${plan.price}
+                        </span>
+                        <span
+                          className={`font-medium mb-1 text-sm ${plan.popular ? "text-blue-200" : "text-white/50"}`}
+                        >
+                          {plan.isFree ? "" : plan.period}
+                        </span>
+                      </div>
+                    )}
                   </div>
                 )}
               </div>
