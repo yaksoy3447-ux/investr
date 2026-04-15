@@ -54,7 +54,7 @@ export default function Hero() {
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light leading-[1.1] mb-8 tracking-tight">
               {t("heroH1_1")} <br className="hidden lg:block" />
               <span className="relative inline-block mt-2">
-                <span className="font-[family-name:var(--font-playfair)] font-bold italic text-transparent bg-clip-text bg-gradient-to-r from-[#F9E596] via-primary to-[#A07D1C] pr-2">
+                <span className="inline-block font-[family-name:var(--font-playfair)] font-bold italic text-transparent bg-clip-text bg-gradient-to-r from-[#F9E596] via-primary to-[#A07D1C] pr-4 pb-2">
                   {t("heroH1_2")}
                 </span>
                 {/* Glowing underline */}
