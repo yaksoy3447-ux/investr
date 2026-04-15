@@ -1,19 +1,20 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import { Check, X } from 'lucide-react';
-import { Link } from '@/i18n/routing';
-import { useState } from 'react';
-import { useTranslations, useLocale } from 'next-intl';
-import { usePlan } from '@/components/providers/PlanProvider';
+import { motion } from "framer-motion";
+import { Check, X } from "lucide-react";
+import { Link } from "@/i18n/routing";
+import { useState } from "react";
+import { useTranslations, useLocale } from "next-intl";
+import { usePlan } from "@/components/providers/PlanProvider";
 
 export default function Pricing() {
   const [isYearly, setIsYearly] = useState(false);
   const [loadingPlan, setLoadingPlan] = useState<string | null>(null);
   const [creditAmount, setCreditAmount] = useState<number>(10);
-  const t = useTranslations('landing.pricingPage');
+  const [promoCode, setPromoCode] = useState<string>("");
+  const t = useTranslations("landing.pricingPage");
   const locale = useLocale();
-  
+
   // Safe context extraction for when used outside PlanProvider (Landing Page)
   let currentPlan: string | undefined = undefined;
   try {
@@ -44,109 +45,143 @@ export default function Pricing() {
     isSubscription?: boolean;
     popular?: boolean;
     limits: string[];
-    features: { name: string, included: boolean }[];
+    features: { name: string; included: boolean }[];
     cta: string;
   };
 
-  const plans = t.raw('plans') as PlanType[];
+  const plans = t.raw("plans") as PlanType[];
 
   // Adjust plans based on isYearly
-  const visiblePlans = plans.map(p => {
-    if (p.isSubscription && isYearly && !p.isFree) {
-      return {
-        ...p,
-        price: Number(p.price) * 9,
-        period: '/ year'
-      };
-    }
-    if (p.isCredit && isYearly) {
-      // Hide or keep the credit card in yearly view? 
-      // The user said "Aylık ve yıllık aynı şekilde kalsın sadece aylık kısmına extra kredi alma ekleyecektik... yıllık kısmında çıkıp yap."
-      // Let's just grey it out or keep it the same since credits are independent.
+  const visiblePlans = plans
+    .map((p) => {
+      if (p.isSubscription && isYearly && !p.isFree) {
+        return {
+          ...p,
+          price: Number(p.price) * 9,
+          period: "/ year",
+        };
+      }
+      if (p.isCredit && isYearly) {
+        // Hide or keep the credit card in yearly view?
+        // The user said "Aylık ve yıllık aynı şekilde kalsın sadece aylık kısmına extra kredi alma ekleyecektik... yıllık kısmında çıkıp yap."
+        // Let's just grey it out or keep it the same since credits are independent.
+        return p;
+      }
       return p;
-    }
-    return p;
-  }).filter(p => {
-    // Hide the credit option if we are in Yearly view?
-    // "sadece aylık kısmına extra kredi alma ekleyecektik o kadar." -> only in monthly view.
-    if (isYearly && p.isCredit) return false;
-    return true;
-  });
+    })
+    .filter((p) => {
+      // Hide the credit option if we are in Yearly view?
+      // "sadece aylık kısmına extra kredi alma ekleyecektik o kadar." -> only in monthly view.
+      if (isYearly && p.isCredit) return false;
+      return true;
+    });
 
-  const handleCheckout = async (planId: string, isFree: boolean, isCredit: boolean) => {
+  const handleCheckout = async (
+    planId: string,
+    isFree: boolean,
+    isCredit: boolean,
+  ) => {
     if (isFree) {
-      window.location.href = '/register';
+      window.location.href = "/register";
       return;
     }
-    
+
     setLoadingPlan(planId);
-    
+
     try {
-      const payload: { planLevel: string; quantity?: number; isYearly?: boolean } = { planLevel: planId };
+      const payload: {
+        planLevel: string;
+        quantity?: number;
+        isYearly?: boolean;
+        promoCode?: string;
+      } = { planLevel: planId };
       if (isCredit) {
         payload.quantity = creditAmount;
       }
       if (isYearly && !isCredit) {
         payload.isYearly = true;
       }
+      if (promoCode) {
+        payload.promoCode = promoCode;
+      }
 
-      const res = await fetch('/api/stripe/checkout', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+      const res = await fetch("/api/stripe/checkout", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
       });
-      
+
       if (res.status === 401) {
-        window.location.href = '/register';
+        window.location.href = "/register";
         return;
       }
-      
+
       if (res.ok) {
         const data = await res.json();
         if (data.url) {
           window.location.href = data.url;
         }
       } else {
-        alert('Stripe initialization failed.');
+        const errorText = await res.text();
+        alert(`Error: ${errorText || "Stripe initialization failed."}`);
       }
     } catch (err) {
       console.error(err);
-      alert('Error connecting to payment gateway.');
+      alert("Error connecting to payment gateway.");
     } finally {
       setLoadingPlan(null);
     }
   };
 
   return (
-    <section className="py-24 px-6 bg-[#030303] text-white overflow-hidden relative" id="pricing">
+    <section
+      className="py-24 px-6 bg-[#030303] text-white overflow-hidden relative"
+      id="pricing"
+    >
       {/* Background Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] bg-primary/20 blur-[150px] rounded-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto relative z-10">
-        
         {/* Toggle Controls */}
-        <div className="flex justify-center mb-16">
+        <div className="flex flex-col items-center justify-center mb-16 gap-6">
           <div className="inline-flex items-center gap-2 bg-white/5 rounded-full p-1.5 border border-white/10 shadow-[0_0_20px_rgba(255,255,255,0.05)] backdrop-blur-md">
-            <button 
+            <button
               onClick={() => setIsYearly(false)}
-              className={`px-8 py-3 rounded-full font-semibold text-sm transition-all duration-300 ${!isYearly ? 'bg-white text-black shadow-lg' : 'text-white/60 hover:text-white'}`}
+              className={`px-8 py-3 rounded-full font-semibold text-sm transition-all duration-300 ${!isYearly ? "bg-white text-black shadow-lg" : "text-white/60 hover:text-white"}`}
             >
-              {t('monthly')}
+              {t("monthly")}
             </button>
-            <button 
+            <button
               onClick={() => setIsYearly(true)}
-              className={`relative px-8 py-3 rounded-full font-semibold text-sm transition-all duration-300 ${isYearly ? 'bg-white text-black shadow-lg' : 'text-white/60 hover:text-white'}`}
+              className={`relative px-8 py-3 rounded-full font-semibold text-sm transition-all duration-300 ${isYearly ? "bg-white text-black shadow-lg" : "text-white/60 hover:text-white"}`}
             >
-              {t('yearly')}
+              {t("yearly")}
               <span className="absolute -top-3 -right-6 bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-[10px] px-2 py-0.5 rounded-full font-bold whitespace-nowrap">
-                {t('yearlyBadge')}
+                {t("yearlyBadge")}
               </span>
             </button>
+          </div>
+
+          {/* Promo Code Input */}
+          <div className="flex items-center gap-2 max-w-sm w-full relative">
+            <input
+              type="text"
+              placeholder={
+                locale === "tr"
+                  ? "Promosyon Kodu (İsteğe Bağlı)"
+                  : "Promo Code (Optional)"
+              }
+              value={promoCode}
+              onChange={(e) => setPromoCode(e.target.value)}
+              className="w-full bg-white/5 border border-white/10 rounded-full px-5 py-3 text-sm text-white placeholder-white/40 focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all text-center"
+            />
           </div>
         </div>
 
         {/* Plan Cards - We have 5 items in Monthly, 4 items in Yearly */}
-        <div className={`grid grid-cols-1 md:grid-cols-2 gap-5 items-stretch ${isYearly ? 'lg:grid-cols-4' : 'lg:grid-cols-5'}`}>
+        <div
+          className={`grid grid-cols-1 md:grid-cols-2 gap-5 items-stretch ${isYearly ? "lg:grid-cols-4" : "lg:grid-cols-5"}`}
+        >
           {visiblePlans.map((plan, index) => (
             <motion.div
               key={plan.name}
@@ -156,20 +191,28 @@ export default function Pricing() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className={`relative rounded-3xl p-6 flex flex-col ${
                 plan.popular
-                  ? 'bg-primary text-white shadow-[0_0_50px_rgba(59,130,246,0.2)] lg:-translate-y-2 border border-blue-400/50'
+                  ? "bg-primary text-white shadow-[0_0_50px_rgba(59,130,246,0.2)] lg:-translate-y-2 border border-blue-400/50"
                   : plan.isFree
-                  ? 'bg-white/[0.03] border border-white/[0.06]'
-                  : 'bg-white/5 border border-white/10'
+                    ? "bg-white/[0.03] border border-white/[0.06]"
+                    : "bg-white/5 border border-white/10"
               }`}
             >
               <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                <div className={`px-4 py-1.5 rounded-full text-[10px] font-bold tracking-wide shadow-md whitespace-nowrap uppercase ${plan.popular ? 'bg-blue-100 text-blue-700' : 'bg-white/10 text-white/80 border border-white/20'}`}>
+                <div
+                  className={`px-4 py-1.5 rounded-full text-[10px] font-bold tracking-wide shadow-md whitespace-nowrap uppercase ${plan.popular ? "bg-blue-100 text-blue-700" : "bg-white/10 text-white/80 border border-white/20"}`}
+                >
                   {plan.badge}
                 </div>
               </div>
 
-              <h3 className="text-xl font-bold mb-2 text-white mt-2">{plan.name}</h3>
-              <p className={`text-xs mb-5 h-8 ${plan.popular ? 'text-blue-100' : 'text-white/60'}`}>{plan.description}</p>
+              <h3 className="text-xl font-bold mb-2 text-white mt-2">
+                {plan.name}
+              </h3>
+              <p
+                className={`text-xs mb-5 h-8 ${plan.popular ? "text-blue-100" : "text-white/60"}`}
+              >
+                {plan.description}
+              </p>
 
               <div className="flex flex-col items-start gap-1 mb-5">
                 {plan.isCredit ? (
@@ -183,17 +226,21 @@ export default function Pricing() {
                         {plan.period}
                       </span>
                     </div>
-                    
+
                     {/* Counter Control */}
                     <div className="flex items-center justify-between bg-white/10 rounded-lg overflow-hidden border border-white/10 p-1 mb-2">
-                      <button 
-                        onClick={() => setCreditAmount(Math.max(10, creditAmount - 5))}
+                      <button
+                        onClick={() =>
+                          setCreditAmount(Math.max(10, creditAmount - 5))
+                        }
                         className="w-8 h-8 flex items-center justify-center bg-white/5 hover:bg-white/10 rounded text-xl"
                       >
                         -
                       </button>
-                      <span className="font-bold text-sm">{creditAmount} Credits</span>
-                      <button 
+                      <span className="font-bold text-sm">
+                        {creditAmount} Credits
+                      </span>
+                      <button
                         onClick={() => setCreditAmount(creditAmount + 5)}
                         className="w-8 h-8 flex items-center justify-center bg-white/5 hover:bg-white/10 rounded text-lg"
                       >
@@ -207,8 +254,10 @@ export default function Pricing() {
                     <span className="text-4xl font-extrabold tracking-tighter text-white">
                       ${plan.price}
                     </span>
-                    <span className={`font-medium mb-1 text-sm ${plan.popular ? 'text-blue-200' : 'text-white/50'}`}>
-                      {plan.isFree ? '' : plan.period}
+                    <span
+                      className={`font-medium mb-1 text-sm ${plan.popular ? "text-blue-200" : "text-white/50"}`}
+                    >
+                      {plan.isFree ? "" : plan.period}
                     </span>
                   </div>
                 )}
@@ -217,60 +266,109 @@ export default function Pricing() {
               {/* Angle Match Style Core Features Layout */}
               <ul className="space-y-3 mb-6">
                 {plan.limits.map((limit, i) => (
-                  <li key={i} className="flex items-start gap-2.5 text-xs font-semibold text-white/90">
+                  <li
+                    key={i}
+                    className="flex items-start gap-2.5 text-xs font-semibold text-white/90"
+                  >
                     <div className="mt-1 w-1.5 h-1.5 rounded-full bg-current flex-shrink-0 opacity-70" />
                     <span>{limit}</span>
                   </li>
                 ))}
               </ul>
 
-              <div className={`h-px w-full mb-6 ${plan.popular ? 'bg-blue-400/30 border-blue-400/30' : 'bg-white/10 border-white/10'} border-b border-dashed bg-transparent`} />
+              <div
+                className={`h-px w-full mb-6 ${plan.popular ? "bg-blue-400/30 border-blue-400/30" : "bg-white/10 border-white/10"} border-b border-dashed bg-transparent`}
+              />
 
               {/* Angel Match Style Feature Checklist */}
               <ul className="space-y-3 flex-1 mb-6">
                 {plan.features?.map((feature, i) => (
-                  <li key={i} className={`flex items-start gap-2.5 text-xs font-medium ${plan.popular ? 'text-blue-50' : 'text-white/80'}`}>
+                  <li
+                    key={i}
+                    className={`flex items-start gap-2.5 text-xs font-medium ${plan.popular ? "text-blue-50" : "text-white/80"}`}
+                  >
                     <div className="mt-0.5 flex-shrink-0">
                       {feature.included ? (
-                        <Check size={14} className={plan.popular ? 'text-white' : 'text-emerald-400'} />
+                        <Check
+                          size={14}
+                          className={
+                            plan.popular ? "text-white" : "text-emerald-400"
+                          }
+                        />
                       ) : (
                         <X size={14} className="text-white/20" />
                       )}
                     </div>
-                    <span className={feature.included ? '' : 'text-white/30 line-through'}>{feature.name}</span>
+                    <span
+                      className={
+                        feature.included ? "" : "text-white/30 line-through"
+                      }
+                    >
+                      {feature.name}
+                    </span>
                   </li>
                 ))}
               </ul>
 
               <button
-                onClick={() => handleCheckout(plan.id, plan.isFree || false, plan.isCredit || false)}
+                onClick={() =>
+                  handleCheckout(
+                    plan.id,
+                    plan.isFree || false,
+                    plan.isCredit || false,
+                  )
+                }
                 disabled={
-                  loadingPlan === plan.id || 
-                  (plan.isFree && userTier > 0) || 
-                  (!plan.isCredit && planTiers[plan.id] !== undefined && planTiers[plan.id] < userTier) || // ALWAYS disable lower tiers
-                  (!plan.isCredit && !isYearly && planTiers[plan.id] === userTier) // Disable current tier ONLY in monthly view
+                  loadingPlan === plan.id ||
+                  (plan.isFree && userTier > 0) ||
+                  (!plan.isCredit &&
+                    planTiers[plan.id] !== undefined &&
+                    planTiers[plan.id] < userTier) || // ALWAYS disable lower tiers
+                  (!plan.isCredit &&
+                    !isYearly &&
+                    planTiers[plan.id] === userTier) // Disable current tier ONLY in monthly view
                 }
                 className={`w-full text-center py-3 rounded-xl font-bold transition-all text-sm flex items-center justify-center gap-2 mt-auto ${
-                  (plan.isFree && userTier > 0) || (!plan.isCredit && planTiers[plan.id] !== undefined && planTiers[plan.id] < userTier) || (!isYearly && currentPlan === plan.id)
-                    ? 'bg-white/10 text-white/40 cursor-not-allowed border border-white/5'
+                  (plan.isFree && userTier > 0) ||
+                  (!plan.isCredit &&
+                    planTiers[plan.id] !== undefined &&
+                    planTiers[plan.id] < userTier) ||
+                  (!isYearly && currentPlan === plan.id)
+                    ? "bg-white/10 text-white/40 cursor-not-allowed border border-white/5"
                     : plan.popular
-                    ? 'bg-white hover:bg-gray-100 text-primary shadow-lg'
-                    : plan.isFree
-                    ? 'bg-white/5 hover:bg-white/10 text-white border border-white/10'
-                    : 'bg-white/10 hover:bg-white/20 text-white border border-white/5'
-                } ${loadingPlan === plan.id ? 'opacity-70 cursor-wait' : ''}`}
+                      ? "bg-white hover:bg-gray-100 text-primary shadow-lg"
+                      : plan.isFree
+                        ? "bg-white/5 hover:bg-white/10 text-white border border-white/10"
+                        : "bg-white/10 hover:bg-white/20 text-white border border-white/5"
+                } ${loadingPlan === plan.id ? "opacity-70 cursor-wait" : ""}`}
               >
                 {loadingPlan === plan.id ? (
                   <div className="w-4 h-4 border-2 border-current border-t-transparent rounded-full animate-spin" />
                 ) : !isYearly && currentPlan === plan.id ? (
-                  locale === 'tr' ? 'Mevcut Planınız' : 'Your Current Plan'
-                ) : (plan.isFree && userTier > 0) || (!plan.isCredit && planTiers[plan.id] !== undefined && planTiers[plan.id] < userTier) ? (
-                  locale === 'tr' ? 'Kullanılamaz' : 'Unavailable'
+                  locale === "tr" ? (
+                    "Mevcut Planınız"
+                  ) : (
+                    "Your Current Plan"
+                  )
+                ) : (plan.isFree && userTier > 0) ||
+                  (!plan.isCredit &&
+                    planTiers[plan.id] !== undefined &&
+                    planTiers[plan.id] < userTier) ? (
+                  locale === "tr" ? (
+                    "Kullanılamaz"
+                  ) : (
+                    "Unavailable"
+                  )
+                ) : isYearly && !plan.isFree && !plan.isCredit ? (
+                  locale === "tr" ? (
+                    "Yıllık Abone Ol"
+                  ) : (
+                    "Subscribe Yearly"
+                  )
                 ) : (
-                  isYearly && !plan.isFree && !plan.isCredit ? (locale === 'tr' ? 'Yıllık Abone Ol' : 'Subscribe Yearly') : plan.cta
+                  plan.cta
                 )}
               </button>
-
             </motion.div>
           ))}
         </div>
