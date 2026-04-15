@@ -120,17 +120,25 @@ export async function POST(req: Request) {
       };
 
       if (promoCode) {
-        const promotionCodes = await stripe.promotionCodes.list({
-          code: promoCode,
+        const promoCodeClean = promoCode.trim();
+        let promotionCodes = await stripe.promotionCodes.list({
+          code: promoCodeClean,
           active: true,
           limit: 1,
         });
+        if (promotionCodes.data.length === 0) {
+          promotionCodes = await stripe.promotionCodes.list({
+            code: promoCodeClean.toUpperCase(),
+            active: true,
+            limit: 1,
+          });
+        }
         if (promotionCodes.data.length > 0) {
           sessionConfig.discounts = [
             { promotion_code: promotionCodes.data[0].id },
           ];
         } else {
-          sessionConfig.discounts = [{ coupon: promoCode }];
+          sessionConfig.discounts = [{ coupon: promoCodeClean }];
         }
       } else {
         sessionConfig.allow_promotion_codes = true;
@@ -161,17 +169,25 @@ export async function POST(req: Request) {
     };
 
     if (promoCode) {
-      const promotionCodes = await stripe.promotionCodes.list({
-        code: promoCode,
+      const promoCodeClean = promoCode.trim();
+      let promotionCodes = await stripe.promotionCodes.list({
+        code: promoCodeClean,
         active: true,
         limit: 1,
       });
+      if (promotionCodes.data.length === 0) {
+        promotionCodes = await stripe.promotionCodes.list({
+          code: promoCodeClean.toUpperCase(),
+          active: true,
+          limit: 1,
+        });
+      }
       if (promotionCodes.data.length > 0) {
         sessionConfig.discounts = [
           { promotion_code: promotionCodes.data[0].id },
         ];
       } else {
-        sessionConfig.discounts = [{ coupon: promoCode }];
+        sessionConfig.discounts = [{ coupon: promoCodeClean }];
       }
     } else {
       sessionConfig.allow_promotion_codes = true;
@@ -186,7 +202,7 @@ export async function POST(req: Request) {
       error?.message?.includes("coupon") ||
       error?.code === "resource_missing"
     ) {
-      return new NextResponse("Geçersiz promosyon kodu / Invalid promo code", {
+      return new NextResponse("INVALID_CODE", {
         status: 400,
       });
     }

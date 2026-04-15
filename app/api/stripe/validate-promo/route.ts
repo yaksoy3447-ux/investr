@@ -18,9 +18,9 @@ export async function POST(req: Request) {
     // That's fine, we will just allow checking the promo code without auth.
 
     const body = await req.json();
-    const { promoCode } = body;
+    const promoCodeClean = body.promoCode?.trim();
 
-    if (!promoCode) {
+    if (!promoCodeClean) {
       return new NextResponse("Promo code is required", { status: 400 });
     }
 
@@ -32,7 +32,7 @@ export async function POST(req: Request) {
 
     // 1. Check promotion codes
     const promotionCodes = await stripe.promotionCodes.list({
-      code: promoCode,
+      code: promoCodeClean,
       active: true,
       limit: 1,
     });
@@ -47,7 +47,7 @@ export async function POST(req: Request) {
     } else {
       // 2. Check coupons
       try {
-        const coupon = await stripe.coupons.retrieve(promoCode);
+        const coupon = await stripe.coupons.retrieve(promoCodeClean);
         if (coupon.valid) {
           discountMatch = {
             percent_off: coupon.percent_off,
@@ -58,12 +58,29 @@ export async function POST(req: Request) {
       } catch (err: any) {
         // Not a valid coupon
       }
+      
+      // 3. Fallback: try uppercase for promotion codes
+      if (!discountMatch) {
+         const upperPromotionCodes = await stripe.promotionCodes.list({
+            code: promoCodeClean.toUpperCase(),
+            active: true,
+            limit: 1,
+         });
+         if (upperPromotionCodes.data.length > 0) {
+            const coupon = (upperPromotionCodes.data[0] as any).coupon;
+            discountMatch = {
+              percent_off: coupon.percent_off,
+              amount_off: coupon.amount_off,
+              currency: coupon.currency,
+            };
+         }
+      }
     }
 
     if (discountMatch) {
       return NextResponse.json(discountMatch);
     } else {
-      return new NextResponse("Geçersiz promosyon kodu / Invalid promo code", {
+      return new NextResponse("INVALID_CODE", {
         status: 400,
       });
     }
