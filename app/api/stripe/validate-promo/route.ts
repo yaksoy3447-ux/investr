@@ -45,18 +45,21 @@ export async function POST(req: Request) {
         currency: coupon.currency,
       };
     } else {
-      // 2. Check coupons
+      // 2. Check coupons by ID or Name
       try {
-        const coupon = await stripe.coupons.retrieve(promoCodeClean);
-        if (coupon.valid) {
+        const coupons = await stripe.coupons.list({ limit: 100 });
+        const matchedCoupon = coupons.data.find(
+          (c) => c.id === promoCodeClean || c.name?.toUpperCase() === promoCodeClean.toUpperCase()
+        );
+        if (matchedCoupon && matchedCoupon.valid) {
           discountMatch = {
-            percent_off: coupon.percent_off,
-            amount_off: coupon.amount_off,
-            currency: coupon.currency,
+            percent_off: matchedCoupon.percent_off,
+            amount_off: matchedCoupon.amount_off,
+            currency: matchedCoupon.currency,
           };
         }
       } catch (err: any) {
-        // Not a valid coupon
+        // Safe to ignore
       }
       
       // 3. Fallback: try uppercase for promotion codes

@@ -138,7 +138,16 @@ export async function POST(req: Request) {
             { promotion_code: promotionCodes.data[0].id },
           ];
         } else {
-          sessionConfig.discounts = [{ coupon: promoCodeClean }];
+          // Fallback to searching Coupons by name or ID
+          const coupons = await stripe.coupons.list({ limit: 100 });
+          const matchedCoupon = coupons.data.find(
+            (c) => c.id === promoCodeClean || c.name?.toUpperCase() === promoCodeClean.toUpperCase()
+          );
+          if (matchedCoupon) {
+            sessionConfig.discounts = [{ coupon: matchedCoupon.id }];
+          } else {
+            sessionConfig.discounts = [{ coupon: promoCodeClean }];
+          }
         }
       } else {
         sessionConfig.allow_promotion_codes = true;
@@ -187,7 +196,16 @@ export async function POST(req: Request) {
           { promotion_code: promotionCodes.data[0].id },
         ];
       } else {
-        sessionConfig.discounts = [{ coupon: promoCodeClean }];
+        // Fallback to searching Coupons by name or ID
+        const coupons = await stripe.coupons.list({ limit: 100 });
+        const matchedCoupon = coupons.data.find(
+          (c) => c.id === promoCodeClean || c.name?.toUpperCase() === promoCodeClean.toUpperCase()
+        );
+        if (matchedCoupon) {
+          sessionConfig.discounts = [{ coupon: matchedCoupon.id }];
+        } else {
+          sessionConfig.discounts = [{ coupon: promoCodeClean }];
+        }
       }
     } else {
       sessionConfig.allow_promotion_codes = true;

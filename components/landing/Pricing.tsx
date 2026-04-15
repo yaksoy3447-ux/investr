@@ -36,7 +36,7 @@ export default function Pricing() {
         setDiscount(data);
       } else {
         const err = await res.text();
-        if (err === "INVALID_CODE") {
+        if (err.includes("INVALID_CODE") || err.includes("Invalid")) {
           setPromoError(locale === "tr" ? "Geçersiz promosyon kodu" : "Invalid promo code");
         } else {
           setPromoError(err);
@@ -180,7 +180,7 @@ export default function Pricing() {
         }
       } else {
         const errorText = await res.text();
-        if (errorText === "INVALID_CODE") {
+        if (errorText.includes("INVALID_CODE") || errorText.includes("Invalid")) {
           alert(locale === "tr" ? "Hata: Geçersiz promosyon kodu" : "Error: Invalid promo code");
         } else {
           alert(`Error: ${errorText || "Stripe initialization failed."}`);
