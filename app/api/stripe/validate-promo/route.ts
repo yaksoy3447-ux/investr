@@ -38,7 +38,7 @@ export async function POST(req: Request) {
     });
 
     if (promotionCodes.data.length > 0) {
-      const coupon = promotionCodes.data[0].coupon;
+      const coupon = (promotionCodes.data[0] as any).coupon;
       discountMatch = {
         percent_off: coupon.percent_off,
         amount_off: coupon.amount_off,
