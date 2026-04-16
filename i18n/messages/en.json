@@ -736,9 +736,7 @@
           "date": "April 16, 2026",
           "readMinutes": 8,
           "image": "/blog/joyful_health_main.png",
-          "secondaryImages": [
-            "/blog/joyful_health_main.png"
-          ],
+          "secondaryImages": [],
           "category": "Health Technology (HealthTech)",
           "id": 50
         },
@@ -749,9 +747,7 @@
           "date": "April 17, 2026",
           "readMinutes": 8,
           "image": "/blog/vasuki_ai_main.png",
-          "secondaryImages": [
-            "/blog/vasuki_ai_main.png"
-          ],
+          "secondaryImages": [],
           "category": "Artificial Intelligence (AI) & Seed Funding",
           "id": 49
         },
@@ -762,9 +758,7 @@
           "date": "April 16, 2026",
           "readMinutes": 9,
           "image": "/blog/openfx_main.png",
-          "secondaryImages": [
-            "/blog/openfx_main.png"
-          ],
+          "secondaryImages": [],
           "category": "Fintech & Web3",
           "id": 48
         },
@@ -775,9 +769,7 @@
           "date": "April 16, 2026",
           "readMinutes": 8,
           "image": "/blog/modus_ai_main.png",
-          "secondaryImages": [
-            "/blog/modus_ai_main.png"
-          ],
+          "secondaryImages": [],
           "category": "Artificial Intelligence (AI) & B2B SaaS",
           "id": 47
         },
@@ -788,9 +780,7 @@
           "date": "April 16, 2026",
           "readMinutes": 9,
           "image": "/blog/artemis_ai_main.png",
-          "secondaryImages": [
-            "/blog/artemis_ai_main.png"
-          ],
+          "secondaryImages": [],
           "category": "Cybersecurity & AI",
           "id": 46
         },
@@ -801,9 +791,7 @@
           "date": "April 16, 2026",
           "readMinutes": 8,
           "image": "/blog/solidroad_ai_main.png",
-          "secondaryImages": [
-            "/blog/solidroad_ai_main.png"
-          ],
+          "secondaryImages": [],
           "category": "Customer Experience Tech (CX)",
           "id": 45
         },
@@ -814,9 +802,7 @@
           "date": "April 16, 2026",
           "readMinutes": 8,
           "image": "/blog/spektr_ai_main.png",
-          "secondaryImages": [
-            "/blog/spektr_ai_main.png"
-          ],
+          "secondaryImages": [],
           "category": "RegTech & Compliance",
           "id": 44
         },
