@@ -737,10 +737,7 @@
           "readMinutes": 8,
           "image": "/blog/joyful_health_main.png",
           "secondaryImages": [
-            "/blog/joyful_health_1.png",
-            "/blog/joyful_health_2.png",
-            "/blog/joyful_health_3.png",
-            "/blog/joyful_health_4.png"
+            "/blog/joyful_health_main.png"
           ],
           "category": "Sağlık Teknolojisi (HealthTech)",
           "id": 50
@@ -753,10 +750,7 @@
           "readMinutes": 8,
           "image": "/blog/vasuki_ai_main.png",
           "secondaryImages": [
-            "/blog/vasuki_ai_1.png",
-            "/blog/vasuki_ai_2.png",
-            "/blog/vasuki_ai_3.png",
-            "/blog/vasuki_ai_4.png"
+            "/blog/vasuki_ai_main.png"
           ],
           "category": "Yapay Zeka (AI) & Erken Aşama Tohum",
           "id": 49
@@ -769,10 +763,7 @@
           "readMinutes": 9,
           "image": "/blog/openfx_main.png",
           "secondaryImages": [
-            "/blog/openfx_1.png",
-            "/blog/openfx_2.png",
-            "/blog/openfx_3.png",
-            "/blog/openfx_4.png"
+            "/blog/openfx_main.png"
           ],
           "category": "Fintech & Web3",
           "id": 48
@@ -785,10 +776,7 @@
           "readMinutes": 8,
           "image": "/blog/modus_ai_main.png",
           "secondaryImages": [
-            "/blog/modus_ai_1.png",
-            "/blog/modus_ai_2.png",
-            "/blog/modus_ai_3.png",
-            "/blog/modus_ai_4.png"
+            "/blog/modus_ai_main.png"
           ],
           "category": "Yapay Zeka (AI) & B2B SaaS",
           "id": 47
@@ -801,10 +789,7 @@
           "readMinutes": 9,
           "image": "/blog/artemis_ai_main.png",
           "secondaryImages": [
-            "/blog/artemis_ai_1.png",
-            "/blog/artemis_ai_2.png",
-            "/blog/artemis_ai_3.png",
-            "/blog/artemis_ai_4.png"
+            "/blog/artemis_ai_main.png"
           ],
           "category": "Siber Güvenlik & AI",
           "id": 46
@@ -817,10 +802,7 @@
           "readMinutes": 8,
           "image": "/blog/solidroad_ai_main.png",
           "secondaryImages": [
-            "/blog/solidroad_ai_1.png",
-            "/blog/solidroad_ai_2.png",
-            "/blog/solidroad_ai_3.png",
-            "/blog/solidroad_ai_4.png"
+            "/blog/solidroad_ai_main.png"
           ],
           "category": "Müşteri Deneyimi Teknolojisi (CX)",
           "id": 45
@@ -833,10 +815,7 @@
           "readMinutes": 8,
           "image": "/blog/spektr_ai_main.png",
           "secondaryImages": [
-            "/blog/spektr_ai_1.png",
-            "/blog/spektr_ai_2.png",
-            "/blog/spektr_ai_3.png",
-            "/blog/spektr_ai_4.png"
+            "/blog/spektr_ai_main.png"
           ],
           "category": "RegTech & Finansal Uyum",
           "id": 44
