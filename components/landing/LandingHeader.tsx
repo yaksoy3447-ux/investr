@@ -66,7 +66,7 @@ export default function LandingHeader() {
           <Link href="/#how-it-works" className="hover:text-white transition-colors">{t('header.howItWorks')}</Link>
           <Link href="/blog" className="hover:text-white transition-colors">{t('header.blog')}</Link>
           <Link href="/#testimonials" className="hover:text-white transition-colors">{t('header.testimonials')}</Link>
-          <Link href="/pricing" className="hover:text-white transition-colors">{t('header.pricing')}</Link>
+          <Link href="/login" className="hover:text-white transition-colors">{t('header.pricing')}</Link>
         </nav>
 
         {/* Right Actions */}

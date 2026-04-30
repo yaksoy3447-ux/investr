@@ -95,7 +95,7 @@ export default function Footer() {
               <Link href="/#how-it-works" className="hover:text-white transition-colors">{t('links.platform1')}</Link>
               <Link href="/investors" className="hover:text-white transition-colors">{t('links.platform2')}</Link>
               <Link href="/#testimonials" className="hover:text-white transition-colors">{t('links.platform4')}</Link>
-              <Link href="/pricing" className="hover:text-white transition-colors">{t('links.platform3')}</Link>
+              <Link href="/login" className="hover:text-white transition-colors">{t('links.platform3')}</Link>
             </div>
             <div className="flex flex-col gap-4">
               <h4 className="font-bold text-white mb-2 uppercase tracking-wider text-xs">{t('links.company')}</h4>
